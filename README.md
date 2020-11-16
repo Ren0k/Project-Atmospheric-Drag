@@ -258,7 +258,7 @@ Lets consider the following situation.
 See the above image.  
 A **C7 Aerospace Division - Mk1 Liquid Fuel Fuselage** is falling directly down to Kerbin in a mostly prograde orientation. How do we determine the drag on this part?  
 
-#### Getting Drag Cube Values
+#### 1) Getting Drag Cube Values
 Lets start by getting the drag cube values in the PartDatabase.cfg file, this is what I found:  
 
 > cube = Default, 2.432,0.7714,0.7222, 2.432,0.7714,0.7222, 1.213,0.9716,0.1341, 1.213,0.9716,0.1341, 2.432,0.7688,0.7222, 2.432,0.7688,0.7222, 0,0,0, 1.25,1.938,1.25  
@@ -282,7 +282,7 @@ In the physics.cfg file in the root KSP folder, about halfway down, you can find
 Between every key value, a spline (curve) is created. To read values between key value pairs, a [Hermite Interpolator](https://en.wikibooks.org/wiki/Cg_Programming/Unity/Hermite_Curves) is used.  
 A hermite interpolator function is used in the script. We will further explore this later. For now lets apply the first transformation to the values above.  
 
-#### 1) Initial Cd Transformation
+#### 2) Initial Cd Transformation
 We will transform every Cd value above, according to these splines found in the physics.cfg file:  
 
 >DRAG_CD // The final Cd of a given facing is the drag cube Cd evalauted on this curve  
@@ -307,7 +307,7 @@ YN = A: 1.213 Cd: 0.9702
 ZP = A: 2.432 Cd: 0.5248    
 ZN = A: 2.432 Cd: 0.5248    
 
-#### 2) Mach Cd Transformation  
+#### 3) Mach Cd Transformation  
 Now a second transformation is done, based on the current mach number.  
 The order of which you apply the transformations is important. This transformation has to be done at this particular moment.  
 These are the relevant key value pairs, again from the physics.cfg file:  
@@ -330,7 +330,7 @@ YN = A: 1.213 Cd: 0.9677
 ZP = A: 2.432 Cd: 0.4977    
 ZN = A: 2.432 Cd: 0.4977    
 
-#### 3) Surface Transformation
+#### 4) Surface Transformation
 Now we are going to look at every of the 6 surfaces, and determine what 'direction' of drag they experience. 
 
 Lets consider the front section of the falling fuel tank.  
@@ -367,7 +367,7 @@ YN = A: 1.213 Cd: 0.9677
 ZP = A: 2.432 Cd: 0.0099  
 ZN = A: 2.432 Cd: 0.0099   
 
-#### 4) Overall Mach Transformation
+#### 5) Overall Mach Transformation
 The next transformation is applied to all surfaces, and depends on mach number.  
 Its found in the physics file as:  
 > DRAG_MULTIPLIER // Overall multiplier to drag based on mach  
@@ -381,7 +381,7 @@ YN = A: 1.213 Cd: 0.48385
 ZP = A: 2.432 Cd: 0.00495  
 ZN = A: 2.432 Cd: 0.00495   
 
-#### 5) Reynolds Number Transformation  
+#### 6) Reynolds Number Transformation  
 Or more a Pseudo-Reynolds as mentioned in the physics file. This is simply a value calculated by (density x velocity) with density as kg/m3 and velocity in m/s.  
 The reynolds number in our example is 163.69 (0.8606 x 190.2).  
 
@@ -395,4 +395,16 @@ YP = A: 1.213 Cd: 0.4430
 YN = A: 1.213 Cd: 0.4228    
 ZP = A: 2.432 Cd: 0.0043   
 ZN = A: 2.432 Cd: 0.0043     
+
+#### 7) Drag Equation  
+We have finally come to the section where we can apply the drag equation.  
+There are 2 more things to add, and those things are global drag modifiers.  
+A global drag modifier exists for drag cube drag (0.1), and a global drag modifier exists for overall drag (8).  
+Combining these gives an overall multiplier of 0.8 to the result of the drag equation.   
+
+> Fd = ((Rho x V^2) / 2) * A * Cd * 0.8  with Rho = 0.8606 and V = 190.2.  
+
+The final calculation now becomes:  
+
+> ((2.432 * 0.0044) + (2.432 * 0.0044) + (1.213 * 0.4430) + (1.213 * 0.4430) + (2.432 * 0.0043) + (2.432 * 0.0043)) * ((Rho * V^2) / 2) * 0.8.  
 
