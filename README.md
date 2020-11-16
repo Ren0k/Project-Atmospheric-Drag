@@ -258,6 +258,7 @@ Lets consider the following situation.
 See the above image.  
 A **C7 Aerospace Division - Mk1 Liquid Fuel Fuselage** is falling directly down to Kerbin in a mostly prograde orientation. How do we determine the drag on this part?  
 
+#### Getting Drag Cube Values
 Lets start by getting the drag cube values in the PartDatabase.cfg file, this is what I found:  
 
 > cube = Default, 2.432,0.7714,0.7222, 2.432,0.7714,0.7222, 1.213,0.9716,0.1341, 1.213,0.9716,0.1341, 2.432,0.7688,0.7222, 2.432,0.7688,0.7222, 0,0,0, 1.25,1.938,1.25  
@@ -281,7 +282,29 @@ In the physics.cfg file in the root KSP folder, about halfway down, you can find
 Between every key value, a spline (curve) is created. To read value between key value pairs, a [Hermite Interpolator](https://en.wikibooks.org/wiki/Cg_Programming/Unity/Hermite_Curves) is used.  
 A hermite interpolator function is used in the script. We will further explore this later. For now lets apply the first transformation to the values above.  
 
+#### Initial Cd Transformation
+We will transform every Cd value above, according to these splines found in the physics.cfg file:  
 
+DRAG_CD // The final Cd of a given facing is the drag cube Cd evalauted on this curve
+{
+	key = 0.05 0.0025 0.15 0.15
+	key = 0.4 0.15 0.3963967 0.3963967
+	key = 0.7 0.35 0.9066986 0.9066986
+	key = 0.75 0.45 3.213604 3.213604
+	key = 0.8 0.66 3.49833 3.49833
+	key = 0.85 0.8 2.212924 2.212924
+	key = 0.9 0.89 1.1 1.1
+	key = 1 1 1 1
+}
+
+Example: For the XP Value (Cd = 0.7714), this falls between 0.75 and 0.8, and a spline interpolation is done between the 2 key value pairs.  
+With the included function, we can quickly determine the new 'realistic' Cd values:  
+XP = A: 2.432 Cd: 0.5366
+XN = A: 2.432 Cd: 0.5366 
+YP = A: 1.213 Cd: 0.9702  
+YN = A: 1.213 Cd: 0.9702  
+ZP = A: 2.432 Cd: 0.5248  
+ZN = A: 2.432 Cd: 0.5248  
 
 
 
