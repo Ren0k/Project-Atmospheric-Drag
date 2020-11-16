@@ -253,6 +253,9 @@ Lets consider the following situation.
 
 ![Example 1](https://github.com/Ren0k/Project-Atmospheric-Drag/blob/main/Images/Example%201.jpg)  
 
-### Drag Cube Example
+### Drag Cube Example 1
+
+Note the above image.  
+A C7 Aerospace Division - Mk1 Liquid Fuel Fuselage is falling directly down to Kerbin in a prograde orientation. How do we determine the drag on this part?  
 
 
