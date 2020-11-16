@@ -246,7 +246,7 @@ When it comes to drag cubes, there are 3 'types' of drag:
 - Surface (skin friction) Drag
 - Tail Drag  
 
-Every surface can have either 1 or 2 different types of drag applied to it, either a combination of Tip/Surface or Tail/Surface. 
+Every surface can have either 1 or 2 different types of drag applied to it, either a combination of Tip/Surface or Tail/Surface.  
 
 In my opinion, the best way to further explain the concept is by using actual situations whilst in KSP.  
 Lets consider the following situation.  
@@ -262,7 +262,7 @@ Lets start by getting the drag cube values in the PartDatabase.cfg file, this is
 
 > cube = Default, 2.432,0.7714,0.7222, 2.432,0.7714,0.7222, 1.213,0.9716,0.1341, 1.213,0.9716,0.1341, 2.432,0.7688,0.7222, 2.432,0.7688,0.7222, 0,0,0, 1.25,1.938,1.25  
 
-There are a total of 8 sections of 3 values, seperated by a comma. The first 6 apply to use and are in order XP/XN/YP/YN/ZP/ZN.  
+There are a total of 8 sections of 3 values, seperated by a comma. The first 6 apply to us and are in order XP/XN/YP/YN/ZP/ZN.  
 We use the first 2 values per section which are A and 'initial Cd'.  
 This gives us the following:  
 XP = A: 2.432 Cd: 0.7714  
@@ -271,7 +271,13 @@ YP = A: 1.213 Cd: 0.9716
 YN = A: 1.213 Cd: 0.9716  
 ZP = A: 2.432 Cd: 0.7688  
 ZN = A: 2.432 Cd: 0.7688  
+Note how the surface sides (XP/XN/ZP/ZN) are pretty much the same as the shape of the tank is a cylinder.  
 
+The Cd values we obtained are not really Cd Values, you might have noticed that they are very high.  
+Consider them as 'Intial Cd Values', and before they are applied to the actual part an initial transformation to the Cd values is done to make them more 'realistic'.  
+The process of those transformations is done a lot. KSP (Unity) uses float curves in the form of cubic hermite splines, to get values from complex curves.  
+In the physics.cfg file in the root KSP folder, about halfway down, you can find a collection of Key Value pairs. Those Key Value pairs determine the shape of the curves.  
+Between every key value, a spline (curve) is created. To get a value between values, a [Hermite Interpolator](https://en.wikibooks.org/wiki/Cg_Programming/Unity/Hermite_Curves) is used.  
 
 
 
