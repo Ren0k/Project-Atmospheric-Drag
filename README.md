@@ -276,7 +276,7 @@ Note how the surface sides (XP/XN/ZP/ZN) are pretty much the same as the shape o
 
 #### Splines
 The Cd values we obtained are not really Cd Values, you might have noticed that they are very high.  
-Consider them as 'Intial Cd Values', and before they are applied to the actual part an initial transformation to the Cd values is done to make them more 'realistic'.  
+Consider them 'Intial Cd Values', and before they are applied to the actual part an initial transformation to the Cd values is done to make them more 'realistic'.  
 The process of those transformations is done a lot. KSP (Unity) uses float curves in the form of cubic hermite splines, to get values from complex curves.  
 In the physics.cfg file in the root KSP folder, about halfway down, you can find a collection of Key Value pairs. Those Key Value pairs determine the shape of the curves.  
 Between every key value, a spline (curve) is created. To read value between key value pairs, a [Hermite Interpolator](https://en.wikibooks.org/wiki/Cg_Programming/Unity/Hermite_Curves) is used.  
