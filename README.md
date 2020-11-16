@@ -172,5 +172,55 @@ You might have worked with the drag equation before, illustrated in the image be
 
 ![Drag Equation](https://www.grc.nasa.gov/www/k-12/airplane/Images/drageq.gif)  
 
-This chapter explores the mechanics of kerbal aerodynamics.  
+This is on a basic level how it works in KSP.  
+You take dynamic pressure ((Rho x V^2)/2) and multiply it with a (Cd x A) value.  
+
+Getting dynamic pressure is possibly with the method provided by kOS (ship:q), or can be calculated independently.  
+To calculate dynamic pressure, you need an accurate value of density, which is not provided by kOS but can be determined. I have provided a tool that allows you to get accurate density values for Kerbin's atmosphere, for other atmospheres you can get an estimated value.  
+
+The main 'gotcha' is the value of (Cd x A) or CdA, which is very dynamic.  
+
+Before we dive in, here a full overview of the 'types' of drag, modifiers and influencing factors:  
+
+**Drag Cubes**  
+- 6 Dragcube Surfaces per Body Part  
+- Dragcube Tip Modifier  
+- Dragcube Surface Modifier  
+- Dragcube Tail Modifier  
+- Mach Based Drag Modifier
+- Initial Drag Coefficient Correction
+- Mach Based Drag Coefficient Modifier
+- Reynolds Number Based Drag Modifier  
+- Occupied Node CdA Corrections
+- Part Variant based Drag Cubes
+- 'Part-State' based Drag Cubes
+- Procedural Drag Cube Generation (Fairings)  
+- Part Exclusion (Cargobays/fairings etc)
+- Global Dragcube Multiplier
+- Global Overall Drag Multiplier
+**Lifting Surfaces**
+- AoA Based Lift Coefficient
+- Mach Based Lift Coefficient Modifier
+- AoA Based Drag Coefficient
+- Mach Based Drag Coefficient Modifier
+- Deflection Lift Coefficient (Main Area Value)
+- Induced Drag (Anti-Velocity Vector Horizontal Lift Component)
+- Global Lift Multiplier
+- Global Lift Drag Multiplier
+**Body/Capsule Lift**  
+- AoA Based Body Lift Coefficient 
+- Mach Based Body Lift Coefficient Modifier
+- Deflection Lift Coefficient (Main Area Value)
+- Induced Drag (Anti-Velocity Vector Horizontal Lift Component)
+- Global Lift Multiplier
+**Speedbrake**  
+- AoA Based Drag Coefficient
+- Mach Based Drag Coefficient Modifier
+- Deflection Lift Coefficient (Main Area Value)
+- Global Lift Drag Multiplier
+
+
+
+
+
 Due to the complexity of this system, and to get the best intuitive feeling about the inner workings, I decided to explain this by using actual situations whilst in KSP.  
