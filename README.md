@@ -166,5 +166,11 @@ This concludes a high-level overview, the next section will go in depth into how
 
 # KSP Drag
 
+## Introduction
+Welcome to the fascinating world of KSP aerodynamics.  
+You might have worked with the drag equation before, illustrated in the image below.
+
+![Drag Equation](https://www.grc.nasa.gov/www/k-12/airplane/Images/drageq.gif)  
+
 This chapter explores the mechanics of kerbal aerodynamics.  
 Due to the complexity of this system, and to get the best intuitive feeling about the inner workings, I decided to explain this by using actual situations whilst in KSP.  
