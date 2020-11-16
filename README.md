@@ -220,8 +220,22 @@ Before we dive in, here a full overview of the 'types' of drag, modifiers and in
 - Deflection Lift Coefficient (Main Area Value)
 - Global Lift Drag Multiplier
 
+With this out of the way, you might realize that a little bit more is involved than filling in the drag equation.  
+We will break it down section by section, calculation by calculation, starting with Drag Cubes.
 
+## Drag Cubes
 
+### What are drag cubes?  
+Every part in KSP has 6 surfaces: A front surface (YP), a back surface (YN), and 4 side surfaces (XP/XN/ZP/ZN).
+A drag cube is a 3 Dimensional Cube that sits on top of every of those surfaces, with 3 values:  
+- Area
+- Drag Coefficient
+- Depth
+Depth is not used for our purposes.  
+This leaves 12 values for every part that is involved in drag.  
+
+### How is drag applied to drag cubes?
 
 
 Due to the complexity of this system, and to get the best intuitive feeling about the inner workings, I decided to explain this by using actual situations whilst in KSP.  
+Lets 
