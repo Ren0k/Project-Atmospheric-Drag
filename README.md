@@ -251,9 +251,9 @@ Every surface can have either 1 or 2 different types of drag applied to it, eith
 In my opinion, the best way to further explain the concept is by using actual situations whilst in KSP.  
 Lets consider the following situation.  
 
-![Example 1](https://github.com/Ren0k/Project-Atmospheric-Drag/blob/main/Images/Example%201.jpg)  
-
 ### Drag Cube Example 1
+
+![Example 1](https://github.com/Ren0k/Project-Atmospheric-Drag/blob/main/Images/Example%201.jpg)  
 
 See the above image.  
 A **C7 Aerospace Division - Mk1 Liquid Fuel Fuselage** is falling directly down to Kerbin in a mostly prograde orientation. How do we determine the drag on this part?  
