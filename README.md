@@ -372,7 +372,7 @@ The next transformation is applied to all surfaces, and depends on mach number.
 Its found in the physics file as:  
 > DRAG_MULTIPLIER // Overall multiplier to drag based on mach  
 
-We repeated the process, get the interpolated value, and apply it to all 6 Cd Values.  
+We repeat the process, get the interpolated value, and apply it to all 6 Cd Values.  
 The interpolated value is 0.5, applying to all drag cubes:  
 XP = A: 2.432 Cd: 0.00505  
 XN = A: 2.432 Cd: 0.00505  
@@ -381,4 +381,6 @@ YN = A: 1.213 Cd: 0.48385
 ZP = A: 2.432 Cd: 0.00495  
 ZN = A: 2.432 Cd: 0.00495   
 
-#### 5) 
+#### 5) Reynolds Number Transformation  
+Or more a Pseudo-Reynolds as mentioned in the physics file. This is simply a value calculated by (density x velocity) with density as kg/m3 and velocity in m/s.  
+
