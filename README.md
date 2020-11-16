@@ -102,7 +102,7 @@ Comes in handy if your vessel is complex and you had to manually input drag cube
 Analyze every single analyzed part, used to verify correct drag cube calculations  
 - Review Parameters  
 Shows you what parameters/configuration/orientation you have selected for this
-- Realtime Drag  
+- dragGUI    
 A dragGUI, similar to the KSP aeroGUI menu, but with more in depth information about vessel drag. Is computationally quite heavy and lacks a little bit behind the actual calculated drag values by KSP.  
 - Create Profile  
 Continues to the next menu where you can create a drag profile  
