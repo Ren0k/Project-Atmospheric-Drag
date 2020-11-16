@@ -357,7 +357,7 @@ ZP = A: 2.432 Cd: 0.0099
 ZN = A: 2.432 Cd: 0.0099   
 
 ##### Tail Modifier  
-From our spline curve we get a value of 1, so the YN Cs stays the same. 
+From our spline curve we get a value of 1, so the YN Cd stays the same. 
 
 ##### Results
 XP = A: 2.432 Cd: 0.0101  
