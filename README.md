@@ -30,10 +30,13 @@ There are of course limitations to what this tool can do.
 Drag will be determined for a fixed vessel orientation and configuration, so changing any of these in flight will result in inaccurate readings.  
 While in theory it is possible to allow for changing orientations and configurations, the amount of calculations required to do this is too great for kOS.  
 Hence I have chosen to restrict the tool to this setup.  
+
 Other limitations and bugs:  
 - The information required to do these calculations can not be obtained with kOS alone. A copy of your 'partdatabase.cfg' and your vessel's .craft file have to be put in the correct folder for use by the tool
 - Airbrake Deployment angle is bugged in KSP; a bug report is filed. The bug is actually coded in this script, and if it is fixed in KSP this will have to be adjusted here.
-- Engine Plates are currently bugged in KSP; a bug report for this is filed. This is NOT coded into the script, engine plates do not apply their drag cubes. You will have to manually enter drag cube values
+- Engine Plates are currently bugged in KSP; a bug report for this is filed. This is NOT coded into the script, engine plates do not apply their drag cubes. You will have to manually enter drag cube values  
+- Fairings work by procedural drag cube generation. The process KSP uses to do this can not be re-created, and if you use fairings manual values have to be entered.  
+- Cargobay part exclusion can not be determined, you will have to specify which parts are excluded if you have a cargobay fitted.  
 - Simple non-stock/modded parts will work; more complex non-stock parts that have different variants and modules might not work  
 - You need accurate mach number values; this is determined by the accuracy of the static ambient temperature (SAT) and density, which is not provided by kOS. I have added a tool that allows you to obtain accurate SAT's for kerbin, but for other planets you will have to use an estimated value.
 
@@ -53,7 +56,7 @@ A quick overview of things you need to know:
 - Create a copy of your ship's .craft file (found in KSP\saves\savename\ships) in KSP\Ships\Script\dragProfile\DATA\Vessels.  
 Note: do this at the last possible moment, as any time you save your vessel in the VAB, new part ID's are created and a new copy has to be put in the \Vessels folder.
 
-## Use
+## Usage
 
 There are 2 main scripts to use, found in the dragProfile root folder. 'createProfile.ks' and 'useProfile.ks'.  
 You start by running the 'createProfile.ks' script. To do this simply create a script in the root \Script folder and enter runpath("dragProfile/createProfile.ks").
@@ -61,8 +64,11 @@ This will open the user interface.  If you do not want to use the user interface
   
 The menu that loads will have multiple options. Whatever you select, the script starts by checking if the partdatabase.cfg file has been analyzed yet, and if not it will analyze the file and put relevant information in a partdatabase.json file, so you do not have to do this scan everytime.  
 I will give a quick overview of the options you have:  
+
+### Menu 1
 - Configure  
 This allows you to manually specify your vessel's configuration of parts and flight orientation.  
+Amongst the options here is 'special menu', which will at a later stage allow you to manually edit every single part of the analyzed vessel.  
 - Load Partlist  
 You can save an analyzed partlist for re-use at a later section, and load it here so you can skip the part analysis 
 - Rescan Partdatabase  
@@ -71,9 +77,24 @@ If the partdatabase.cfg file has changed if you for example have added a few cus
 This will let you skip the manual configuration section, and the script will 'Scan' your vessel as it currently is and continue as if you will fly retrograde
 - IPU Selector  
 Depending on the size of your vessel, it might take a long time to analyze your vessel and create a profile. To lower the time required you can increase the IPU value.  
+  
+When you are done configuring, or if you have selected 'Analyze Now', the analysis tool begins.  
+It will scan every single part, both in game and from the .craft file, obtain relevant information, and put it in one vesselPartList file.  
+You will be shown a loading screen showing you the progress.  
+Once this is completed, a new window with multiple options is shown. A quick overview:  
 
-
-
+### Menu 2
+- Save Part List  
+You can save the analyzed part list here and re-use it. 
+Comes in handy if your vessel is complex and you had to manually input drag cube values; saves you from repeating this
+- Review Part List  
+Analyze every single analyzed part, used to verify correct drag cube calculations  
+- Review Parameters
+Shows you what parameters/configuration/orientation you have selected for this
+- Realtime Drag
+A dragGUI, similar to the KSP aeroGUI menu, but with more in depth information about vessel drag. Is computationally quite heavy and lacks a little bit behind the actual calculated drag values by KSP.  
+- Create Profile
+Continues to the next menu where you can create a drag profile  
 
 
 
