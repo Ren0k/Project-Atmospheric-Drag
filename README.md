@@ -197,8 +197,8 @@ Before we dive in, here a full overview of the 'types' of drag, modifiers and in
 - Procedural Drag Cube Generation (Fairings)  
 - Part Exclusion (Cargobays/fairings etc)
 - Global Dragcube Multiplier
-- Global Overall Drag Multiplier
-**Lifting Surfaces**
+- Global Overall Drag Multiplier  
+**Lifting Surfaces**  
 - AoA Based Lift Coefficient
 - Mach Based Lift Coefficient Modifier
 - AoA Based Drag Coefficient
@@ -206,13 +206,13 @@ Before we dive in, here a full overview of the 'types' of drag, modifiers and in
 - Deflection Lift Coefficient (Main Area Value)
 - Induced Drag (Anti-Velocity Vector Horizontal Lift Component)
 - Global Lift Multiplier
-- Global Lift Drag Multiplier
+- Global Lift Drag Multiplier  
 **Body/Capsule Lift**  
 - AoA Based Body Lift Coefficient 
 - Mach Based Body Lift Coefficient Modifier
 - Deflection Lift Coefficient (Main Area Value)
 - Induced Drag (Anti-Velocity Vector Horizontal Lift Component)
-- Global Lift Multiplier
+- Global Lift Multiplier  
 **Speedbrake**  
 - AoA Based Drag Coefficient
 - Mach Based Drag Coefficient Modifier
