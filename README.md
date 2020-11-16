@@ -321,7 +321,7 @@ These are the relevant key value pairs, again from the physics.cfg file:
 >}  
 
 Note that the Cd is raised to the power of the interpolated value.  
-The mach number in our example is 0.552. This return a value of 1.082.
+The mach number in our example is 0.552. This returns a value of 1.082.
 So for every Cd we apply the transformation of Cd^1.082.  
 XP = A: 2.432 Cd: 0.5098  
 XN = A: 2.432 Cd: 0.5098   
@@ -331,7 +331,7 @@ ZP = A: 2.432 Cd: 0.4977
 ZN = A: 2.432 Cd: 0.4977    
 
 #### 4) Surface Transformation
-Now we are going to look at every of the 6 surfaces, and determine what 'direction' of drag they experience. 
+Now we are going to look at each of the 6 surfaces, and determine what 'direction' of drag they experience. 
 
 Lets consider the front section of the falling fuel tank.  
 It is falling directly down, facing the relative airflow. In our example it only experiences 'Tip Drag'. Would it have an angle to the relative airflow, it could also experience some 'Surface Drag'. More on that in the next example.  
