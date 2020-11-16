@@ -175,7 +175,7 @@ You might have worked with the drag equation before, illustrated in the image be
 This is on a basic level how it works in KSP.  
 You take dynamic pressure ((Rho x V^2)/2) and multiply it with a (Cd x A) value.  
 
-Getting dynamic pressure is possibly with the method provided by kOS (ship:q), or can be calculated independently.  
+Getting dynamic pressure is possible with the method provided by kOS (ship:q), or can be calculated independently.  
 To calculate dynamic pressure, you need an accurate value of density, which is not provided by kOS but can be determined. I have provided a tool that allows you to get accurate density values for Kerbin's atmosphere, for other atmospheres you can get an estimated value.  
 
 The main 'gotcha' is the value of (Cd x A) or CdA, which is very dynamic.  
