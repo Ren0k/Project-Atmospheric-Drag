@@ -344,9 +344,16 @@ There are different curves/modifiers for tip/surface/tail drag, based on mach nu
 Lets work out the tip modifier first:
 
 ##### Tip Modifier
-From our spline curve we get a value of 1.0488.
+From our spline curve we get a value of 1.0488.  
 This value is multiplied by the YP (Currently facing the airflow) Cd, returning:  
-YP = A: 1.213 Cd: 1.014
+YP = A: 1.213 Cd: 1.014  
 
 ##### Surface/Skin Modifier
+From our spline curve we get a value of 0.02. 
+This value is multiplied by the XP/XN/ZP/ZN Cd, returning:  
+XP = A: 2.432 Cd: 0.0101 
+XN = A: 2.432 Cd: 0.0101 
+ZP = A: 2.432 Cd: 0.0099 
+ZN = A: 2.432 Cd: 0.0099  
 
+##### Tail Modifier
