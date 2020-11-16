@@ -230,12 +230,29 @@ Every part in KSP has 6 surfaces: A front surface (YP), a back surface (YN), and
 A drag cube is a 3 Dimensional Cube that sits on top of every of those surfaces, with 3 values:  
 - Area
 - Drag Coefficient
-- Depth
+- Depth  
+
 Depth is not used for our purposes.  
 This leaves 12 values for every part that is involved in drag.  
 
+Drag Cubes for parts are saved in the PartDatabase.cfg file in the root KSP folder.  
+If you look through this file, you can find all drag cubes for all parts.  
+You might find that some parts have multiple cubes. This is due different part variants or different part states.  
+
 ### How is drag applied to drag cubes?
 
+When it comes to drag cubes, there are 3 'types' of drag:  
+- Tip Drag
+- Surface (skin friction) Drag
+- Tail Drag  
 
-Due to the complexity of this system, and to get the best intuitive feeling about the inner workings, I decided to explain this by using actual situations whilst in KSP.  
-Lets 
+Every surface can have either 1 or 2 different types of drag applied to it, either a combination of Tip/Surface or Tail/Surface. 
+
+In my opinion, the best way to further explain the concept is by using actual situations whilst in KSP.  
+Lets consider the following situation.  
+
+![Example 1](https://github.com/Ren0k/Project-Atmospheric-Drag/blob/main/Images/Example%201.jpg)  
+
+### Drag Cube Example
+
+
