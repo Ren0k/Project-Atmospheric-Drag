@@ -285,17 +285,17 @@ A hermite interpolator function is used in the script. We will further explore t
 #### Initial Cd Transformation
 We will transform every Cd value above, according to these splines found in the physics.cfg file:  
 
-DRAG_CD // The final Cd of a given facing is the drag cube Cd evalauted on this curve  
-{  
-	key = 0.05 0.0025 0.15 0.15  
-	key = 0.4 0.15 0.3963967 0.3963967  
-	key = 0.7 0.35 0.9066986 0.9066986  
-	key = 0.75 0.45 3.213604 3.213604  
-	key = 0.8 0.66 3.49833 3.49833  
-	key = 0.85 0.8 2.212924 2.212924  
-	key = 0.9 0.89 1.1 1.1  
-	key = 1 1 1 1  
-}  
+>DRAG_CD // The final Cd of a given facing is the drag cube Cd evalauted on this curve  
+>{  
+>	key = 0.05 0.0025 0.15 0.15  
+>	key = 0.4 0.15 0.3963967 0.3963967  
+>	key = 0.7 0.35 0.9066986 0.9066986  
+>	key = 0.75 0.45 3.213604 3.213604  
+>	key = 0.8 0.66 3.49833 3.49833  
+>	key = 0.85 0.8 2.212924 2.212924  
+>	key = 0.9 0.89 1.1 1.1  
+>	key = 1 1 1 1  
+>}  
   
 Example: For the XP Value (Cd = 0.7714), this falls between 0.75 and 0.8, and a spline interpolation is done between the 2 key value pairs.  
 With the included function, we can quickly determine the new 'realistic' Cd values:  
