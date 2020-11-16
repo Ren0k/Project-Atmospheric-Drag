@@ -279,7 +279,7 @@ The Cd values we obtained are not really Cd Values, you might have noticed that 
 Consider them 'Intial Cd Values', and before they are applied to the actual part an initial transformation to the Cd values is done to make them more 'realistic'.  
 The process of those transformations is done a lot. KSP (Unity) uses float curves in the form of cubic hermite splines, to get values from complex curves.  
 In the physics.cfg file in the root KSP folder, about halfway down, you can find a collection of Key Value pairs. Those Key Value pairs determine the shape of the curves.  
-Between every key value, a spline (curve) is created. To read value between key value pairs, a [Hermite Interpolator](https://en.wikibooks.org/wiki/Cg_Programming/Unity/Hermite_Curves) is used.  
+Between every key value, a spline (curve) is created. To read values between key value pairs, a [Hermite Interpolator](https://en.wikibooks.org/wiki/Cg_Programming/Unity/Hermite_Curves) is used.  
 A hermite interpolator function is used in the script. We will further explore this later. For now lets apply the first transformation to the values above.  
 
 #### 1) Initial Cd Transformation
