@@ -45,6 +45,7 @@ A tool is used to guesstimate the values, but it is not too accurate.
 - You need accurate mach number values; this is determined by the accuracy of the static ambient temperature (SAT) and density, which is not provided by kOS. I have added a tool that allows you to obtain accurate SAT's for kerbin, but for other planets you will have to use an estimated value.
 
 ![Demo Image](https://github.com/Ren0k/Project-Atmospheric-Drag/blob/main/Images/Demo%20Image.jpg)    
+** Image of the dragGUI interface **  
 
 # Quickstart Guide
 
