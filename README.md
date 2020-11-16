@@ -26,8 +26,8 @@ The 2nd main section will dive deeply into the mechanics of KSP, how drag is det
 
 ## Limitations
 
-There are of course limitations to what this tool can do. 
-Drag will be determined for a fixed vessel orientation and configuration, so changing any of these in flight will result in inaccurate readings.  
+There are of course limitations to what this tool can do.  
+Drag will be determined for a fixed vessel orientation and configuration, so changing any of these in flight will result in inaccurate readings.    
 While in theory it is possible to allow for changing orientations and configurations, the amount of calculations required to do this is too great for kOS.  
 Hence I have chosen to restrict the tool to this setup.  
 
