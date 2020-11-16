@@ -331,4 +331,22 @@ ZP = A: 2.432 Cd: 0.4977
 ZN = A: 2.432 Cd: 0.4977    
 
 #### 3) Surface Transformation
-Now we are going to look at the 
+Now we are going to look at every of the 6 surfaces, and determine what 'direction' of drag they experience. 
+
+Lets consider the front section of the falling fuel tank.  
+It is falling directly down, facing the relative airflow. In our example it only experiences 'Tip Drag'. Would it have an angle to the relative airflow, it could also experience some 'Surface Drag'. More on that in the next example.  
+
+Now the tail or back section of the fuel tank. It is directly facing away from the relative airflow, hence it only experiences Tail Drag.  
+
+The 4 surfaces section only experience Surface Drag.  
+
+There are different curves/modifiers for tip/surface/tail drag, based on mach number. They can be found in the top of they key value sections of the physics file.  
+Lets work out the tip modifier first:
+
+##### Tip Modifier
+From our spline curve we get a value of 1.0488.
+This value is multiplied by the YP (Currently facing the airflow) Cd, returning:  
+YP = A: 1.213 Cd: 1.014
+
+##### Surface/Skin Modifier
+
