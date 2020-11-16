@@ -3,7 +3,8 @@
 # Introduction
 
 This tool allows you to determine accurate atmospheric drag for stock KSP vessels, under a constant orientation.  
-The tool encompasses a complete re-creation of the actual KSP drag and lift calculations, and takes into account different configurations of your vessel.  
+It encompasses a complete re-creation of the actual KSP drag and lift calculations, and takes into account different configurations of your vessel.  
+The purpose is to only use this tool to create a profile for your vessel with which you can calculate drag; you do this once for a specific vessel and you only have to dit it again if the vessel changes significantly.  
 More specifically, with this tool you will be able to:  
 - Investigate and analyze your vessel's drag under different situations and configurations
 - Manually specify the orientation of your flight, whether prograde or retrograde, and specific AoA's
@@ -36,6 +37,7 @@ Other limitations and bugs:
 - Airbrake Deployment angle is bugged in KSP; a bug report is filed. The bug is actually coded in this script, and if it is fixed in KSP this will have to be adjusted here.
 - Engine Plates are currently bugged in KSP; a bug report for this is filed. This is NOT coded into the script, engine plates do not apply their drag cubes. You will have to manually enter drag cube values  
 - Fairings work by procedural drag cube generation. The process KSP uses to do this can not be re-created, and if you use fairings manual values have to be entered.  
+A tool is used to guesstimate the values, but it is not too accurate.  
 - Cargobay part exclusion can not be determined, you will have to specify which parts are excluded if you have a cargobay fitted.  
 - Simple non-stock/modded parts will work; more complex non-stock parts that have different variants and modules might not work  
 - You need accurate mach number values; this is determined by the accuracy of the static ambient temperature (SAT) and density, which is not provided by kOS. I have added a tool that allows you to obtain accurate SAT's for kerbin, but for other planets you will have to use an estimated value.
