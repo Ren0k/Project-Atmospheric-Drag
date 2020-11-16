@@ -196,6 +196,7 @@ Before we dive in, here a full overview of the 'types' of drag, modifiers and in
 - 'Part-State' based Drag Cubes
 - Procedural Drag Cube Generation (Fairings)  
 - Part Exclusion (Cargobays/fairings etc)
+- Part Specific Drag Modifiers  
 - Global Dragcube Multiplier
 - Global Overall Drag Multiplier  
 #### **Lifting Surfaces**  
