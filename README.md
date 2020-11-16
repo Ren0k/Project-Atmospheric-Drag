@@ -282,7 +282,7 @@ In the physics.cfg file in the root KSP folder, about halfway down, you can find
 Between every key value, a spline (curve) is created. To read value between key value pairs, a [Hermite Interpolator](https://en.wikibooks.org/wiki/Cg_Programming/Unity/Hermite_Curves) is used.  
 A hermite interpolator function is used in the script. We will further explore this later. For now lets apply the first transformation to the values above.  
 
-#### Initial Cd Transformation
+#### 1) Initial Cd Transformation
 We will transform every Cd value above, according to these splines found in the physics.cfg file:  
 
 >DRAG_CD // The final Cd of a given facing is the drag cube Cd evalauted on this curve  
@@ -307,5 +307,26 @@ YN = A: 1.213 Cd: 0.9702
 ZP = A: 2.432 Cd: 0.5248    
 ZN = A: 2.432 Cd: 0.5248    
 
+#### 2) Mach Cd Transformation  
+Now a second transformation is done, based on the current mach number.  
+The order of which you apply the transformations is important. This transformation has to be done at this particular moment.  
+These are the relevant key value pairs, again from the physics.cfg file:  
 
+>DRAG_CD_POWER // The final Cd of a given facing is then raised to this power, indexed by mach number
+>{
+>	key = 0 1 0 0.00715953
+>	key = 0.85 1.25 0.7780356 0.7780356
+>	key = 1.1 2.5 0.2492796 0.2492796
+>	key = 5 3 0 0
+>}
+
+Note that the Cd is raised to the power of the interpolated value.  
+The mach number in our example is 0.552. This return a value of 1.082.
+So for every Cd we apply the transformation of Cd^1.082.  
+XP = A: 2.432 Cd: 0.5366  
+XN = A: 2.432 Cd: 0.5366   
+YP = A: 1.213 Cd: 0.9702    
+YN = A: 1.213 Cd: 0.9702    
+ZP = A: 2.432 Cd: 0.5248    
+ZN = A: 2.432 Cd: 0.5248    
 
