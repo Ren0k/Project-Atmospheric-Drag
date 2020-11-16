@@ -53,7 +53,24 @@ A quick overview of things you need to know:
 - Create a copy of your ship's .craft file (found in KSP\saves\savename\ships) in KSP\Ships\Script\dragProfile\DATA\Vessels.  
 Note: do this at the last possible moment, as any time you save your vessel in the VAB, new part ID's are created and a new copy has to be put in the \Vessels folder.
 
-## Using
+## Use
+
+There are 2 main scripts to use, found in the dragProfile root folder. 'createProfile.ks' and 'useProfile.ks'.  
+You start by running the 'createProfile.ks' script. To do this simply create a script in the root \Script folder and enter runpath("dragProfile/createProfile.ks").
+This will open the user interface.  If you do not want to use the user interface further reading is required in the more advanced sections.  
+  
+The menu that loads will have multiple options. Whatever you select, the script starts by checking if the partdatabase.cfg file has been analyzed yet, and if not it will analyze the file and put relevant information in a partdatabase.json file, so you do not have to do this scan everytime.  
+I will give a quick overview of the options you have:  
+- Configure  
+This allows you to manually specify your vessel's configuration of parts and flight orientation.  
+- Load Partlist  
+You can save an analyzed partlist for re-use at a later section, and load it here so you can skip the part analysis 
+- Rescan Partdatabase  
+If the partdatabase.cfg file has changed if you for example have added a few custom parts, put a new copy of your partdatabase file in the correct folder and rescan it
+- Analyze Now  
+This will let you skip the manual configuration section, and the script will 'Scan' your vessel as it currently is and continue as if you will fly retrograde
+- IPU Selector  
+Depending on the size of your vessel, it might take a long time to analyze your vessel and create a profile. To lower the time required you can increase the IPU value.  
 
 
 
