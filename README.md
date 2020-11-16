@@ -255,7 +255,23 @@ Lets consider the following situation.
 
 ### Drag Cube Example 1
 
-Note the above image.  
-A C7 Aerospace Division - Mk1 Liquid Fuel Fuselage is falling directly down to Kerbin in a prograde orientation. How do we determine the drag on this part?  
+See the above image.  
+A **C7 Aerospace Division - Mk1 Liquid Fuel Fuselage** is falling directly down to Kerbin in a mostly prograde orientation. How do we determine the drag on this part?  
+
+Lets start by getting the drag cube values in the PartDatabase.cfg file, this is what I found:  
+
+> cube = Default, 2.432,0.7714,0.7222, 2.432,0.7714,0.7222, 1.213,0.9716,0.1341, 1.213,0.9716,0.1341, 2.432,0.7688,0.7222, 2.432,0.7688,0.7222, 0,0,0, 1.25,1.938,1.25  
+
+There are a total of 8 sections of 3 values, seperated by a comma. The first 6 apply to use and are in order XP/XN/YP/YN/ZP/ZN.  
+We use the first 2 values per section which are A and 'initial Cd'.  
+This gives us the following:  
+XP = A: 2.432 Cd: 0.7714  
+XN = A: 2.432 Cd: 0.7714  
+YP = A: 1.213 Cd: 0.9716  
+YN = A: 1.213 Cd: 0.9716  
+ZP = A: 2.432 Cd: 0.7688  
+ZN = A: 2.432 Cd: 0.7688  
+
+
 
 
