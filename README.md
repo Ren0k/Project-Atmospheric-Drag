@@ -251,7 +251,7 @@ Every surface can have either 1 or 2 different types of drag applied to it, eith
 In my opinion, the best way to further explain the concept is by using actual situations whilst in KSP.  
 Lets consider the following situation.  
 
-### Drag Cube Example 1
+## Drag Cube Example 1
 
 ![Example 1](https://github.com/Ren0k/Project-Atmospheric-Drag/blob/main/Images/Example%201.jpg)  
 
