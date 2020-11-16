@@ -338,7 +338,7 @@ It is falling directly down, facing the relative airflow. In our example it only
 
 Now the tail or back section of the fuel tank. It is directly facing away from the relative airflow, hence it only experiences Tail Drag.  
 
-The 4 surfaces section only experience Surface Drag.  
+The 4 side section only experience Surface Drag.  
 
 There are different curves/modifiers for tip/surface/tail drag, based on mach number. They can be found in the top of they key value sections of the physics file.  
 Lets work out the tip modifier first:
