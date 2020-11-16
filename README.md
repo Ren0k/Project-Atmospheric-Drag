@@ -182,7 +182,7 @@ The main 'gotcha' is the value of (Cd x A) or CdA, which is very dynamic.
 
 Before we dive in, here a full overview of the 'types' of drag, modifiers and influencing factors:  
 
-####**Drag Cubes**  
+#### **Drag Cubes**  
 - 6 Dragcube Surfaces per Body Part  
 - Dragcube Tip Modifier  
 - Dragcube Surface Modifier  
@@ -198,7 +198,7 @@ Before we dive in, here a full overview of the 'types' of drag, modifiers and in
 - Part Exclusion (Cargobays/fairings etc)
 - Global Dragcube Multiplier
 - Global Overall Drag Multiplier  
-####**Lifting Surfaces**  
+#### **Lifting Surfaces**  
 - AoA Based Lift Coefficient
 - Mach Based Lift Coefficient Modifier
 - AoA Based Drag Coefficient
@@ -207,13 +207,13 @@ Before we dive in, here a full overview of the 'types' of drag, modifiers and in
 - Induced Drag (Anti-Velocity Vector Horizontal Lift Component)
 - Global Lift Multiplier
 - Global Lift Drag Multiplier  
-####**Body/Capsule Lift**  
+#### **Body/Capsule Lift**  
 - AoA Based Body Lift Coefficient 
 - Mach Based Body Lift Coefficient Modifier
 - Deflection Lift Coefficient (Main Area Value)
 - Induced Drag (Anti-Velocity Vector Horizontal Lift Component)
 - Global Lift Multiplier  
-####**Speedbrake**  
+#### **Speedbrake**  
 - AoA Based Drag Coefficient
 - Mach Based Drag Coefficient Modifier
 - Deflection Lift Coefficient (Main Area Value)
