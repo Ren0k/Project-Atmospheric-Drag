@@ -409,7 +409,7 @@ The final calculation now becomes:
 > ((2.432 * 0.0044) + (2.432 * 0.0044) + (1.213 * 0.4430) + (1.213 * 0.4430) + (2.432 * 0.0043) + (2.432 * 0.0043)) * ((Rho * V^2) / 2) * 0.8.  
 
 It returns 13910 Newtons of Drag, an error of about 1.8% with the actual AeroGUI value.  
-This can be explained by my own rounding errors or aeroGUI rounding errors (AeroGUI shows rounded values while actual values can be up to 14 decimal places).   
+This can be explained by my own rounding errors or aeroGUI rounding errors (AeroGUI shows rounded values while actual values can have more than 10 decimal places).   
 
 #### 8) Conclusion  
 This is the method that KSP uses to calculate drag cube drag.  
