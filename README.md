@@ -166,3 +166,5 @@ This concludes a high-level overview, the next section will go in depth into how
 
 # KSP Drag
 
+This chapter explores the mechanics of kerbal aerodynamics.  
+Due to the complexity of this system, and to get the best intuitive feeling about the inner workings, I decided to explain this by using actual situations whilst in KSP.  
