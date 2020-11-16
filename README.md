@@ -21,6 +21,8 @@ This manual is split up in sections.
 The purpose of the 1st main section is to quickly get you started, without providing in depth details of the underlying mechanics.  
 The 2nd main section will dive deeply into the mechanics of KSP, how drag is determined from start to finish, and goes into the workings of the different scripts.  
 
+# Section 1
+
 ## Why was this tool created?
 
 - It paves the way for accurate impact position calculations on planets with an atmosphere.
@@ -160,4 +162,7 @@ For other planets kOS will provide an estimated value, and will reduce the accur
 I recommend exploring the useProfile.ks script and investigate what data is used.  
 This concludes a high-level overview, the next section will go in depth into how it all works.  
 
+# Section 2
+
+# KSP Drag
 
