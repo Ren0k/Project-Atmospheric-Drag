@@ -349,11 +349,36 @@ This value is multiplied by the YP (Currently facing the airflow) Cd, returning:
 YP = A: 1.213 Cd: 1.014  
 
 ##### Surface/Skin Modifier
-From our spline curve we get a value of 0.02. 
-This value is multiplied by the XP/XN/ZP/ZN Cd, returning:  
-XP = A: 2.432 Cd: 0.0101 
-XN = A: 2.432 Cd: 0.0101 
-ZP = A: 2.432 Cd: 0.0099 
-ZN = A: 2.432 Cd: 0.0099  
+From our spline curve we get a value of 0.02.  
+This value is multiplied by the XP/XN/ZP/ZN Cd, returning:   
+XP = A: 2.432 Cd: 0.0101  
+XN = A: 2.432 Cd: 0.0101  
+ZP = A: 2.432 Cd: 0.0099  
+ZN = A: 2.432 Cd: 0.0099   
 
-##### Tail Modifier
+##### Tail Modifier  
+From our spline curve we get a value of 1, so the YN Cs stays the same. 
+
+##### Results
+XP = A: 2.432 Cd: 0.0101  
+XN = A: 2.432 Cd: 0.0101  
+YP = A: 1.213 Cd: 1.014  
+YN = A: 1.213 Cd: 0.9677  
+ZP = A: 2.432 Cd: 0.0099  
+ZN = A: 2.432 Cd: 0.0099   
+
+#### 4) Overall Mach Transformation
+The next transformation is applied to all surfaces, and depends on mach number.  
+Its found in the physics file as:  
+> DRAG_MULTIPLIER // Overall multiplier to drag based on mach  
+
+We repeated the process, get the interpolated value, and apply it to all 6 Cd Values.  
+The interpolated value is 0.5, applying to all drag cubes:  
+XP = A: 2.432 Cd: 0.00505  
+XN = A: 2.432 Cd: 0.00505  
+YP = A: 1.213 Cd: 0.507  
+YN = A: 1.213 Cd: 0.48385   
+ZP = A: 2.432 Cd: 0.00495  
+ZN = A: 2.432 Cd: 0.00495   
+
+#### 5) 
