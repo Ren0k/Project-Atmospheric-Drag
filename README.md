@@ -149,7 +149,7 @@ An example function is provided that you can use, and modify, to your liking.
 Run it with runpath("dragProfile/useProfile.ks").  
 As mentioned earlier, the main limitation to using this is the accuracy of the mach number you provide. In addition, the accuracy of the provided SAT and Density used in Dynamic Pressure calculation is also a big factor.  
 I have provided tools that allow you to quite accurately determine these values for Kerbin.  
-Further information on this topic can be found ![here](https://github.com/Ren0k/Kerbin-Temperature-Model).
+Further information on this topic can be found [here](https://github.com/Ren0k/Kerbin-Temperature-Model).
 For other planets kOS will provide an estimated value, and will reduce the accuracy of the calculation.  
 
 I recommend exploring the useProfile.ks script and investigate what data is used.  
