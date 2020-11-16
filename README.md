@@ -134,6 +134,15 @@ This will end the createProfile script.
 
 ## useProfile
 
+At this stage you have created a 'Drag Profile' for your selected vessel and configuration.  
+You might wonder what this actually is, and how to use it.  
+
+### What is a drag profile?  
+It turns out that the most important property that determines Drag Coefficients (CD) and Lift Coefficients (CL) is mach number.  
+If you know what Cd/Cl value corresponds to what mach number, only a few additional steps are required for you to acquire the drag force on your vessel.  
+A drag profile is a collection of calculated Cd values for different mach numbers, with a specified interval.  
+In kOS language, it is a lexicon of lists.  Every list, contains 2 lists: One for dragcube Cd values, one for 'other' Cd values.  
+The 2 seperate lists are required as the calculation applied to them is different. Drag cube drag calculation requires a reynolds number modifier, while 'other' cd values skip this modifier.  
 
 
 
