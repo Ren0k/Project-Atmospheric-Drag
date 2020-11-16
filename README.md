@@ -67,6 +67,8 @@ This will open the user interface.  If you do not want to use the user interface
 The menu that loads will have multiple options. Whatever you select, the script starts by checking if the partdatabase.cfg file has been analyzed yet, and if not it will analyze the file and put relevant information in a partdatabase.json file, so you do not have to do this scan everytime.  
 I will give a quick overview of the options you have:  
 
+## createProfile
+
 ### Menu 1
 - Configure  
 This allows you to manually specify your vessel's configuration of parts and flight orientation.  
@@ -107,7 +109,7 @@ At what mach number should the profile start. This indicates the lowest mach num
 At what mach number should the profile end. It indicates the highest mach number at which you can use this profile.  
 Note that the highest value you will find in KSP is mach 25; higher mach numbers will have constant Cd/Cl values.  
 - Delta-T  
-The intervals for which you calculate the Cd value. The default selected value of 0.01 works well. Lowering this value will increase accuracy, but also increase calculation time.  
+The intervals for which you calculate the Cd value. The default selected value of 0.01 works well. Lowering this value will increase accuracy but also increase calculation time.  
 I recommend using either 0.0001 / 0.001 / 0.01 / 0.1.  
 - Review Part List  
 Same as in Menu 2
@@ -115,6 +117,20 @@ Same as in Menu 2
 Same as in Menu 2  
 - Create  
 Starts creating this profile, calculating the Cd/Cl values for every mach interval until completed.  
+
+Once you have selected 'Create', a loading menu opens that will show you the progress until completed.  
+Once the profile has completed building, a new menu opens.  
+
+### Menu 4
+- Review Profile  
+A huge list of the calculated values, for your review.  
+- Save As  
+Save the profile under the selected filename. You can name it anything you like, but the default is your vessel's name.  
+It will be saved in the dragProfile\DATA\Profiles folder.  
+- Finish  
+This will end the createProfile script.  
+
+## useProfile
 
 
 
