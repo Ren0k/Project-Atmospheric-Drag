@@ -383,4 +383,16 @@ ZN = A: 2.432 Cd: 0.00495
 
 #### 5) Reynolds Number Transformation  
 Or more a Pseudo-Reynolds as mentioned in the physics file. This is simply a value calculated by (density x velocity) with density as kg/m3 and velocity in m/s.  
+The reynolds number in our example is 163.69 (0.8606 x 190.2).  
+
+The relevant spline curves are found again in the physics file:  
+> DRAG_PSEUDOREYNOLDS // Converts a pseudo-Reynolds number (density * velocity) into a multiplier to drag coefficient  
+
+The interpolated value we get back is 0.8739, and after transforming:  
+XP = A: 2.432 Cd: 0.0044   
+XN = A: 2.432 Cd: 0.0044   
+YP = A: 1.213 Cd: 0.4430   
+YN = A: 1.213 Cd: 0.4228    
+ZP = A: 2.432 Cd: 0.0043   
+ZN = A: 2.432 Cd: 0.0043     
 
