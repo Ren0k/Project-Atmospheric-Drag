@@ -411,3 +411,10 @@ The final calculation now becomes:
 It returns 13910 Newtons of Drag, an error of about 1.8% with the actual AeroGUI value.  
 This can be explained by my own rounding errors or aeroGUI rounding errors (AeroGUI shows rounded values while actual values can be up to 14 decimal places).   
 
+#### 8) Conclusion  
+This is the method that KSP uses to calculate drag cube drag.  
+You might have realized that since only the 2nd (Mach) transformation is done to The Power Of, that all transformations after that are commutative, as long as you keep a constant orientation. So instead of calculating values for every drag cube, we can already apply and add drag cubes together after the surface modifiers are applied.  
+This significantly speeds up the process, and is used in this script.  
+
+## Drag Cube Example 2
+
