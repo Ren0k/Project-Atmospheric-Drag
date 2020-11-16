@@ -298,6 +298,7 @@ We will transform every Cd value above, according to these splines found in the 
 >}  
   
 Example: For the XP Value (Cd = 0.7714), this falls between 0.75 and 0.8, and a spline interpolation is done between the 2 key value pairs.  
+
 With the included function, we can quickly determine the new 'realistic' Cd values:  
 XP = A: 2.432 Cd: 0.5366
 XN = A: 2.432 Cd: 0.5366 
