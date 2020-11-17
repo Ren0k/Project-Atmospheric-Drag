@@ -755,3 +755,13 @@ These parts do not make use of wing profile drag, but lift and induced drag are 
 This can also be determined by the property 'useInternalDragModel' which is false at Mk2 spaceplane parts.  
 
 Body lift is however important, the 'deflectionLiftCoeff' is usually quite a high value and induced drag can be significant.  
+You now understand why in the image above the fuselage parts do not have light blue arrows attached.  
+
+## Special Parts  
+
+I am going to put a few other categories of parts under this section. These are the remaining special cases, I'm going to cover them quickly:  
+- Airbrakes  
+- Capsule/Heatshield  
+
+### Airbrakes  
+
