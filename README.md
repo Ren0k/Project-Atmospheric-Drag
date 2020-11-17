@@ -277,7 +277,7 @@ Note how the surface sides (XP/XN/ZP/ZN) are pretty much the same as the shape o
 #### Splines
 The Cd values we obtained are not really Cd Values, you might have noticed that they are very high.  
 Consider them 'Intial Cd Values', and before they are applied to the actual part an initial transformation to the Cd values is done to make them more 'realistic'.  
-The process of those transformations is done a lot. KSP (Unity) uses float curves in the form of cubic hermite splines, to get values from complex curves.  
+The process of those transformations is done a lot. KSP (Unity) uses float curves in the form of cubic hermite splines, from which values are interpolated.  
 In the physics.cfg file in the root KSP folder, about halfway down, you can find a collection of Key Value pairs. Those Key Value pairs determine the shape of the curves.  
 Between every key value, a spline (curve) is created. To read values between key value pairs, a [Hermite Interpolator](https://en.wikibooks.org/wiki/Cg_Programming/Unity/Hermite_Curves) is used.  
 A hermite interpolator function is used in the script. We will further explore this later. For now lets apply the first transformation to the values above.  
@@ -720,8 +720,6 @@ This will return a value of Lift in Kilonewton, but the rest of the equations us
 
 > L (N) = ((Rho * V^2) / 2) * **deflectionLiftCoeff** * (CL_aoa * CL_mach) * 36  
 
-
-
 ### Wing Profile Drag  
 
 From the same section in the physics file we find 2 sets of key value pairs. They are responsible for 'wing profile drag'.  
@@ -759,12 +757,12 @@ These parts do not make use of wing profile drag, but lift and induced drag are 
 This can also be determined by the property 'useInternalDragModel' which is false at Mk2 spaceplane parts.  
 
 Body lift is however important, the 'deflectionLiftCoeff' is usually quite a high value and induced drag can be significant.  
-Body lift also uses the **liftMultiplier**.
+Body lift also uses the **liftMultiplier**.  
 You now understand why in the image above the fuselage parts do not have light blue arrows attached.  
 
 ## Other Parts
 
-I am going to the last 2 sets of parts under this section. These are the remaining special cases, I'm going to cover them quickly:  
+I am going to put the last 2 sets of parts under this section. These are the remaining special cases, I'm going to cover them quickly:  
 - Airbrakes  
 - Capsule/Heatshield  
 
@@ -789,6 +787,25 @@ They have 2 specific sets of curves in the physics file:
 The mach multiplier is a constant of 0.0625.  
 If you remove drag cube drag by occupying nodes, no drag but induced drag remains. Definitely not exploitable.  
 
+#  Cubic Hermite Interpolator 
 
+The splines used for the Cd/Cl transformations are of of the [cubic hermite type](https://en.wikipedia.org/wiki/Cubic_Hermite_spline).     
+
+[This](https://en.wikibooks.org/wiki/Cg_Programming/Unity/Hermite_Curves) is the structure that unity uses in the 'LineRenderer' class.  
+Since the splines already exist in the physics file, we need a cubic hermite interpolator to 'read' them.  
+A cubic hermite interpolator is created with the function:  
+
+![Hermite Interpolator](https://github.com/Ren0k/Kerbin-Temperature-Model/blob/master/Images/Hermite.jpg)   
+
+Or as used in kOS:  
+
+> (2 * t^3 - 3 * t^2 + 1) * y0 + (t^3 - 2 * t^2 + t) * m0 + (-2 * t^3 + 3 * t^2) * y1 + (t^3 - t^2) * m1  
+
+With:   
+t = position on curve  
+y0 = start value  
+y1 = end value  
+m0 = start tangent  
+m1 = end tangent  
 
 
