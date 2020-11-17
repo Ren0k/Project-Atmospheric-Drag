@@ -463,6 +463,7 @@ Mk0 YNA = Mk0 YNA - Mk1 YPA = 0.3033-1.213 = 0 (Cannot be negative)
 
 The Cd values also change, they follow this transformation:  
 > ((rootCdValue x rootAValue)-attachedAValue)/newRootAValue  
+
 Mk1 YPCd = ((Mk1 YPCd * Mk1 YPA) - Mk0 YNA) / (Mk1 YPA - Mk0 YNA)  
 Mk1 YPCd = ((0.9716  * 1.213) - 0.3033) / (1.213 - 0.3033)  
 Mk1 YPCd = ((1.1785508) - 0.3033) / (0.9097)  
