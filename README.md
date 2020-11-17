@@ -248,7 +248,7 @@ When it comes to drag cubes, there are 3 'types' of drag:
 
 Every surface can have either 1 or 2 different types of drag applied to it, either a combination of Tip/Surface or Tail/Surface.  
 
-In my opinion, the best way to further explain the concept is by using actual situations whilst in KSP.  
+In my opinion, the best way to further explain the concept is by using actual situations while in KSP.  
 Lets consider the following situation.  
 
 ## Drag Cube Example 1
@@ -830,4 +830,25 @@ The position on the curve 't' is a value between key0[0] and key1[0], this is co
 The tangents have to be represented to scale, and a 'normfactor' is used defined as:  
 > normFactor = (x1-x0)  
 
+#### Example  
 
+We want to get the Initial Drag Cube Cd of 0.55 corrected using the spline curve found in the physics file.  
+These are the 2 key values that we need:  
+
+> key = 0.4 0.15 0.3963967 0.3963967  
+> key = 0.7 0.35 0.9066986 0.9066986  
+
+value = 0.55  
+x0 = 0.4  
+x1 = 0.7  
+y0 = 0.15  
+y1 = 0.35  
+m0 = 0.3963967  
+m1 = 0.9066986  
+normFactor = (x1 - x0) = (0.7 - 0.4) = 0.3  
+t = (value - x0) / normFactor = (0.55 - 0.4) / (0.3) = 0.15/0.3 = 0.5
+
+Cd = (2 * t^3 - 3 * t^2 + 1) * y0 + (t^3 - 2 * t^2 + t) * m0 + (-2 * t^3 + 3 * t^2) * y1 + (t^3 - t^2) * m1  
+Cd = (2 * 0.5^3 - 3 * 0.5^2 + 1) * 0.15 + (0.5^3 - 2 * 0.5^2 + 0.5) * 0.3963967 + (-2 * 0.5^3 + 3 * 0.5^2) * 0.35 + (0.5^3 - 0.5^2) * 0.9066986  
+Cd = (0.5) * 0.15 + (0.125) * 0.3963967 + (0.5) * 0.35 + (-0.125) * 0.9066986  
+Cd = 0.075 + 0.0495495875 + 0.175 - 0.113337325 = **0.1862122625**  
