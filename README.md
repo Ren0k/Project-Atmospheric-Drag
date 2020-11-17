@@ -684,8 +684,39 @@ You will find that wings have a 'dragModelType' property of 'none', i.e. they do
 All wings have a module called 'ModuleLiftingSurface'. This module defines the properties of the wings.  
 We are actually only interested in a single property, called 'deflectionLiftCoeff'.  
 
-deflectionLiftCoeff defines the Area of the wing, but also not really. It is just a modifier that we use in the place of 'A' in the drag equation.  
+**deflectionLiftCoeff** defines the Area of the wing, but also not really. It is just a modifier that we use in the place of 'A' in the drag equation.  
+As it stands there is no way to calculate or acquire this value from kOS. For simple wings it turns out that it is simply its mass multiplied by 10, but this is not the case for all wings.  
+To solve this problem I have included an extra database containing all stock and dlc lifting surface parts with its values.  
 
+**Wing Lift**  
+Lets start with lift.  
+Why is this important if we are intersted in drag? Well, because induced drag as previously mentioned is a direct result of lift generated.  
+
+![Lift](https://www.grc.nasa.gov/www/k-12/airplane/Images/lifteq.gif)  
+
+The image above shows the lift equation. Similar to the drag equation, but instead of a coefficient of drag (Cd) a coefficient of lift (Cl) is used.  
+Again, this is how KSP does it. Luckily the method is a lot simpler than with drag cubes.  
+We have all information we need, including the 'A' value (deflectionLiftCoeff), except the Cl value.  
+To acquire Cl, we again follow a series of transformations described below.  
+
+#### 1) Creating a CL value based on Angle of Attack (AoA)  
+Again from the physics.cfg file we find key values described as:  
+
+>lift // Converts Sin(AoA) into a lift coefficient (Cl) then multiplied by the below mach multiplier, dynamic pressure, the wing area, and the global lift multiplier  
+
+Exactly the same spline curve structure as with drag cubes, but with AoA as an input.  
+
+#### 2) Mach based CL modifier  
+From the physics file:  
+
+>liftMach // Converts mach number into a multiplier to Cl  
+
+No further explantation required, the value of this is multiplied by Cl to get a final value
+
+#### Results
+And that's it. The full equation:  
+
+> L = ((Rho * V^2) / 2) * **deflectionLiftCoeff** * (CLaoa * CLmach)  
 
 
 
