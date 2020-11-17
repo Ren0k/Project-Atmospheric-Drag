@@ -659,3 +659,8 @@ My guess is that KSP rounds up or down some values, perhaps the 'Drag Vector' as
 This concludes drag cubes, next we will be looking at other 'types' of drag.  
 
 # Lifting Surface Drag  
+
+![Lift Drag](https://github.com/Ren0k/Project-Atmospheric-Drag/blob/main/Images/Demo%20Image%203.jpg)  
+
+The image above demonstrates quite a few 'effect' that we are going to cover. It is a bit chaotic, lets make some sense of all those arrows.  
+
