@@ -788,6 +788,14 @@ They have 2 specific sets of curves in the physics file:
 The mach multiplier is a constant of 0.0625.  
 If you remove drag cube drag by occupying nodes, no drag but induced drag remains. Definitely not exploitable.  
 
+# Section 3
+
+## Introduction  
+
+Now that we have a proper understanding of how things work in KSP, lets give a high level overview of the different scripts.  
+I am not going to explain every part in detail, instead there are notes added to every script that will help you understand.  
+Some sections require further explaining, starting with splines.  
+
 #  Cubic Hermite Interpolator 
 
 The splines used for the Cd/Cl transformations are of of the [cubic hermite type](https://en.wikipedia.org/wiki/Cubic_Hermite_spline).     
