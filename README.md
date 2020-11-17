@@ -439,8 +439,20 @@ ZN = A: 2.432 Cd: 0.7688
 
 **Mk0 Liquid Fuel Fuselage**  
 XP = A: 0.623 Cd: 0.7672  
-XN = A: 0.623 Cd: 0.7672
+XN = A: 0.623 Cd: 0.7672  
 YP = A: 0.3033 Cd: 0.9425  
 YN = A: 0.3033 Cd: 0.9425  
 ZP = A: 0.623 Cd: 0.7672  
 ZN = A: 0.623 Cd: 0.7672  
+
+#### 2) Occupied Node Corrections
+
+The Mk0 fuel tank is 'blocking' a section of the YP side of the Mk1 fuel tank. You can imagine that this will change the drag on both the Mk1 YP and Mk0 YN sides.  
+This is what KSP does by applying corrections to occupied nodes. The only way to know if a node is occupied is by looking at the .Craft file, thats why the script needs it.  
+
+##### So how do these corrections work?  
+Whenever a node is occupied by another node, the exact same transformation is done every single time; irrespective of orientation. This means that once a node is occupied, you can do whatever you want with the part and the CdA values stay the same. This can be (mis)used to your advantage...  
+
+Lets look at our example. The front (YP) side of the Mk1 tank is occupied by the back (YN) side of the Mk0 tank:  
+Mk1 YP = A: 1.213 Cd: 0.9716  
+Mk0 YN = A: 0.3033 Cd: 0.9425   
