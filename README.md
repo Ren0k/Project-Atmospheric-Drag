@@ -792,11 +792,10 @@ If you remove drag cube drag by occupying nodes, no drag but induced drag remain
 
 ## Introduction  
 
-Now that we have a proper understanding of how things work in KSP, lets give a high level overview of the different scripts.  
+Now that we have a proper understanding of how things work in KSP, lets go over a few scripts or structures that require further explanation.    
 I am not going to explain every part in detail, instead there are notes added to every script that will help you understand.  
-Some sections require further explaining, starting with splines.  
 
-#  Cubic Hermite Interpolator 
+##  Cubic Hermite Interpolator 
 
 The splines used for the Cd/Cl transformations are of of the [cubic hermite type](https://en.wikipedia.org/wiki/Cubic_Hermite_spline).     
 
@@ -817,7 +816,7 @@ y1 = end value
 m0 = start tangent  
 m1 = end tangent  
 
-#### Interaction with key values
+### Interaction with key values
 
 Key values in this model are represented in a list.  
 To create a curve, you need 2 keys.  
@@ -839,7 +838,7 @@ The position on the curve 't' is a value between key0[0] and key1[0], this is co
 The tangents have to be represented to scale, and a 'normfactor' is used defined as:  
 > normFactor = (x1-x0)  
 
-#### Example  
+### Example  
 
 We want to get the Initial Drag Cube Cd of 0.55 corrected using the spline curve found in the physics file.  
 These are the 2 key values that we need:  
@@ -862,7 +861,7 @@ Cd = (2 * 0.5^3 - 3 * 0.5^2 + 1) * 0.15 + (0.5^3 - 2 * 0.5^2 + 0.5) * 0.3963967 
 Cd = (0.5) * 0.15 + (0.125) * 0.3963967 + (0.5) * 0.35 + (-0.125) * 0.9066986  
 Cd = 0.075 + 0.0495495875 + 0.175 - 0.113337325 = **0.1862122625**  
 
-# Additional Part Database  
+## Additional Part Database  
 
 Like we have seen in the previous sections, some information is not obtainable from kOS, the partdatabase or the craft file.  
 For these parts a small database is added from which the relevant script can get its values.  
@@ -877,3 +876,23 @@ List of parts that are of the special type 'capsulebottom' (heat shields/capsule
 Some parts like landing gears and parachutes have an additional drag modifier defining a specific state  
 - **partVariants**  
 Some parts like engines have different variants that correspond to different drag cubes  
+
+## Bypassing the User Interface  
+
+Look at the file called createProfile.ks.  
+The function called 'example_CreateProfile' is an example of how to skip the user interface, just input values and create a drag profile.  
+The input to the 'executeAnalysis' function has to be a lexicon of defined parameters.  
+
+## How to read a drag profile?  
+
+A dragprofile has a machStart, machEnd and dT property.  
+For every mach number, a lexicon key of (mach/dT) is created.  
+So going mach 1.5, dT being 0.01, a key of 1.5/0.01 = 150 is used.  
+The same applies to the machStart and machEnd key.  
+The reason for this is to prevent floating point (rounding) errors in the keys.  
+
+In addition, 2 tangent vectors are computed so a 'Catmull-Rom Spline' can be created between every mach key.  
+This allows you to use the same hermite interpolator to get the most exact values between mach keys.  
+Of course you can use a linear method (example provided), or simple round your mach number to the nearest key.  
+
+The function 'useProfile' demonstrates a few of these concepts and it will make more sense looking through this file.  
