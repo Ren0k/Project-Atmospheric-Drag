@@ -456,3 +456,10 @@ Whenever a node is occupied by another node, the exact same transformation is do
 Lets look at our example. The front (YP) side of the Mk1 tank is occupied by the back (YN) side of the Mk0 tank:  
 Mk1 YP = A: 1.213 Cd: 0.9716  
 Mk0 YN = A: 0.3033 Cd: 0.9425   
+
+The area of the occupied node changes by subtracting the area of the attached node, lets do this.  
+Mk1 YPA = Mk1 YPA - Mk0 YNA = 1.213-0.3033 = 0.9097  
+Mk0 YNA = Mk0 YNA - Mk1 YPA = 0.3033-1.213 = 0 (Cannot be negative)  
+
+The Cd values also change, they follow this transformation:  
+> (rootCdValue x rootAValue)-attachedAValue)/newRootAValue  
