@@ -520,3 +520,38 @@ ZP = A: 0.623 Cd: 0.4513463801
 ZN = A: 0.623 Cd: 0.4513463801      
 
 #### 5) Surface Transformation  
+Unlike in example 1, our craft is falling down under an angle to the relative airflow. This complicates things.  
+
+##### Front
+Imagine the front section (YP) of the smaller Mk0 fuel tank.  
+Of course it faces mostly in the relative airflow (Tip Direction), but since it is angled it will also experience side/skin drag.  
+Essentially what happens is that the YP dragcube is split up in 2 sections. The Tip section, and the Side section.  
+Per section, the Cd value does not change, but the A value does.  
+So how big are those sections?  
+
+The tip section is Cos(AoA) * A = 0.9376343655 * 0.3033 = 0.2843845031  
+The side section is Sin(AoA) * A = 0.3476230668 * 0.3033 = 0.1054340762  
+Result:  
+YPtip = A: 0.2843845031 Cd: 0.9253309388  
+YPside = A: 0.1054340762 Cd: 0.9253309388  
+
+Instead of this method, the script will calculate this with the Vector Dot Product of the part:facing:forevector with the ship:facing:forevector.  
+
+##### Side
+So far we have called the XP/XN/YP/YN side sections, but in reality they are Right, Left, Top, Bottom Sections.  
+It is now important to consider them as such, since orientation will not have the same effect on each side.  
+Lets think about the top section (ZP). From a port side perspective, since the AoA is about 20 degrees up, the top section is tilted clockwise.  
+The top section, it being the top section, is already facing directly up from the vessels perspective, so it is tilting backwards.  
+If it is tilting backwards, that means that the ZP side now, in addition to side drag, also experiences tail drag.  
+Same method as before:  
+
+The side section is Cos(AoA) * A = 0.9376343655 * 0.623 = 0.5841462097  
+The tail section is Sin(AoA) * A = 0.3476230668 * 0.623 = 0.2165691706  
+Result:  
+ZPside = A: 0.5841462097 Cd: 0.4513463801  
+ZPtail = A: 0.2165691706 Cd: 0.4513463801  
+
+Now lets think about the right (XP) and left (XN) sides. Their orientation in the airstream did not change, they only rotated CW/CCW.  
+Their values do not change and they stay the XP/XN values they were, as they do not experience any tip/tail drag.  
+
+
