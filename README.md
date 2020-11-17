@@ -662,5 +662,12 @@ This concludes drag cubes, next we will be looking at other 'types' of drag.
 
 ![Lift Drag](https://github.com/Ren0k/Project-Atmospheric-Drag/blob/main/Images/Demo%20Image%203.jpg)  
 
-The image above demonstrates quite a few 'effect' that we are going to cover. It is a bit chaotic, lets make some sense of all those arrows.  
+The image above demonstrates quite a few 'effect' that we are going to cover. It is a bit chaotic, lets make some sense of all those arrows. 
+
+The red arrows are all drag vectors. Drag vectors always apply in the opposite direction of motion.  
+
+The light blue arrows are 'sideways' drag vectors. Every part that uses drag cubes will not only have drag applied in the opposite direction of motion, but also directly perpendicular to the direction of motion depending on the parts orientation into the airstream. This results in a kind of Lift as a result of drag, but its not the same type of lift as we discuss next.  
+In this image you will see only a few light blue arrows, those are the only parts that solely use drag cubes. The other parts are 'special parts'.  
+
+The dark blue arrows are lift vectors. 
 
