@@ -716,7 +716,31 @@ No further explantation required, the value of this is multiplied by Cl to get a
 #### Results
 And that's it. The full equation:  
 
-> L = ((Rho * V^2) / 2) * **deflectionLiftCoeff** * (CLaoa * CLmach)  
+> L = ((Rho * V^2) / 2) * **deflectionLiftCoeff** * (CL_aoa * CL_mach)  
+
+Before looking at induced drag lets look at wing profile drag.  
+
+## Wing Profile Drag  
+
+From the same section in the physics file we find 2 sets of key value pairs. They are responsible for 'wing profile drag'.  
+Perhaps not the official name, but a name that stuck with me.  
+You can consider wing profile drag as drag that is always there, and is also influenced by AoA and mach but in a different way than drag cubes.  
+
+Again 2 transformations are done:  
+
+#### 1) Creating a CD value based on Angle of Attack (AoA)  
+
+>drag // Converts Sin(AoA) into a drag coefficient (Cd) then multiplied by the below mach multiplier, dynamic pressure, the wing area, and the global lifting surface drag multiplier  
+
+#### 2) Mach based CD modifier  
+
+>dragMach // Converts mach number into a multiplier to Cd  
+
+#### Results  
+
+> Wingdrag = ((Rho * V^2) / 2) * **deflectionLiftCoeff** * (CD_aoa * CD_mach)  
+
+## Lift Induced Drag  
 
 
 
