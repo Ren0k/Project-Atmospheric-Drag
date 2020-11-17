@@ -852,3 +852,19 @@ Cd = (2 * t^3 - 3 * t^2 + 1) * y0 + (t^3 - 2 * t^2 + t) * m0 + (-2 * t^3 + 3 * t
 Cd = (2 * 0.5^3 - 3 * 0.5^2 + 1) * 0.15 + (0.5^3 - 2 * 0.5^2 + 0.5) * 0.3963967 + (-2 * 0.5^3 + 3 * 0.5^2) * 0.35 + (0.5^3 - 0.5^2) * 0.9066986  
 Cd = (0.5) * 0.15 + (0.125) * 0.3963967 + (0.5) * 0.35 + (-0.125) * 0.9066986  
 Cd = 0.075 + 0.0495495875 + 0.175 - 0.113337325 = **0.1862122625**  
+
+# Additional Part Database  
+
+Like we have seen in the previous sections, some information is not obtainable from kOS, the partdatabase or the craft file.  
+For these parts a small database is added from which the relevant script can get its values.  
+If you want to use modded parts with special properties, they will have to be added here.  
+This is a list of properties added to the database:  
+
+- **deflectionLiftCoeff**  
+For wings/capsule/heatshields/fairings etc  
+- **capsuleBottomList**  
+List of parts that are of the special type 'capsulebottom' (heat shields/capsules etc)  
+- **dragModifierList**  
+Some parts like landing gears and parachutes have an additional drag modifier defining a specific state  
+- **partVariants**  
+Some parts like engines have different variants that correspond to different drag cubes  
