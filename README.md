@@ -664,10 +664,17 @@ This concludes drag cubes, next we will be looking at other 'types' of drag.
 
 The image above demonstrates quite a few 'effect' that we are going to cover. It is a bit chaotic, lets make some sense of all those arrows. 
 
-The red arrows are all drag vectors. Drag vectors always apply in the opposite direction of motion.  
+The **red arrows** are all drag vectors. Drag vectors always apply in the opposite direction of motion. Every part with drag will have drag vectors in the same direction.   
 
-The light blue arrows are 'sideways' drag vectors. Every part that uses drag cubes will not only have drag applied in the opposite direction of motion, but also directly perpendicular to the direction of motion depending on the parts orientation into the airstream. This results in a kind of Lift as a result of drag, but its not the same type of lift as we discuss next.  
+The **light blue arrows** are 'sideways' drag vectors. Every part that uses drag cubes will not only have drag applied in the opposite direction of motion, but also directly perpendicular to the direction of motion depending on the parts orientation into the airstream. This results in a kind of Lift as a result of drag, but its not the same type of lift as we discuss next.  
 In this image you will see only a few light blue arrows, those are the only parts that solely use drag cubes. The other parts are 'special parts'.  
 
-The dark blue arrows are lift vectors. 
+The **dark blue arrows** are lift vectors. Unlike lift as a result of drag, lift vectors do not apply perpendicular to the direction of motion.  
+The higher the AoA, the more the lift vector tilts back to the opposite direction of motion.  
+The result of this, is that there is a opposite velocity vector lift component, that adds to drag. For all intents and purposes I'm going to call this Induced Drag.  
+Real world induced drag is the result of a different mechanic, but the main idea is that Induced Drag is the result of lift and that is true in this situation.  
+
+The **yellow arrows** are lift vectors from control surfaces. They work mostly the same as the dark blue lift vectors, but can have more tilt since control surfaces rotate.  
+
+
 
