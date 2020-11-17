@@ -582,6 +582,35 @@ ZPtail = A: 0.2165691706 Cd: 0.4513463801
 ZNtip = A: 0.2165691706 Cd: 0.4513463801  
 ZNside = A: 0.5841462097 Cd: 0.4513463801  
 
+Now we will apply the tip/side/tail modifiers to each corresponding Cd value.  
+Tip Modifier: 1.15301958754785  
+Side Modifier: 0.02  
+Tail Modifier: 1  
+
+##### Results  
+**Mk1 Liquid Fuel Fuselage**  
+XP = A: 2.432 Cd: 0.009428472676  
+XN = A: 2.432 Cd: 0.009428472676  
+YPtip = A: 0.8529659823 Cd: 1.097263143  
+YPside = A: 0.3162327039 Cd: 0.01903286214  
+YNside = A: 0.42166678 Cd: 0.01928254492  
+YNtail = A: 1.137350485 Cd: 0.9641272461  
+ZPside = A: 2.280326777 Cd: 0.009178246828  
+ZPtail = A: 0.8454192985 Cd: 0.4589123414  
+ZNtip = A: 0.8454192985 Cd: 0.5291349186  
+ZNside = A: 2.280326777 Cd: 0.009178246828  
+
+**Mk0 Liquid Fuel Fuselage**  
+XP = A: 0.623 Cd: 0.009026927602  
+XN = A: 0.623 Cd: 0.009026927602  
+YPtip = A: 0.2843845031 Cd: 0.9253309388  
+YPside = A: 0.1054340762 Cd: 0.01850661878  
+YN = A: 0.0000 Cd: 0.0000  
+ZPside = A: 0.5841462097 Cd: 0.009026927602  
+ZPtail = A: 0.2165691706 Cd: 0.4513463801  
+ZNtip = A: 0.2165691706 Cd: 0.520411217  
+ZNside = A: 0.5841462097 Cd: 0.009026927602  
+
 #### 6) Overall Mach Transformation  
 Before moving on, lets try something different.  
 Instead of doing calculations now for every surface, we can make this process more efficient.  
@@ -595,3 +624,5 @@ Lets do this now:
 
 **Mk0 Liquid Fuel Fuselage**  
 (0.623 * 0.4513463801) + (0.623 * 0.4513463801) + (0.2843845031 * 0.9253309388) + (0.1054340762 * 0.9253309388) + (0.5841462097 * 0.4513463801) + (0.2165691706 * 0.4513463801) + (0.2165691706 * 0.4513463801) + (0.5841462097 * 0.4513463801) = **1.645888758**  
+
+Lets get the interpolated value from the overall mach transformation: 
