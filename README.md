@@ -409,7 +409,6 @@ The final calculation now becomes:
 > ((2.432 * 0.0044) + (2.432 * 0.0044) + (1.213 * 0.4430) + (1.213 * 0.4430) + (2.432 * 0.0043) + (2.432 * 0.0043)) * ((Rho * V^2) / 2) * 0.8.  
 
 It returns 13910 Newtons of Drag, an error of about 1.8% with the actual AeroGUI value.  
-The error exists because of me rounding numbers with a lot of decimal places.  
 
 #### 8) Conclusion  
 This is the method that KSP uses to calculate drag cube drag.  
@@ -462,7 +461,7 @@ Mk1 YPA = Mk1 YPA - Mk0 YNA = 1.213-0.3033 = 0.9097
 Mk0 YNA = Mk0 YNA - Mk1 YPA = 0.3033-1.213 = 0 (Cannot be negative)  
 
 The Cd values also change, they follow this transformation:  
-> ((rootCdValue x rootAValue)-attachedAValue)/newRootAValue  
+> ((rootCdValue x rootAValue) - attachedAValue) / newRootAValue  
 
 Mk1 YPCd = ((Mk1 YPCd * Mk1 YPA) - Mk0 YNA) / (Mk1 YPA - Mk0 YNA)  
 Mk1 YPCd = ((0.9716  * 1.213) - 0.3033) / (1.213 - 0.3033)  
@@ -540,7 +539,7 @@ Instead of this method, the script will calculate this with the Vector Dot Produ
 So far we have called the XP/XN/YP/YN side sections, but in reality they are Right, Left, Top, Bottom Sections.  
 It is now important to consider them as such, since orientation will not have the same effect on each side.  
 Lets think about the top section (ZP). From a port side perspective, since the AoA is about 20 degrees up, the top section is tilted clockwise.  
-The top section, it being the top section, is already facing directly up from the vessels perspective, so it is tilting backwards.  
+The top section is already facing directly up from the vessels perspective, so now it is tilting backwards.  
 If it is tilting backwards, that means that the ZP side now, in addition to side drag, also experiences tail drag.  
 Same method as before:  
 
@@ -655,7 +654,7 @@ V = 269.1
 #### 8) Conclusion  
 The calculated drag values are very close to the displayed in game values.  
 It is not quite clear to me where the errors come from, but with an average error of around 1-2% the level of precision required for our purposes is sufficient.  
-My guess is that KSP rounds up or down some values, perhaps the 'Drag Vector' as displayed in the part GUI. We use the exact values, perhaps we should have use the displayed values (0.0, 0.9, 0.3).  
+My guess is that KSP rounds up or down some values, perhaps the 'Drag Vector' as displayed in the part GUI. We used the exact values, perhaps we should have use the displayed values (0.0, 0.9, 0.3).  
 This concludes drag cubes, next we will be looking at other 'types' of drag.  
 
 # Lifting Surface Drag  
@@ -675,6 +674,18 @@ The result of this, is that there is a opposite velocity vector lift component, 
 Real world induced drag is the result of a different mechanic, but the main idea is that Induced Drag is the result of lift and that is true in this situation.  
 
 The **yellow arrows** are lift vectors from control surfaces. They work mostly the same as the dark blue lift vectors, but can have more tilt since control surfaces rotate.  
+
+## Wings  
+
+**What makes a part a wing?**  
+If you explore the GameData parts folders, you find that every part has a CFG file defining its properties.  
+So far we have been looking at drag cubes. Whether a part uses drag cubes is defined by the 'dragModelType' property. If it is 'default', it means that standard drag cubes are used. If it is 'none', it means that no drag cubes are used.  
+You will find that wings have a 'dragModelType' property of 'none', i.e. they do not use drag cubes. So where do wing's properties come from?  
+All wings have a module called 'ModuleLiftingSurface'. This module defines the properties of the wings.  
+We are actually only interested in a single property, called 'deflectionLiftCoeff'.  
+
+deflectionLiftCoeff defines the Area of the wing, but also not really. It is just a modifier that we use in the place of 'A' in the drag equation.  
+
 
 
 
