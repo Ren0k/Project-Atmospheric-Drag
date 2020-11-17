@@ -762,9 +762,9 @@ Body lift is however important, the 'deflectionLiftCoeff' is usually quite a hig
 Body lift also uses the **liftMultiplier**.
 You now understand why in the image above the fuselage parts do not have light blue arrows attached.  
 
-## Special Parts  
+## Other Parts
 
-I am going to put a few other categories of parts under this section. These are the remaining special cases, I'm going to cover them quickly:  
+I am going to the last 2 sets of parts under this section. These are the remaining special cases, I'm going to cover them quickly:  
 - Airbrakes  
 - Capsule/Heatshield  
 
@@ -776,4 +776,19 @@ They do not produce lift, only drag following 2 transformations in the specific 
 >Converts Sin(AoA) into a drag coefficient (Cd) then multiplied by the below mach multiplier, dynamic pressure, the wing area, and the global lifting surface drag multiplier  
 
 >dragMach // Converts mach number into a multiplier to Cd  
+
+### Capsules and Heat Shields  
+
+Another special case. They use drag cubes and they have the same module as wings (ModuleLiftingSurface), but without profile drag.  
+They have 2 specific sets of curves in the physics file:  
+
+>lift // Converts Sin(AoA) into a lift coefficient (Cl) then multiplied by the below mach multiplier, dynamic pressure, the wing area, and the global lift multiplier  
+
+>liftMach // Converts mach number into a multiplier to Cl  
+
+The mach multiplier is a constant of 0.0625.  
+If you remove drag cube drag by occupying nodes, no drag but induced drag remains. Definitely not exploitable.  
+
+
+
 
