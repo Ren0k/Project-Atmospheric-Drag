@@ -478,10 +478,8 @@ Mk0 YNCd = 0
 Mk1 YP = A: 0.9097 Cd: 0.9621312521  
 Mk0 YN = A: 0.0000 Cd: 0.0000    
 
-#### 3) Mach Cd Transformation  
-Exactly the same process as in the 1st example.  
-The mach number in our example is 0.793.  
-The interpolated value is
+#### 3) Initial Cd Transformation   
+Exactly the same process as in the 1st example, these are the results:  
 
 **Mk1 Liquid Fuel Fuselage**  
 XP = A: 2.432 Cd: 0.536649606952518  
@@ -498,5 +496,26 @@ YP = A: 0.3033 Cd: 0.93778859375
 YN = A: 0.0000 Cd: 0.0000  
 ZP = A: 0.623 Cd: 0.517662391136973  
 ZN = A: 0.623 Cd: 0.517662391136973    
+  
+#### 4) Mach Cd Transformation  
+The mach number in our example is 0.793.  
+The interpolated value is 1.20820404078286.  
+The results after applying the transformation, just like in example 1:  
 
-#### 4) Initial Cd Transformation  
+**Mk1 Liquid Fuel Fuselage**  
+XP = A: 2.432 Cd: 0.4714236338  
+XN = A: 2.432 Cd: 0.4714236338  
+YP = A: 0.9097 Cd: 0.9516431069  
+YN = A: 1.213 Cd: 0.9641272461  
+ZP = A: 2.432 Cd: 0.4589123414  
+ZN = A: 2.432 Cd: 0.4589123414  
+
+**Mk0 Liquid Fuel Fuselage**  
+XP = A: 0.623 Cd: 0.4513463801  
+XN = A: 0.623 Cd: 0.4513463801  
+YP = A: 0.3033 Cd: 0.9253309388  
+YN = A: 0.0000 Cd: 0.0000  
+ZP = A: 0.623 Cd: 0.4513463801  
+ZN = A: 0.623 Cd: 0.4513463801      
+
+#### 5) Surface Transformation  
