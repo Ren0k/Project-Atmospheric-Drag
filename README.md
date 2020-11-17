@@ -469,11 +469,34 @@ Mk1 YPCd = ((1.1785508) - 0.3033) / (0.9097)
 Mk1 YPCd = ((1.1785508) - 0.3033) / (0.9097)  
 Mk1 YPCd = 0.9621312521
 
-Mk0 YNCd = ((Mk0 YNCd * Mk0 YNA) - Mk1 YPA) / (Mk0 YNA - Mk1 YPA)
+Mk0 YNCd = ((Mk0 YNCd * Mk0 YNA) - Mk1 YPA) / (Mk0 YNA - Mk1 YPA)  
 Mk0 YNCd = ((0.9425  * 0.3033) - 1.213) / (0.3033 - 1.213)  
 Mk0 YNCd = (-0.92713975) / (**0**) (The new area value cannot be negative)  
 Mk0 YNCd = 0  
 
 ##### Results  
 Mk1 YP = A: 0.9097 Cd: 0.9621312521  
-Mk0 YN = A: 0.0000 Cd: 0.0000     
+Mk0 YN = A: 0.0000 Cd: 0.0000    
+
+#### 3) Mach Cd Transformation  
+Exactly the same process as in the 1st example.  
+The mach number in our example is 0.793.  
+The interpolated value is
+
+**Mk1 Liquid Fuel Fuselage**  
+XP = A: 2.432 Cd: 0.536649606952518  
+XN = A: 2.432 Cd: 0.536649606952518  
+YP = A: 0.9097 Cd: 0.959806221740299  
+YN = A: 1.213 Cd: 0.97021594304  
+ZP = A: 2.432 Cd: 0.524834334231859  
+ZN = A: 2.432 Cd: 0.524834334231859  
+
+**Mk0 Liquid Fuel Fuselage**  
+XP = A: 0.623 Cd: 0.517662391136973  
+XN = A: 0.623 Cd: 0.517662391136973  
+YP = A: 0.3033 Cd: 0.93778859375  
+YN = A: 0.0000 Cd: 0.0000  
+ZP = A: 0.623 Cd: 0.517662391136973  
+ZN = A: 0.623 Cd: 0.517662391136973    
+
+#### 4) Initial Cd Transformation  
