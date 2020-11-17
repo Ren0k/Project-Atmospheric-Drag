@@ -4,15 +4,15 @@
 
 # Introduction
 
-This tool allows you to determine accurate atmospheric drag for stock KSP vessels, for a fixed orientation and configuration.
+This tool allows you to determine accurate atmospheric drag for stock KSP vessels, for a fixed orientation and configuration.  
 It encompasses a complete re-creation of the actual KSP drag and lift calculations, and takes into account different configurations of your vessel.  
 The idea is to create a profile for your vessel only once with which you can calculate drag; you do this for a specific vessel/vesselState and you only have to do it it again if the vessel changes significantly.  
 More specifically, with this tool you will be able to:  
-- Investigate and analyze your vessel's drag under different situations and configurations
-- Manually specify the orientation of your flight, whether prograde or retrograde, and specific AoA's
-- Specify part configurations i.e. gear extension, airbrake deployment, parachute state etc
-- Specify only certain sections or stages of your vessel
-- Create a 'drag profile' that can be used and re-used at later moments for rapid drag determinations
+- Investigate and analyze your vessel's drag under different situations and configurations  
+- Manually specify the orientation of your flight, whether prograde or retrograde, and specific AoA's  
+- Specify part configurations i.e. gear extension, airbrake deployment, parachute state etc  
+- Specify only certain sections or stages of your vessel  
+- Create a 'drag profile' that can be used and re-used at later moments for rapid drag determinations  
 
 Due to the complexity of the method, a simple user interface is provided that will guide you quickly through the process.  
 Of course you can skip the user interface, and just use the script as part of your script. For that purpose, I recommended reading through the relevant section.  
