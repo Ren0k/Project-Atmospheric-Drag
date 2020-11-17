@@ -625,5 +625,18 @@ Lets do this now:
 **Mk0 Liquid Fuel Fuselage**  
 (0.623 * 0.009026927602) + (0.623 * 0.009026927602) + (0.2843845031 * 0.9253309388) + (0.1054340762 * 0.01850661878) + (0.5841462097 * 0.009026927602) + (0.2165691706 * 0.4513463801) + (0.2165691706 * 0.520411217 ) + (0.5841462097 * 0.009026927602) = **0.4973473872**  
 
-Lets get the interpolated value from the overall mach transformation: 
+Lets get the interpolated value from the overall mach transformation: **0.5**  
 
+**Mk1 Liquid Fuel Fuselage**  
+2.969661464 * 0.5 = 1.484830732  
+**Mk0 Liquid Fuel Fuselage**  
+0.4973473872 * 0.5 = 0.2486736936  
+
+#### 7) Reynolds Number Transformation  
+Reynolds Number = Density * Velocity = 0.797353 * 269.1 = 214.5676923  
+Reynolds Modifier = 0.820143757099439  
+
+**Mk1 Liquid Fuel Fuselage**  
+1.484830732 * 0.820143757099439 = 1.217774655  
+**Mk0 Liquid Fuel Fuselage**  
+0.2486736936 * 0.820143757099439 = 0.2039481774  
