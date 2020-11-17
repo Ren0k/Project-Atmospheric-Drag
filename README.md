@@ -223,7 +223,7 @@ Before we dive in, here a full overview of the 'types' of drag, modifiers and in
 With this out of the way, you might realize that a little bit more is involved than filling in the drag equation.  
 We will break it down section by section, calculation by calculation, starting with Drag Cubes.
 
-## Drag Cubes
+# Drag Cubes
 
 ### What are drag cubes?  
 Every part in KSP has 6 surfaces: A front surface (YP), a back surface (YN), and 4 side surfaces (XP/XN/ZP/ZN).
@@ -656,3 +656,6 @@ V = 269.1
 The calculated drag values are very close to the displayed in game values.  
 It is not quite clear to me where the errors come from, but with an average error of around 1-2% the level of precision required for our purposes is sufficient.  
 My guess is that KSP rounds up or down some values, perhaps the 'Drag Vector' as displayed in the part GUI. We use the exact values, perhaps we should have use the displayed values (0.0, 0.9, 0.3).  
+This concludes drag cubes, next we will be looking at other 'types' of drag.  
+
+# Lifting Surface Drag  
