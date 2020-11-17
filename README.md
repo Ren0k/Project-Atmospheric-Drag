@@ -562,10 +562,17 @@ After applying all of the above, these are the results:
 **Mk1 Liquid Fuel Fuselage**  
 XP = A: 2.432 Cd: 0.4714236338  
 XN = A: 2.432 Cd: 0.4714236338  
-YP = A: 0.9097 Cd: 0.9516431069  
-YN = A: 1.213 Cd: 0.9641272461  
+YP = A: 0.9097 Cd: 0.9516431069 
+YPtip = A: 0.8529659823 Cd: 0.9516431069 
+YPside = A: 0.3162327039 Cd: 0.9516431069 
+YNside = A: 0.42166678 Cd: 0.9641272461
+YNtail = A: 1.137350485 Cd: 0.9641272461
 ZP = A: 2.432 Cd: 0.4589123414  
+ZPside = A: 2.280326777 Cd: 0.4589123414 
+ZPtail = A: 0.8454192985 Cd: 0.4589123414 
 ZN = A: 2.432 Cd: 0.4589123414  
+ZNtip = A: 0.8454192985 Cd: 0.4589123414 
+ZNside = A: 2.280326777 Cd: 0.4589123414
 
 **Mk0 Liquid Fuel Fuselage**  
 XP = A: 0.623 Cd: 0.4513463801  
