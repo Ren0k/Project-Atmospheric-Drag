@@ -420,8 +420,9 @@ This significantly speeds up the process, and is used in this script.
 
 ![Example 2](https://github.com/Ren0k/Project-Atmospheric-Drag/blob/main/Images/Example%202.jpg)  
 
-The same fuel tank as in example 1 is falling down towards Kerbin. In addition, a smaller Mk0 fuel tank is added to the front section of the Mk1 fuel tank. Also, the craft has an AoA of about 20 degrees up to the relative airflow. Note that there are some internal parts so ignore the total drag/lift values etc.  
-How do we get the drag on the vessel now?  
+The same fuel tank as in example 1 is falling down towards Kerbin. In addition, a smaller Mk0 fuel tank is added to the front section of the Mk1 fuel tank. Also, the craft has an AoA of about 20 degrees up to the relative airflow. 
+There are some internal gyros that produce drag, we ignore them for now, and only look at drag values of the 2 fuel tanks.  
+So how do we get the drag on the 2 fuel tanks?  
 
 We follow the exact same steps as in example 1, but a few addition before starting with transformations.  
 
