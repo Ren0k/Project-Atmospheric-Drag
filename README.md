@@ -748,4 +748,10 @@ The relationship is very simple.
 
 ## Body Lift  
 
+You will also find parts that both use drag cubes and have a 'ModuleLiftingSurface'.  
+For example, Mk2 Spaceplane parts fall in this category, just like the vessel used in the image above.  
+This does not make the part a wing though, there is a difference.  
+These parts do not make use of wing profile drag, but lift and induced drag are valid properties of such a part.  
+This can also be determined by the property 'useInternalDragModel' which is false at Mk2 spaceplane parts.  
 
+Body lift is however important, the 'deflectionLiftCoeff' is usually quite a high value and induced drag can be significant.  
