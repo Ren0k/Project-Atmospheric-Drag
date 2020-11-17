@@ -562,17 +562,14 @@ After applying all of the above, these are the results:
 **Mk1 Liquid Fuel Fuselage**  
 XP = A: 2.432 Cd: 0.4714236338  
 XN = A: 2.432 Cd: 0.4714236338  
-YP = A: 0.9097 Cd: 0.9516431069 
-YPtip = A: 0.8529659823 Cd: 0.9516431069 
-YPside = A: 0.3162327039 Cd: 0.9516431069 
-YNside = A: 0.42166678 Cd: 0.9641272461
-YNtail = A: 1.137350485 Cd: 0.9641272461
-ZP = A: 2.432 Cd: 0.4589123414  
-ZPside = A: 2.280326777 Cd: 0.4589123414 
-ZPtail = A: 0.8454192985 Cd: 0.4589123414 
-ZN = A: 2.432 Cd: 0.4589123414  
-ZNtip = A: 0.8454192985 Cd: 0.4589123414 
-ZNside = A: 2.280326777 Cd: 0.4589123414
+YPtip = A: 0.8529659823 Cd: 0.9516431069  
+YPside = A: 0.3162327039 Cd: 0.9516431069  
+YNside = A: 0.42166678 Cd: 0.9641272461  
+YNtail = A: 1.137350485 Cd: 0.9641272461  
+ZPside = A: 2.280326777 Cd: 0.4589123414  
+ZPtail = A: 0.8454192985 Cd: 0.4589123414  
+ZNtip = A: 0.8454192985 Cd: 0.4589123414  
+ZNside = A: 2.280326777 Cd: 0.4589123414  
 
 **Mk0 Liquid Fuel Fuselage**  
 XP = A: 0.623 Cd: 0.4513463801  
@@ -584,3 +581,19 @@ ZPside = A: 0.5841462097 Cd: 0.4513463801
 ZPtail = A: 0.2165691706 Cd: 0.4513463801  
 ZNtip = A: 0.2165691706 Cd: 0.4513463801  
 ZNside = A: 0.5841462097 Cd: 0.4513463801  
+
+#### 6) Overall Mach Transformation  
+Before moving on, lets try something different.  
+Instead of doing calculations now for every surface, we can make this process more efficient.  
+Every transformation from now on is the same and applied to every dragcube.  
+The order of this, is no longer of influence.  
+We can add all (Cd * A) values together, and get only 1 value back to which we apply the coming transformations.  
+Lets do this now:  
+
+**Mk1 Liquid Fuel Fuselage**  
+(2.432 * 0.4714236338) + (2.432 * 0.4714236338) + (0.8529659823 * 0.9516431069 ) + (0.3162327039 * 0.9516431069) + (0.42166678 * 0.9641272461) + (1.137350485 * 0.9641272461)
++ (2.280326777 * 0.4589123414) + (0.8454192985 * 0.4589123414) + (0.8454192985 * 0.4589123414) + (2.280326777 * 0.4589123414) = **7.777642348**  
+
+**Mk0 Liquid Fuel Fuselage**  
+(0.623 * 0.4513463801) + (0.623 * 0.4513463801) + (0.2843845031 * 0.9253309388) + (0.1054340762 * 0.9253309388) + (0.5841462097 * 0.4513463801) + (0.2165691706 * 0.4513463801)
++ (0.2165691706 * 0.4513463801) + (0.5841462097 * 0.4513463801) = **1.645888758**  
