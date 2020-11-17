@@ -808,4 +808,26 @@ y1 = end value
 m0 = start tangent  
 m1 = end tangent  
 
+#### Interaction with key values
+
+Key values in this model are represented in a list.  
+To create a curve, you need 2 keys.  
+Consider the following set from the initial CD modifier curve from the physics file:  
+> local key0 is list  (0.05   ,0.0025     ,0.15      ,0.15).  
+> local key1 is list  (0.4    ,0.1500     ,0.3963967 ,0.3963967).  
+
+Here, [0] represents Cd_in, [1] represents Cd_out, [2] represents the in-tangent, [3] represents the out-tangent.  
+A hermite curve can be created in this instance using: 
+- key0[1] as y0. 
+- key1[1] as y1. 
+- key0[3] as m0.
+- key1[2] as m1.
+
+As these are the first and final keys, key0[2] and key1[3] are not used.  
+The position on the curve 't' is a value between key0[0] and key1[0], this is converted to a value between 0-1 in the function using:
+> t = (input-x0)/(x1-x0)  
+
+The tangents have to be represented to scale, and a 'normfactor' is used defined as:  
+> normFactor = (x1-x0)  
+
 
