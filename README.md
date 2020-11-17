@@ -554,4 +554,27 @@ ZPtail = A: 0.2165691706 Cd: 0.4513463801
 Now lets think about the right (XP) and left (XN) sides. Their orientation in the airstream did not change, they only rotated CW/CCW.  
 Their values do not change and they stay the XP/XN values they were, as they do not experience any tip/tail drag.  
 
+##### Tail  
+Same as above; in our situation the YN sections are tilted so that they also experience Side drag.  
 
+##### Results  
+After applying all of the above, these are the results:  
+
+**Mk1 Liquid Fuel Fuselage**  
+XP = A: 2.432 Cd: 0.4714236338  
+XN = A: 2.432 Cd: 0.4714236338  
+YP = A: 0.9097 Cd: 0.9516431069  
+YN = A: 1.213 Cd: 0.9641272461  
+ZP = A: 2.432 Cd: 0.4589123414  
+ZN = A: 2.432 Cd: 0.4589123414  
+
+**Mk0 Liquid Fuel Fuselage**  
+XP = A: 0.623 Cd: 0.4513463801  
+XN = A: 0.623 Cd: 0.4513463801  
+YPtip = A: 0.2843845031 Cd: 0.9253309388  
+YPside = A: 0.1054340762 Cd: 0.9253309388  
+YN = A: 0.0000 Cd: 0.0000  
+ZPside = A: 0.5841462097 Cd: 0.4513463801  
+ZPtail = A: 0.2165691706 Cd: 0.4513463801  
+ZNtip = A: 0.2165691706 Cd: 0.4513463801  
+ZNside = A: 0.5841462097 Cd: 0.4513463801  
