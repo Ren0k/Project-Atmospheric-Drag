@@ -418,3 +418,28 @@ This significantly speeds up the process, and is used in this script.
 
 ## Drag Cube Example 2
 
+![Example 2](https://github.com/Ren0k/Project-Atmospheric-Drag/blob/main/Images/Example%202.jpg)  
+
+The same fuel tank as in example 1 is falling down towards Kerbin. In addition, a smaller Mk0 fuel tank is added to the front section of the Mk1 fuel tank. Also, the craft has an AoA of about 20 degrees up to the relative airflow. Note that there are some internal parts so ignore the total drag/lift values etc.  
+How do we get the drag on the vessel now?  
+
+We follow the exact same steps as in example 1, but a few addition before starting with transformations.  
+
+#### 1) Getting Drag Cube Values
+Same as in example 1:
+
+**Mk1 Liquid Fuel Fuselage**  
+XP = A: 2.432 Cd: 0.7714  
+XN = A: 2.432 Cd: 0.7714  
+YP = A: 1.213 Cd: 0.9716  
+YN = A: 1.213 Cd: 0.9716  
+ZP = A: 2.432 Cd: 0.7688  
+ZN = A: 2.432 Cd: 0.7688  
+
+**Mk0 Liquid Fuel Fuselage**  
+XP = A: 0.623 Cd: 0.7672  
+XN = A: 0.623 Cd: 0.7672
+YP = A: 0.3033 Cd: 0.9425  
+YN = A: 0.3033 Cd: 0.9425  
+ZP = A: 0.623 Cd: 0.7672  
+ZN = A: 0.623 Cd: 0.7672  
