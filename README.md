@@ -738,9 +738,13 @@ Again 2 transformations are done:
 
 #### Results  
 
-> Wingdrag = ((Rho * V^2) / 2) * **deflectionLiftCoeff** * (CD_aoa * CD_mach)  
+>Wingdrag = ((Rho * V^2) / 2) * **deflectionLiftCoeff** * (CD_aoa * CD_mach)  
 
 ## Lift Induced Drag  
 
+When a lifting surface produces lift, its lift vector tilts in the opposite direction of motion.  
+The relationship is very simple.  
+
+>Induced Drag = Sin (AoA) * ((Rho * V^2) / 2) * **deflectionLiftCoeff** * (CL_aoa * CL_mach)  
 
 
