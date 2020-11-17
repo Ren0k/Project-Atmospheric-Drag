@@ -894,6 +894,6 @@ The reason for this is to prevent floating point (rounding) errors in the keys.
 
 In addition, 2 tangent vectors are computed so a 'Catmull-Rom Spline' can be created between every mach key.  
 This allows you to use the same hermite interpolator to get the most exact values between mach keys.  
-Of course you can use a linear method (example provided), or simple round your mach number to the nearest key.  
+Of course you can use a linear method (example provided), or simply round your mach number to the nearest key.  
 
 The function 'useProfile' demonstrates a few of these concepts and it will make more sense looking through this file.  
