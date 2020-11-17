@@ -467,8 +467,7 @@ The Cd values also change, they follow this transformation:
 Mk1 YPCd = ((Mk1 YPCd * Mk1 YPA) - Mk0 YNA) / (Mk1 YPA - Mk0 YNA)  
 Mk1 YPCd = ((0.9716  * 1.213) - 0.3033) / (1.213 - 0.3033)  
 Mk1 YPCd = ((1.1785508) - 0.3033) / (0.9097)  
-Mk1 YPCd = ((1.1785508) - 0.3033) / (0.9097)  
-Mk1 YPCd = 0.9621312521
+Mk1 YPCd = 0.9621312521  
 
 Mk0 YNCd = ((Mk0 YNCd * Mk0 YNA) - Mk1 YPA) / (Mk0 YNA - Mk1 YPA)  
 Mk0 YNCd = ((0.9425  * 0.3033) - 1.213) / (0.3033 - 1.213)  
