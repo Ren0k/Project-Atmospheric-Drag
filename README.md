@@ -640,3 +640,19 @@ Reynolds Modifier = 0.820143757099439
 1.484830732 * 0.820143757099439 = 1.217774655  
 **Mk0 Liquid Fuel Fuselage**  
 0.2486736936 * 0.820143757099439 = 0.2039481774  
+
+#### 7) Drag Equation  
+Rho = 0.797353  
+V = 269.1  
+
+> Fd = ((Rho x V^2) / 2) * A * Cd * 0.8
+
+**Mk1 Liquid Fuel Fuselage**  
+> Fd = ((0.797353 * 269.1^2) / 2) * 1.217774655  * 0.8 = 28125 = 28.1kN  
+**Mk0 Liquid Fuel Fuselage**  
+> Fd = ((0.797353 * 269.1^2) / 2) * 0.2039481774  * 0.8 = 4710 = 4.7kN  
+
+#### 8) Conclusion  
+The calculated drag values are very close to the displayed in game values.  
+It is not quite clear to me where the errors come from, but with an average error of around 1-2% the level of precision required for our purposes is sufficient.  
+My guess is that KSP rounds up or down some values, perhaps the 'Drag Vector' as displayed in the part GUI. We use the exact values, perhaps we should have use the displayed values (0.0, 0.9, 0.3).  
