@@ -688,7 +688,8 @@ We are actually only interested in a single property, called 'deflectionLiftCoef
 As it stands there is no way to calculate or acquire this value from kOS. For simple wings it turns out that it is simply its mass multiplied by 10, but this is not the case for all wings.  
 To solve this problem I have included an extra database containing all stock and dlc lifting surface parts with its values.  
 
-**Wing Lift**  
+### Wing Lift  
+
 Lets start with lift.  
 Why is this important if we are intersted in drag? Well, because induced drag as previously mentioned is a direct result of lift generated.  
 
@@ -718,9 +719,7 @@ And that's it. The full equation:
 
 > L = ((Rho * V^2) / 2) * **deflectionLiftCoeff** * (CL_aoa * CL_mach)  
 
-Before looking at induced drag lets look at wing profile drag.  
-
-## Wing Profile Drag  
+### Wing Profile Drag  
 
 From the same section in the physics file we find 2 sets of key value pairs. They are responsible for 'wing profile drag'.  
 Perhaps not the official name, but a name that stuck with me.  
@@ -740,11 +739,13 @@ Again 2 transformations are done:
 
 >Wingdrag = ((Rho * V^2) / 2) * **deflectionLiftCoeff** * (CD_aoa * CD_mach)  
 
-## Lift Induced Drag  
+### Lift Induced Drag  
 
 When a lifting surface produces lift, its lift vector tilts in the opposite direction of motion.  
 The relationship is very simple.  
 
 >Induced Drag = Sin (AoA) * ((Rho * V^2) / 2) * **deflectionLiftCoeff** * (CL_aoa * CL_mach)  
+
+## Body Lift  
 
 
