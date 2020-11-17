@@ -715,9 +715,12 @@ From the physics file:
 No further explantation required, the value of this is multiplied by Cl to get a final value
 
 #### Results
-And that's it. The full equation:  
+There is one more things before we get our final equation, and that is to add the **liftMultiplier** found in the physics file, of 0.036.  
+This will return a value of Lift in Kilonewton, but the rest of the equations use Newton. That is why the multiplier I use in the script is 36.  
 
-> L = ((Rho * V^2) / 2) * **deflectionLiftCoeff** * (CL_aoa * CL_mach)  
+> L (N) = ((Rho * V^2) / 2) * **deflectionLiftCoeff** * (CL_aoa * CL_mach) * 36  
+
+
 
 ### Wing Profile Drag  
 
@@ -736,15 +739,16 @@ Again 2 transformations are done:
 >dragMach // Converts mach number into a multiplier to Cd  
 
 #### Results  
+Adding the specific **liftDragMultiplier** of 0.015, or 15 for a result in Newton.  
 
->Wingdrag = ((Rho * V^2) / 2) * **deflectionLiftCoeff** * (CD_aoa * CD_mach)  
+>Wingdrag (N) = ((Rho * V^2) / 2) * **deflectionLiftCoeff** * (CD_aoa * CD_mach) * 15  
 
 ### Lift Induced Drag  
 
 When a lifting surface produces lift, its lift vector tilts in the opposite direction of motion.  
 The relationship is very simple.  
 
->Induced Drag = Sin (AoA) * ((Rho * V^2) / 2) * **deflectionLiftCoeff** * (CL_aoa * CL_mach)  
+>Induced Drag (N) = Sin (AoA) * ((Rho * V^2) / 2) * **deflectionLiftCoeff** * (CL_aoa * CL_mach) * 36
 
 ## Body Lift  
 
@@ -755,6 +759,7 @@ These parts do not make use of wing profile drag, but lift and induced drag are 
 This can also be determined by the property 'useInternalDragModel' which is false at Mk2 spaceplane parts.  
 
 Body lift is however important, the 'deflectionLiftCoeff' is usually quite a high value and induced drag can be significant.  
+Body lift also uses the **liftMultiplier**.
 You now understand why in the image above the fuselage parts do not have light blue arrows attached.  
 
 ## Special Parts  
@@ -764,4 +769,11 @@ I am going to put a few other categories of parts under this section. These are 
 - Capsule/Heatshield  
 
 ### Airbrakes  
+
+Airbrakes do not use dragcubes. They have a module called **ModuleAeroSurface** that also has a **deflectionLiftCoeff** value.  
+They do not produce lift, only drag following 2 transformations in the specific airbrake section in the physics file.  
+
+>Converts Sin(AoA) into a drag coefficient (Cd) then multiplied by the below mach multiplier, dynamic pressure, the wing area, and the global lifting surface drag multiplier  
+
+>dragMach // Converts mach number into a multiplier to Cd  
 
