@@ -284,17 +284,16 @@ A drag cube is a 3 Dimensional Cube that sits on top of every of those surfaces,
 Depth is not used for our purposes.  
 This leaves 12 values for every part that is involved in drag.  
 
+Drag Cubes for parts are saved in the PartDatabase.cfg file in the root KSP folder.  
+If you look through this file, you can find all drag cubes for all parts.  
+You might find that some parts have multiple cubes. This is due different part variants or different part states.  
+
 **IMPORTANT NOTE**  
 You might think, looking at the image, that the right (XP) and left (XN) sides are reversed. This is not the case.  
 In fact, top and bottom are reversed, and the image you look at is upside down.  
 This was the only solution to line up the partGUI 'drag vectors' with the calculated drag vectors.  
 When you spawn a part in the VAB/SPH, it actually spawns upside down with the top (ZN) node on the bottom.  
 If this is still confusing, just remember that ZN corresponds with the top section.  
-
-
-Drag Cubes for parts are saved in the PartDatabase.cfg file in the root KSP folder.  
-If you look through this file, you can find all drag cubes for all parts.  
-You might find that some parts have multiple cubes. This is due different part variants or different part states.  
 
 ![dragcube1](https://lh6.googleusercontent.com/wYG-GLOLnBKE3vilulRY9uhMRN3eosBdO8aCY_KvxkmdhSnmbStaiOgJgaH2ebMiC3rM6ilk4g_BSDtyn7AYACO3jeAqu5zEDtfx8NBJ4luhXiZ9X7QpiC79aaveVJ_oHFtFaQsY)  
 
