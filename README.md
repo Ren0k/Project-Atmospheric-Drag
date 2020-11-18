@@ -275,7 +275,7 @@ Lets go down the rabbit hole.
 
 ### What are drag cubes?  
 Every part in KSP has 6 surfaces: A front surface (YP), a back surface (YN), and 4 side surfaces (XP/XN/ZP/ZN).  
-The side surfaces can be further divided into right (XP), left (XN), top (ZN), bottom (ZP).  
+The side surfaces can be further divided into right (XN), left (XP), top (ZP), bottom (ZN).  
 A drag cube is a 3 Dimensional Cube that sits on top of every of those surfaces, with 3 values:  
 - Area
 - Drag Coefficient
@@ -290,13 +290,11 @@ You might find that some parts have multiple cubes. This is due different part v
 
 **IMPORTANT NOTE**  
 You might think, looking at the image, that the X+ (XP) and X- (XN) sides are reversed. This is not the case.  
-In fact, ZP (Z+) and ZN (Z-) are reversed, to make the Z+ (ZP) side on the bottom, and the Z- (ZN) side on the top.   
-That is why the ZN side is called the top side, and the ZP node is called the bottom side.  
-The image you look at is actually upside down.  
-You might say that right and left are reversed, but that does not seem to be true.  
-The only solution to line up the partGUI 'drag vectors' with the calculated drag vectors was to reverse up and down.  
-When you spawn a part in the SPH, it actually spawns in this specific configuration with ZN on the top, ZP on the bottom, XP on the right, XN on the left.   
-Just remember that the top side corresponds to ZN (Z-) and the bottom side corresponds to ZP (Z+).  
+KSP uses a [left-handed](https://ksp-kos.github.io/KOS/math/ref_frame.html#left-handed) coordinate system.  
+When you spawn a part in the SPH, it actually spawns with the ZP side on the bottom, the ZN side on the top, the XP side on the right and the XN side on the left.  
+My way of correcting for this left-handed system is to 'reverse' the top and bottom sides, so the top side is called ZN and the bottom side is called ZP.  
+This was the best way to get the actual calculations to line up with in game drag vectors.  
+If you see me mix up these sides, this is the reason.  
 
 ![dragcube1](https://lh6.googleusercontent.com/wYG-GLOLnBKE3vilulRY9uhMRN3eosBdO8aCY_KvxkmdhSnmbStaiOgJgaH2ebMiC3rM6ilk4g_BSDtyn7AYACO3jeAqu5zEDtfx8NBJ4luhXiZ9X7QpiC79aaveVJ_oHFtFaQsY)  
 
