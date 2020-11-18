@@ -81,7 +81,7 @@ I will give a quick overview of the options you have:
 
 ## createProfile
 
-### Menu 1
+### Menu 1 - Configuration  
 - Configure  
 This allows you to manually specify your vessel's configuration of parts and flight orientation.  
 Amongst the options here is 'special menu', which will at a later stage allow you to manually edit every single part of the analyzed vessel.  
@@ -99,7 +99,7 @@ It will scan every single part, both in game and from the .craft file, obtain re
 You will be shown a loading screen showing you the progress.  
 Once this is completed, a new window with multiple options is shown. A quick overview:  
 
-### Menu 2
+### Menu 2 - Review  
 - Save Part List  
 You can save the analyzed part list here and re-use it. 
 Comes in handy if your vessel is complex and you had to manually input drag cube values; saves you from repeating this
@@ -114,7 +114,7 @@ Continues to the next menu where you can create a drag profile
 
 If you select 'Create Profile' you will continue to the next menu where you can create a 'Drag Profile'.  
 
-### Menu 3
+### Menu 3 - Profile Creation  
 **IMPORTANT**  
 Depending on the values you select, a profile might become an excessively large file with file sizes up to 20-30 Mb.  
 If you create a profile for a very wide range of mach numbers, be gentle on the dT value you select.  
@@ -138,7 +138,7 @@ Starts creating this profile, calculating the Cd/Cl values for every mach interv
 Once you have selected 'Create', a loading menu opens that will show you the progress until completed.  
 Once the profile has completed building, a new menu opens.  
 
-### Menu 4
+### Menu 4 - Profile Review  
 - Review Profile  
 A huge list of the calculated values, for your review.  
 - Save As  
