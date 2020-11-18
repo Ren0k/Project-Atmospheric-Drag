@@ -39,9 +39,9 @@ Hence I have chosen to restrict the tool to this setup.
 
 Other limitations and bugs:  
 - The information required to do these calculations can not be obtained with kOS alone. A copy of your 'partdatabase.cfg' and your vessel's .craft file have to be put in the correct folder for use by the tool
-- Airbrake Deployment angle is bugged in KSP; a bug report is filed. The bug is actually coded in this script, and if it is fixed in KSP this will have to be adjusted here.
-- Engine Plates are currently bugged in KSP; a bug report for this is filed. This is NOT coded into the script, engine plates do not apply their drag cubes. You will have to manually enter drag cube values  
-- Fairings work by procedural drag cube generation. The process KSP uses to do this can not be re-created, and if you use fairings manual values have to be entered.  
+- **Airbrake** Deployment angle is bugged in KSP; a bug report is filed. The bug is actually coded in this script, and if it is fixed in KSP this will have to be adjusted here. You should not have to worry about this, just be aware it exists.  
+- **Engine Plates** are currently bugged in KSP; a bug report for this is filed. This is NOT coded into the script, engine plates do not apply their drag cubes. You will have to manually enter drag cube values.  
+- **Fairings** work by procedural drag cube generation. The process KSP uses to do this can not be re-created, and if you use fairings manual values have to be entered.  
 A tool is used to guesstimate the values, but it is not too accurate.  
 - Cargobay part exclusion can not be determined, you will have to specify which parts are excluded if you have a cargobay fitted.  
 - Simple non-stock/modded parts will work; more complex non-stock parts that have different variants and modules might not work  
@@ -797,7 +797,7 @@ Lets go over a few types of parts that need further explaining.
 
 If a cargo bay is closed, any part inside it is excluded from drag.  
 The method KSP uses to determine if a part is inside a cargo bay is as follows:  
-- Determine the Center of the cargo bay and the part based on their bounds   
+- Determine the center of the cargo bay and the specific part based on their bounds   
 - Draw a line (raycast) from the center of the part to the center of the cargo bay. The line can only collide with the cargo bay.  
 - If the line intersects the mesh colliders of the cargo bay, it is outside  
 - If the line does not intersect the mesh colliders of the cargo bay, it is inside  
@@ -809,6 +809,14 @@ Unfortunately, I was not able to figure out how to recreate this with kOS and as
 Fairings use a procedural drag cube generation system, and are not available in the partdatabase file.  
 The system used to generate drag cubes is based on a camera tool in unity and can not be recreated with kOS.  
 As such, if fairings are used the user will have to manually specify drag cube values with the tool provided by the user interface.  
+If not, a function will try to guess the value based on its properties.  
+
+## ModuleDragModifier  
+
+Certain parts like landing gears and parachute have a module called **ModuleDragModifier**.  
+They are a direct modifier to drag, usually depending on a certain state.  
+Landing gears have different modifier values for their deployed/retracted states.  
+The ModuleDragModifier values are included in the ExtraDatabase.  
 
 # Section 3
 
