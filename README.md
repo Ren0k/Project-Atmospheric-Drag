@@ -596,7 +596,9 @@ YPside = A: 0.1054340762 Cd: 0.9253309388
 
 Instead of this method, the script will calculate this with the Vector Dot Product of the part:facing:forevector with the ship:facing:forevector.  
 
-##### Side
+##### Side  
+**NOTE**  
+>I mix up YP/YN sides here, but this is not relevant as the 2 surfaces have the same values  
 So far we have called the XP/XN/YP/YN side sections, but in reality they are Right, Left, Top, Bottom Sections.  
 It is now important to consider them as such, since orientation will not have the same effect on each side.  
 Lets think about the top section (ZP). From a port side perspective, since the AoA is about 20 degrees up, the top section is tilted clockwise.  
