@@ -768,13 +768,7 @@ Body lift is however important, the 'deflectionLiftCoeff' is usually quite a hig
 Body lift also uses the **liftMultiplier**, and body lift has its own spline curves in the physics file.  
 You now understand why in the image above, the fuselage parts do not have light blue arrows attached.  
 
-## Other Parts
-
-I am going to put the last 2 sets of parts under this section. These are the remaining special cases, I'm going to cover them quickly:  
-- Airbrakes  
-- Capsule/Heatshield  
-
-### Airbrakes  
+## Airbrakes  
 
 Airbrakes do not use dragcubes. They have a module called **ModuleAeroSurface** that also has a **deflectionLiftCoeff** value.  
 They do not produce lift, only drag following 2 transformations in the specific airbrake section in the physics file.  
@@ -783,7 +777,7 @@ They do not produce lift, only drag following 2 transformations in the specific 
 
 >dragMach // Converts mach number into a multiplier to Cd  
 
-### Capsules and Heat Shields  
+## Capsules and Heat Shields  
 
 Another special case. They use drag cubes and they have the same module as wings (ModuleLiftingSurface), but without profile drag.  
 They have 2 specific sets of curves in the physics file:  
@@ -794,6 +788,27 @@ They have 2 specific sets of curves in the physics file:
 
 The mach multiplier is a constant of 0.0625.  
 If you remove drag cube drag by occupying nodes, no drag but induced drag remains. Definitely not an exploitable wing.  
+
+# Special Parts  
+
+Lets go over a few types of parts that need further explaining.  
+
+## Cargo Bays  
+
+If a cargo bay is closed, any part inside it is excluded from drag.  
+The method KSP uses to determine if a part is inside a cargo bay is as follows:  
+- Determine the Center of the cargo bay and the part based on their bounds   
+- Draw a line (raycast) from the center of the part to the center of the cargo bay. The line can only collide with the cargo bay.  
+- If the line intersects the mesh colliders of the cargo bay, it is outside  
+- If the line does not intersect the mesh colliders of the cargo bay, it is inside  
+
+Unfortunately, I was not able to figure out how to recreate this with kOS and as such the user will have to manually specify which parts are excluded from drag or just use a vessel without parts in its cargobay.  
+
+## Fairings  
+
+Fairings use a procedural drag cube generation system, and are not available in the partdatabase file.  
+The system used to generate drag cubes is based on a camera tool in unity and can not be recreated with kOS.  
+As such, if fairings are used the user will have to manually specify drag cube values with the tool provided by the user interface.  
 
 # Section 3
 
