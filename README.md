@@ -32,7 +32,11 @@ The 3rd section goes into the different scripts and files used.
 ### f. [What is a drag profile?](#whatdragprofile)  
 ### g. [How to use a drag profile?](#useprofile)   
 ## 1. [Section 2](#Section2)  
-### a. [Limitations](#limitations)  
+### a. [KSP Drag](#kspdrag)  
+### b. [Drag Overview](#dragoverview)  
+### c. [Drag Cubes](#dragcubes)  
+### d. [Example 1](#dcexample1)  
+### e. [Example 2](#dcexample1)  
 
 # Section 1 <a name="Section1"></a>
 
