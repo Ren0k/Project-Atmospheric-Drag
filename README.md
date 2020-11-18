@@ -992,14 +992,40 @@ The function 'useProfile' demonstrates a few of these concepts and it will make 
 
 ## Useful Functions and Equations  
 
+A list and summary of useful functions and equations that can be helpful.  
+
 ### Atmospheric Values  
 **Density:**  
 > ρ = P / ((R/M) * T)   
+
 ρ = Density (kg/m^3)  
 P = Pressure (pa)  
 R = Ideal Gas Constant (j/m/k)  
 M = Atmospheric Molar Mass (kg/mol)  
 T = Temperature (kelvin)  
+
+**Speed of sound:**  
+> vm = γ * (R/M) * T  
+
+vm = Speed of sound (m/s)  
+γ = Adiabatic Index / Heat Capacity Ratio  
+R = Ideal Gas Constant (j/m/k)  
+M = Atmospheric Molar Mass (kg/mol)  
+T = Temperature (kelvin)  
+
+**Equivalent Airspeed:**  
+> eas = tas / sqrt(1.225/ρ)  
+
+eas = Equivalent Airspeed (m/s)  
+tas = True Airspeed (m/s)  
+ρ = Density (kg/m^3)  
+
+### Lift and Drag  
+**KSP Drag:**  
+> D (N) = ((ρ x v^2) / 2) * A * Cd * 0.8  
+
+**KSP Lift:**  
+> L (N) = ((ρ * v^2) / 2) * **deflectionLiftCoeff** * (CL_aoa * CL_mach) * 36  
 
 ## Useful Links   <a name="links"></a>  
 
