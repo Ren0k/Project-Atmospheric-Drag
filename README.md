@@ -14,7 +14,7 @@ More specifically, with this tool you will be able to:
 - Specify only certain sections or stages of your vessel  
 - Create a 'drag profile' that can be used and re-used at later moments for rapid drag determinations  
 
-Due to the complexity of the method, a simple user interface is provided that will guide you quickly through the process.  
+Due to the complexity of the method, a simple graphical user interface is provided that will guide you quickly through the process.  
 Of course you can skip the user interface, and just use the script as part of your script. For that purpose, I recommend reading through the relevant section.  
   
 This manual is split up in 3 sections.  
