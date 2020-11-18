@@ -822,7 +822,6 @@ This can also be determined by the property 'useInternalDragModel' which is fals
 
 Body lift is however important, the 'deflectionLiftCoeff' is usually quite a high value and induced drag can be significant.  
 Body lift also uses the **liftMultiplier**, and body lift has its own spline curves in the physics file.  
-You now understand why in the image above, the fuselage parts do not have light blue arrows attached.  
 
 ## Airbrakes  <a name="airbrakes"></a>  
 
