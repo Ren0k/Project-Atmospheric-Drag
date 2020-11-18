@@ -1051,5 +1051,13 @@ tas = True Airspeed (m/s)
 
 - [Guide](https://github.com/Ren0k/Kerbin-Temperature-Model) for the tool provided here with which you calculate kerbin air temperatures  
 
+# Afterword  
+
+The script can deal with a lot of different vessels and configurations, but its not a final solution.  
+Should you encounter any bugs or errors I'm interested in knowing.  
+If any KSP bugs are fixed I will update the scripts, or if I made any mistakes I will correct them accordingly.  
+
+Finally, I hope that the tool can be helpful for you  and your projects, and that the KSP aerodynamics guide has given you some insight.  
+Thanks!  
 
 
