@@ -51,6 +51,7 @@ The 3rd section goes into the different scripts and files used.
 ### 2. [Additional Part Database](#extradatabase)  
 ### 3. [Bypass the GUI](#nogui)  
 ### 4. [How to read a drag profile?](#readprofile)  
+### 5. [Useful Functions and Equations](#equations)  
 ### 5. [Useful Links](#links)  
 
 # Section 1 <a name="Section1"></a>
@@ -990,7 +991,7 @@ Of course you can use a linear method (example provided), or simply round your m
 
 The function 'useProfile' demonstrates a few of these concepts and it will make more sense looking through this file.  
 
-## Useful Functions and Equations  
+## Useful Functions and Equations  <a name="equations"></a>  
 
 A list and summary of useful functions and equations that can be helpful.  
 
@@ -1021,11 +1022,19 @@ tas = True Airspeed (m/s)
 ρ = Density (kg/m^3)  
 
 ### Lift and Drag  
-**KSP Drag:**  
-> D (N) = ((ρ x v^2) / 2) * A * Cd * 0.8  
+**KSP Drag per side:**  
+> D (N) = ((ρ x v^2) / 2) * (rootA - attachedA) * (FinalCd) * 0.8  
 
 **KSP Lift:**  
 > L (N) = ((ρ * v^2) / 2) * **deflectionLiftCoeff** * (CL_aoa * CL_mach) * 36  
+
+**KSP Profile Drag:**  
+> PD (N) = ((ρ * v^2) / 2) * **deflectionLiftCoeff** * (CD_aoa * CD_mach) * 15  
+
+**KSP Induced Drag:**  
+> ID (N) = Sin (AoA) * ((ρ * v^2) / 2) * **deflectionLiftCoeff** * (CL_aoa * CL_mach) * 36  
+
+
 
 ## Useful Links   <a name="links"></a>  
 
