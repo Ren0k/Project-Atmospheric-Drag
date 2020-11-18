@@ -48,6 +48,10 @@ The 3rd section goes into the different scripts and files used.
 ### 6. [Special Parts](#specialparts)   
 ## 3. [Section 3 - Script Structure](#Section3)  
 ### 1. [Cubic Hermite Splines](#hermite)  
+### 2. [Additional Part Database](#extradatabase)  
+### 3. [Bypass the GUI](#nogui)  
+### 4. [How to read a drag profile?](#readprofile)  
+### 5. [Useful Links](#links)  
 
 # Section 1 <a name="Section1"></a>
 
@@ -198,6 +202,7 @@ Further information on this topic can be found [here](https://github.com/Ren0k/K
 For other planets kOS will provide an estimated value, and will reduce the accuracy of the calculation.  
 
 I recommend exploring the useProfile.ks script and investigate what data is used.  
+Also I recommend reading this section [How to read a drag profile?](#readprofile).  
 This concludes a high-level overview, the next section will go in depth into how it all works.  
 
 # Section 2 <a name="Section2"></a>
@@ -944,7 +949,7 @@ Some parts like landing gears and parachutes have an additional drag modifier de
 - **partVariants**  
 Some parts like engines have different variants that correspond to different drag cubes  
 
-## Bypassing the User Interface  
+## Bypassing the User Interface  <a name="nogui"></a>  
 
 Look at the file called createProfile.ks.  
 The function called 'example_CreateProfile' is an example of how to skip the user interface, just input the parameters as demonstrated, and the function will create and return the dragProfile.    
