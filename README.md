@@ -597,21 +597,19 @@ YPside = A: 0.1054340762 Cd: 0.9253309388
 Instead of this method, the script will calculate this with the Vector Dot Product of the part:facing:forevector with the ship:facing:forevector.  
 
 ##### Side  
-**NOTE**  
->I mix up YP/YN sides here, but this is not relevant as the 2 surfaces have the same values  
 
-So far we have called the XP/XN/YP/YN side sections, but in reality they are Right, Left, Top, Bottom Sections.  
+So far we have called the XP/XN/YP/YN side sections, but in reality they are Right, Left, Bottom, Top Sections.  
 It is now important to consider them as such, since orientation will not have the same effect on each side.  
-Lets think about the top section (ZP). From a port side perspective, since the AoA is about 20 degrees up, the top section is tilted clockwise.  
+Lets think about the top section (ZN). From a port side perspective, since the AoA is about 20 degrees up, the top section is tilted clockwise.  
 The top section is already facing directly up from the vessels perspective, so now it is tilting backwards.  
-If it is tilting backwards, that means that the ZP side now, in addition to side drag, also experiences tail drag.  
+If it is tilting backwards, that means that the ZN side now, in addition to side drag, also experiences tail drag.  
 Same method as before:  
 
 The side section is Cos(AoA) * A = 0.9376343655 * 0.623 = 0.5841462097  
 The tail section is Sin(AoA) * A = 0.3476230668 * 0.623 = 0.2165691706  
 Result:  
-ZPside = A: 0.5841462097 Cd: 0.4513463801  
-ZPtail = A: 0.2165691706 Cd: 0.4513463801  
+ZNside = A: 0.5841462097 Cd: 0.4513463801  
+ZNtail = A: 0.2165691706 Cd: 0.4513463801  
 
 Now lets think about the right (XP) and left (XN) sides. Their orientation in the airstream did not change, they only rotated CW/CCW.  
 Their values do not change and they stay the XP/XN values they were, as they do not experience any tip/tail drag.  
@@ -629,10 +627,10 @@ YPtip = A: 0.8529659823 Cd: 0.9516431069
 YPside = A: 0.3162327039 Cd: 0.9516431069  
 YNside = A: 0.42166678 Cd: 0.9641272461  
 YNtail = A: 1.137350485 Cd: 0.9641272461  
-ZPside = A: 2.280326777 Cd: 0.4589123414  
-ZPtail = A: 0.8454192985 Cd: 0.4589123414  
-ZNtip = A: 0.8454192985 Cd: 0.4589123414  
 ZNside = A: 2.280326777 Cd: 0.4589123414  
+ZNtail = A: 0.8454192985 Cd: 0.4589123414  
+ZPtip = A: 0.8454192985 Cd: 0.4589123414  
+ZPside = A: 2.280326777 Cd: 0.4589123414  
 
 **Mk0 Liquid Fuel Fuselage**  
 XP = A: 0.623 Cd: 0.4513463801  
@@ -640,10 +638,10 @@ XN = A: 0.623 Cd: 0.4513463801
 YPtip = A: 0.2843845031 Cd: 0.9253309388  
 YPside = A: 0.1054340762 Cd: 0.9253309388  
 YN = A: 0.0000 Cd: 0.0000  
-ZPside = A: 0.5841462097 Cd: 0.4513463801  
-ZPtail = A: 0.2165691706 Cd: 0.4513463801  
-ZNtip = A: 0.2165691706 Cd: 0.4513463801  
 ZNside = A: 0.5841462097 Cd: 0.4513463801  
+ZNtail = A: 0.2165691706 Cd: 0.4513463801  
+ZPtip = A: 0.2165691706 Cd: 0.4513463801  
+ZPside = A: 0.5841462097 Cd: 0.4513463801  
 
 Now we will apply the tip/side/tail modifiers to each corresponding Cd value.  
 Tip Modifier: 1.15301958754785  
@@ -658,10 +656,10 @@ YPtip = A: 0.8529659823 Cd: 1.097263143
 YPside = A: 0.3162327039 Cd: 0.01903286214  
 YNside = A: 0.42166678 Cd: 0.01928254492  
 YNtail = A: 1.137350485 Cd: 0.9641272461  
-ZPside = A: 2.280326777 Cd: 0.009178246828  
-ZPtail = A: 0.8454192985 Cd: 0.4589123414  
-ZNtip = A: 0.8454192985 Cd: 0.5291349186  
 ZNside = A: 2.280326777 Cd: 0.009178246828  
+ZNtail = A: 0.8454192985 Cd: 0.4589123414  
+ZPtip = A: 0.8454192985 Cd: 0.5291349186  
+ZPside = A: 2.280326777 Cd: 0.009178246828  
 
 **Mk0 Liquid Fuel Fuselage**  
 XP = A: 0.623 Cd: 0.009026927602  
@@ -669,10 +667,10 @@ XN = A: 0.623 Cd: 0.009026927602
 YPtip = A: 0.2843845031 Cd: 0.9253309388  
 YPside = A: 0.1054340762 Cd: 0.01850661878  
 YN = A: 0.0000 Cd: 0.0000  
-ZPside = A: 0.5841462097 Cd: 0.009026927602  
-ZPtail = A: 0.2165691706 Cd: 0.4513463801  
-ZNtip = A: 0.2165691706 Cd: 0.520411217  
 ZNside = A: 0.5841462097 Cd: 0.009026927602  
+ZNtail = A: 0.2165691706 Cd: 0.4513463801  
+ZPtip = A: 0.2165691706 Cd: 0.520411217  
+ZPside = A: 0.5841462097 Cd: 0.009026927602  
 
 #### 6) Overall Mach Transformation  
 Before moving on, lets try something different.  
