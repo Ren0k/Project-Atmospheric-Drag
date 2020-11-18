@@ -287,6 +287,7 @@ This leaves 12 values for every part that is involved in drag.
 Drag Cubes for parts are saved in the PartDatabase.cfg file in the root KSP folder.  
 If you look through this file, you can find all drag cubes for all parts.  
 You might find that some parts have multiple cubes. This is due different part variants or different part states.  
+The script can figure out what drag cube corresponds to what state, and it should be applied automatically.  
 
 **IMPORTANT NOTE**  
 You might think, looking at the image, that the X+ (XP) and X- (XN) sides are reversed. This is not the case.  
