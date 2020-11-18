@@ -294,7 +294,7 @@ KSP uses a [left-handed](https://ksp-kos.github.io/KOS/math/ref_frame.html#left-
 However when you spawn a part in the SPH, it actually spawns with the ZP side on the bottom, the ZN side on the top, the XP side on the right and the XN side on the left.  
 That is why I chose a different method to deal with this system.  
 My way of correcting for this left-handed system is to 'reverse' the top and bottom sides, so the top side is called ZN and the bottom side is called ZP.  
-This is so they line up with the kOS vector system, where a part:topvector actually originates from the ZN side.  
+Now the sides line up with the kOS vector system, where a part:topvector actually originates from the ZN side, and a part:starvector originates from the XP side.    
 This was the best way to get the actual calculations to line up with in game drag vectors.  
 To make sense of this is to see this image as it is upside down. 
 
