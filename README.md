@@ -175,6 +175,7 @@ Once the profile has completed building, a new menu opens.
 ### Menu 4 - Profile Review  
 - Review Profile  
 A huge list of the calculated values, for your review.  
+Be warned that kOS does not like reading large files.  
 - Save As  
 Save the profile under the selected filename. You can name it anything you like, but the default is your vessel's name.  
 It will be saved in the dragProfile\DATA\Profiles folder.  
