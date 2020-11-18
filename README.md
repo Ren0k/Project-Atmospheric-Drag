@@ -17,7 +17,7 @@ More specifically, with this tool you will be able to:
 Due to the complexity of the method, a simple graphical user interface is provided that will guide you quickly through the process.  
 Of course you can skip the user interface, and just use the script as part of your script. For that purpose, I recommend reading through the relevant section.  
   
-This manual is split up in 3 sections.  
+This manual has 3 main sections:  
 The 1st section will get you started, without providing in depth details of the underlying mechanics.  
 The 2nd section will dive deeply into the mechanics of KSP, how drag is determined from start to finish.  
 The 3rd section goes into the different scripts and files used.  
