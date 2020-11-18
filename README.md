@@ -151,6 +151,7 @@ If you select 'Create Profile' you will continue to the next menu where you can 
 **IMPORTANT**  
 Depending on the values you select, a profile might become an excessively large file with file sizes up to 20-30 Mb.  
 If you create a profile for a very wide range of mach numbers, be gentle on the dT value you select.  
+Also be sensible for the range you select. Are you really going beyond mach 10 in atmospheric flight?  
 
 - Mach Start  
 At what mach number should the profile start. This indicates the lowest mach number at which you can use this profile.  
