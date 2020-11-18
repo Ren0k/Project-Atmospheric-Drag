@@ -33,12 +33,18 @@ The 3rd section goes into the different scripts and files used.
 ### g. [How to use a drag profile?](#useprofile)   
 ## 2. [Section 2](#Section2)  
 ### 1. [KSP Drag](#kspdrag)  
-### a. [Drag Overview](#dragoverview)  
-### b. [Drag Cubes](#dragcubes)  
-### c. [Example 1](#dcexample1)  
-### d. [Example 2](#dcexample1)  
+#### a. [Drag Overview](#dragoverview)  
+#### b. [Drag Cubes](#dragcubes)  
+#### c. [Example 1](#dcexample1)  
+#### d. [Example 2](#dcexample1)  
 ### 2. [Lifting Surfaces](#liftdrag)  
-### a. [Wings](#wings)  
+#### a. [Wings](#wings)  
+#### b. [Wing Lift](#winglift)  
+#### c. [Profile Drag](#wingprofiledrag)  
+#### d. [Induced Drag](#winginduceddrag)  
+### 3. [Airbrakes](#airbrakes)  
+### 4. [Heatshields](#capsule)   
+### 5. [Special Parts](#specialparts)   
 
 # Section 1 <a name="Section1"></a>
 
