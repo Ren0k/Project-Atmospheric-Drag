@@ -669,7 +669,7 @@ This concludes drag cubes, next we will be looking at other 'types' of drag.
 
 ![Lift Drag](https://github.com/Ren0k/Project-Atmospheric-Drag/blob/main/Images/Demo%20Image%203.jpg)  
 
-The image above demonstrates quite a few 'effect' that we are going to cover. It is a bit chaotic, lets make some sense of all those arrows. 
+The image above demonstrates quite a few 'effects' that we are going to cover. It is a bit chaotic, lets make some sense of all those arrows. 
 
 The **red arrows** are all drag vectors. Drag vectors always apply in the opposite direction of motion. Every part with drag will have drag vectors in the same direction.   
 
