@@ -87,7 +87,7 @@ This allows you to manually specify your vessel's configuration of parts and fli
 Amongst the options here is 'special menu', which will at a later stage allow you to manually edit every single part of the analyzed vessel.  
 - Load Partlist  
 You can save an analyzed partlist for re-use at a later section, and load it here so you can skip the part analysis 
-- Rescan Partdatabase  
+- Scan Partdatabase  
 If the partdatabase.cfg file has changed if you for example have added a few custom parts, put a new copy of your partdatabase file in the correct folder and rescan it
 - Analyze Now  
 This will let you skip the manual configuration section, and the script will 'Scan' your vessel as it currently is and continue as if you will fly retrograde
