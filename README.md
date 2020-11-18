@@ -15,10 +15,10 @@ More specifically, with this tool you will be able to:
 - Create a 'drag profile' that can be used and re-used at later moments for rapid drag determinations  
 
 Due to the complexity of the method, a simple user interface is provided that will guide you quickly through the process.  
-Of course you can skip the user interface, and just use the script as part of your script. For that purpose, I recommended reading through the relevant section.  
+Of course you can skip the user interface, and just use the script as part of your script. For that purpose, I recommend reading through the relevant section.  
   
 This manual is split up in 3 sections.  
-The purpose of the 1st section is to quickly get you started, without providing in depth details of the underlying mechanics.  
+The 1st section will get you started, without providing in depth details of the underlying mechanics.  
 The 2nd section will dive deeply into the mechanics of KSP, how drag is determined from start to finish.  
 The 3rd section goes into the different scripts and files used.  
 
