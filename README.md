@@ -75,7 +75,7 @@ To do this simply create a script in the root \Script folder and enter runpath("
 This will open the user interface.  If you do not want to use the user interface further reading is required in the more advanced sections.  
   
 The menu that loads will have multiple options. Whatever you select, the script starts by checking if the partdatabase.cfg file has been analyzed yet, and if not it will analyze the file and put relevant information in a partdatabase.json file, so you do not have to do this scan everytime.  
-If the script is scanning the partdatabase, do NOT interrupt the process as the JSON file might be incomplete, creating errors.  
+If the script is scanning the partdatabase, **do NOT interrupt the process** as the JSON file might be incomplete, creating errors.  
 If you do get errors, rescan the partdatabase.  
 I will give a quick overview of the options you have:  
 
