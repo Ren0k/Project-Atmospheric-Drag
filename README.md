@@ -966,7 +966,8 @@ List of parts that are of the special type 'capsulebottom' (heat shields/capsule
 - **dragModifierList**  
 Some parts like landing gears and parachutes have an additional drag modifier defining a specific state  
 - **partVariants**  
-Some parts like engines have different variants that correspond to different drag cubes  
+Some parts like engines have different variants that correspond to different drag cubes. What partVariant is used, can be determined from the Craft file.  
+A variable I use is called 'extensionState', and it defines what drag cube number is used. Turns out that the way drag cubes are ordered, depends on what module comes first in the part's config file. This should be automatically applied correctly by the script for all stock and dlc parts.  
 
 ## Bypassing the User Interface  <a name="nogui"></a>  
 
