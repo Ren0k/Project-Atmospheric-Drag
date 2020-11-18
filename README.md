@@ -31,7 +31,7 @@ The 3rd section goes into the different scripts and files used.
 ### e. [User Interface](#menus)  
 ### f. [What is a drag profile?](#whatdragprofile)  
 ### g. [How to use a drag profile?](#useprofile)   
-## 1. [Section 2](#Section2)  
+## 2. [Section 2](#Section2)  
 ### a. [KSP Drag](#kspdrag)  
 ### b. [Drag Overview](#dragoverview)  
 ### c. [Drag Cubes](#dragcubes)  
