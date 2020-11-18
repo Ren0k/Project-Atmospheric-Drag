@@ -43,7 +43,7 @@ Other limitations and bugs:
 - **Engine Plates** are currently bugged in KSP; a bug report for this is filed. This is NOT coded into the script, engine plates do not apply their drag cubes. You will have to manually enter drag cube values.  
 - **Fairings** work by procedural drag cube generation. The process KSP uses to do this can not be re-created, and if you use fairings manual values have to be entered.  
 A tool is used to guesstimate the values, but it is not too accurate.  
-- Cargobay part exclusion can not be determined, you will have to specify which parts are excluded if you have a cargobay fitted.  
+- **Cargobay** part exclusion can not be determined, you will have to specify which parts are excluded if you have a cargobay fitted.  
 - Simple non-stock/modded parts will work; more complex non-stock parts that have different variants and modules might not work  
 - You need accurate mach number values; this is determined by the accuracy of the static ambient temperature (SAT) and density, which is not provided by kOS. I have added a tool that allows you to obtain accurate SAT's for kerbin, but for other planets you will have to use an estimated value.
 
