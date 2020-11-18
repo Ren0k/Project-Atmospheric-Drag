@@ -42,9 +42,12 @@ The 3rd section goes into the different scripts and files used.
 #### b. [Wing Lift](#winglift)  
 #### c. [Profile Drag](#wingprofiledrag)  
 #### d. [Induced Drag](#winginduceddrag)  
-### 3. [Airbrakes](#airbrakes)  
-### 4. [Heatshields](#capsule)   
-### 5. [Special Parts](#specialparts)   
+### 3. [Body Lift](#bodylift)  
+### 4. [Airbrakes](#airbrakes)  
+### 5. [Heatshields](#capsule)   
+### 6. [Special Parts](#specialparts)   
+## 3. [Section 3](#Section3)  
+### 1. [Cubic Hermite Splines](#hermite)  
 
 # Section 1 <a name="Section1"></a>
 
@@ -816,7 +819,7 @@ They have 2 specific sets of curves in the physics file:
 The mach multiplier is a constant of 0.0625.  
 If you remove drag cube drag by occupying nodes, no drag but induced drag remains. Definitely not an exploitable wing.  
 
-# Special Parts  <a name="specialparts"></a>  
+# Special Parts   <a name="specialparts"></a>  
 
 Lets go over a few types of parts that need further explaining.  
 
@@ -851,14 +854,14 @@ They are a direct modifier to drag, usually depending on a certain state.
 Landing gears have different modifier values for their deployed/retracted states.  
 The ModuleDragModifier values are included in the ExtraDatabase.  
 
-# Section 3
+# Section 3 <a name="Section3"></a>  
 
 ## Introduction  
 
 Now that we have a proper understanding of how things work in KSP, lets go over a few scripts or structures that require further explanation.    
 I am not going to explain every part in detail, instead there are notes added to every script that will guide you.  
 
-##  Cubic Hermite Interpolator 
+##  Cubic Hermite Interpolator <a name="hermite"></a>  
 
 The splines used for the Cd/Cl transformations are of of the [cubic hermite type](https://en.wikipedia.org/wiki/Cubic_Hermite_spline).     
 
@@ -925,7 +928,7 @@ Cd = (2 * t^3 - 3 * t^2 + 1) * y0 + (t^3 - 2 * t^2 + t) * m0 + (-2 * t^3 + 3 * t
 Cd = (2 * 0.5^3 - 3 * 0.5^2 + 1) * 0.15 + (0.5^3 - 2 * 0.5^2 + 0.5) * 0.11891901 + (-2 * 0.5^3 + 3 * 0.5^2) * 0.35 + (0.5^3 - 0.5^2) * 0.27200958  
 Cd = 0.075 + 0.01486487625 + 0.175 - 0.0340011975 = **0.2308636787** 
 
-## Additional Part Database  
+## Additional Part Database  <a name="extradatabase"></a>  
 
 Like we have seen in the previous sections, some information is not obtainable from kOS, the partdatabase or the craft file.  
 For these parts a small database is added from which the relevant script can get its values.  
@@ -947,7 +950,7 @@ Look at the file called createProfile.ks.
 The function called 'example_CreateProfile' is an example of how to skip the user interface, just input the parameters as demonstrated, and the function will create and return the dragProfile.    
 The input to the 'executeAnalysis' function has to be a lexicon of defined parameters.  
 
-## How to read a drag profile?  
+## How to read a drag profile?   <a name="readprofile"></a>  
 
 A dragprofile has a machStart, machEnd and dT property.  
 For every mach number, a lexicon key of (mach/dT) is created.  
@@ -961,7 +964,7 @@ Of course you can use a linear method (example provided), or simply round your m
 
 The function 'useProfile' demonstrates a few of these concepts and it will make more sense looking through this file.  
 
-## Useful Links  
+## Useful Links   <a name="links"></a>  
 
 - [Dev Post](https://forum.kerbalspaceprogram.com/index.php?/topic/195178-modders-notes-1100/) from the KSP team about the update that introduced drag cubes  
 
