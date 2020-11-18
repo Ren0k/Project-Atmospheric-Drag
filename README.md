@@ -271,6 +271,8 @@ With this out of the way, you might realize that a little bit more is involved t
 We will break it down section by section, calculation by calculation, starting with Drag Cubes.  
 Lets go down the rabbit hole.  
 
+![dragcube1](https://lh6.googleusercontent.com/wYG-GLOLnBKE3vilulRY9uhMRN3eosBdO8aCY_KvxkmdhSnmbStaiOgJgaH2ebMiC3rM6ilk4g_BSDtyn7AYACO3jeAqu5zEDtfx8NBJ4luhXiZ9X7QpiC79aaveVJ_oHFtFaQsY)  
+
 # Drag Cubes <a name="dragcubes"></a>
 
 ### What are drag cubes?  
@@ -286,6 +288,8 @@ This leaves 12 values for every part that is involved in drag.
 Drag Cubes for parts are saved in the PartDatabase.cfg file in the root KSP folder.  
 If you look through this file, you can find all drag cubes for all parts.  
 You might find that some parts have multiple cubes. This is due different part variants or different part states.  
+
+![dragcube2](https://lh5.googleusercontent.com/34BGFljugBKWJ-VcrudyUeJUeBQ_cdi0RWtk7Yd5q-TYgRm3AnKQTI7quNJkDwlBbIRN9b-KTwJipRLJ6spyDYJUEW6XxaXWa7XG5AWy0zntaEun3sneuPJGtkNZKt2mbq8IDXRQ)  
 
 ### How is drag applied to drag cubes?
 
