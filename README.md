@@ -107,7 +107,7 @@ To do this simply create a script in the root \Script folder and enter runpath("
 The 1st thing the script does is check if a partdatabase.json exists, and if not it will create one from your partdatabase.cfg file.  
 If you interrupt this scanning process, the created json file might be incomplete and will result in errors later.  
 If you do get errors, you can rescan the partdatabase in the main menu.     
-Once completed, it will open the user interface.  
+Once complete, it will open the user interface.  
   
 The menu that loads will have multiple options. 
 I will give a quick overview of the options you have:  
