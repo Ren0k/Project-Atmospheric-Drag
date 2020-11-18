@@ -724,7 +724,7 @@ No further explantation required, the value of this is multiplied by Cl to get a
 
 #### Results
 There is one more things before we get our final equation, and that is to add the **liftMultiplier** found in the physics file, of 0.036.  
-This will return a value of Lift in Kilonewton, but the rest of the equations use Newton. That is why the multiplier I use in the script is 36.  
+This will return a value of Lift in Kilonewton, but the rest of the equations uses Newton. That is why the multiplier I use in the script is 36.  
 
 > L (N) = ((Rho * V^2) / 2) * **deflectionLiftCoeff** * (CL_aoa * CL_mach) * 36  
 
@@ -765,8 +765,8 @@ These parts do not make use of wing profile drag, but lift and induced drag are 
 This can also be determined by the property 'useInternalDragModel' which is false at Mk2 spaceplane parts.  
 
 Body lift is however important, the 'deflectionLiftCoeff' is usually quite a high value and induced drag can be significant.  
-Body lift also uses the **liftMultiplier**.  
-You now understand why in the image above the fuselage parts do not have light blue arrows attached.  
+Body lift also uses the **liftMultiplier**, and body lift has its own spline curves in the physics file.  
+You now understand why in the image above, the fuselage parts do not have light blue arrows attached.  
 
 ## Other Parts
 
@@ -793,14 +793,14 @@ They have 2 specific sets of curves in the physics file:
 >liftMach // Converts mach number into a multiplier to Cl  
 
 The mach multiplier is a constant of 0.0625.  
-If you remove drag cube drag by occupying nodes, no drag but induced drag remains. Definitely not exploitable.  
+If you remove drag cube drag by occupying nodes, no drag but induced drag remains. Definitely not an exploitable wing.  
 
 # Section 3
 
 ## Introduction  
 
 Now that we have a proper understanding of how things work in KSP, lets go over a few scripts or structures that require further explanation.    
-I am not going to explain every part in detail, instead there are notes added to every script that will help you understand.  
+I am not going to explain every part in detail, instead there are notes added to every script that will guide you.  
 
 ##  Cubic Hermite Interpolator 
 
@@ -825,7 +825,7 @@ m1 = end tangent
 
 ### Interaction with key values
 
-Key values in this model are represented in a list.  
+Key values in the scripts are represented as a list.  
 To create a curve, you need 2 keys.  
 Consider the following set from the initial CD modifier curve from the physics file:  
 > local key0 is list  (0.05   ,0.0025     ,0.15      ,0.15).  
