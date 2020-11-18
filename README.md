@@ -2,7 +2,13 @@
 
 # A model to determine atmospheric drag with kOS, for stock KSP
 
-# Introduction
+# Table of Contents  
+## 1. [Introduction](#introduction)  
+## 2. [Section 1](#Section1)  
+### a. [Limitations](#limitations)
+### b. [Quick Start Guide](#quickstart)
+
+# Introduction <a name="introduction"></a>
 
 This tool allows you to determine accurate atmospheric drag for stock KSP vessels, for a configurable fixed configuration.  
 It encompasses a complete re-creation of the actual KSP drag and lift calculations, and takes into account different configurations of your vessel.  
@@ -17,16 +23,12 @@ More specifically, with this tool you will be able to:
 Due to the complexity of the method, a simple user interface is provided that will guide you quickly through the process.  
 Of course you can skip the user interface, and just use the script as part of your script. For that purpose, I recommended reading through the relevant section.  
   
-# Table of Contents  
-## 1. [Section 1 - Quick Start](#quickstart)  
-### 1a. [Menus](#menus)
-  
 This manual is split up in 3 sections.  
 The purpose of the 1st section is to quickly get you started, without providing in depth details of the underlying mechanics.  
 The 2nd section will dive deeply into the mechanics of KSP, how drag is determined from start to finish.  
 The 3rd section goes into the different scripts and files used.  
 
-# Section 1 <a name="quickstart"></a>
+# Section 1 <a name="Section1"></a>
 
 ## Why was this tool created?
 
@@ -34,7 +36,7 @@ The 3rd section goes into the different scripts and files used.
 - It helps you analyze and optimize your vessel in atmospheric flight by providing in depth detail of different types of drag
 - By using the drag profile tool provided you can very quickly and accurately determine drag, faster than any other methods
 
-## Limitations
+## Limitations <a name="limitations"></a>
 
 There are of course limitations to what this tool can do.  
 Drag will be determined for a fixed vessel orientation and configuration, so changing any of these in flight will result in inaccurate readings.    
@@ -54,7 +56,7 @@ A tool is used to guesstimate the values, but it is not too accurate.
 ![Demo Image](https://github.com/Ren0k/Project-Atmospheric-Drag/blob/main/Images/Demo%20Image.jpg)    
 **Image of the dragGUI interface**  
 
-# Quickstart Guide
+# Quickstart Guide <a name="quickstart"></a>
 
 A quick overview of things you need to know:  
 - 2 files are required for this to work; your partdatabase.cfg file, and the .craft file of the vessel you use
