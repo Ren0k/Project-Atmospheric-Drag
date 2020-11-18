@@ -103,7 +103,7 @@ There are 2 main scripts to use, found in the dragProfile root folder.
 'createProfile.ks' and 'useProfile.ks'.  
 You start by running the 'createProfile.ks' script.  
 To do this simply create a script in the root \Script folder and enter runpath("dragProfile/createProfile.ks").  
-This will open the user interface.  If you do not want to use the user interface further reading is required in the more advanced sections.  
+This will open the user interface.  
   
 The menu that loads will have multiple options. Whatever you select, the script starts by checking if the partdatabase.cfg file has been analyzed yet, and if not it will analyze the file and put relevant information in a partdatabase.json file, so you do not have to do this scan everytime.  
 If the script is scanning the partdatabase, **do NOT interrupt the process** as the JSON file might be incomplete, creating errors.  
