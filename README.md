@@ -296,7 +296,6 @@ That is why I chose a different method to deal with this system.
 My way of correcting for this left-handed system is to 'reverse' the top and bottom sides, so the top side is called ZN and the bottom side is called ZP.  
 This was the best way to get the actual calculations to line up with in game drag vectors.  
 To make sense of this is to see this image as it is upside down. 
-This might be confusing, and I might mix these values up, but the calculated drag vectors in the script line up with the actual game drag vectors.  
 
 ![dragcube1](https://lh6.googleusercontent.com/wYG-GLOLnBKE3vilulRY9uhMRN3eosBdO8aCY_KvxkmdhSnmbStaiOgJgaH2ebMiC3rM6ilk4g_BSDtyn7AYACO3jeAqu5zEDtfx8NBJ4luhXiZ9X7QpiC79aaveVJ_oHFtFaQsY)  
 
