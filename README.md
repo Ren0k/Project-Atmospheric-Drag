@@ -275,7 +275,8 @@ Lets go down the rabbit hole.
 
 ### What are drag cubes?  
 Every part in KSP has 6 surfaces: A front surface (YP), a back surface (YN), and 4 side surfaces (XP/XN/ZP/ZN).  
-The side surfaces can be further divided into right, left, top, bottom.  
+The side surfaces can be further divided into right (XP), left (XN), top (ZN), bottom (ZP).  
+Note how the image is 'upside down' and that in KSP top and bottom are not as you expect, with the Z-Minus or ZN node being on the top.  
 A drag cube is a 3 Dimensional Cube that sits on top of every of those surfaces, with 3 values:  
 - Area
 - Drag Coefficient
