@@ -23,7 +23,7 @@ The 2nd section will dive deeply into the mechanics of KSP, how drag is determin
 The 3rd section goes into the different scripts and files used.  
 
 # Table of Contents  
-## 1. [Section 1](#Section1)  
+## 1. [Section 1 - Get Started](#Section1)  
 ### a. [Limitations](#limitations)  
 ### b. [Quick Start Guide](#quickstart)  
 ### c. [How to install?](#install)  
@@ -31,7 +31,7 @@ The 3rd section goes into the different scripts and files used.
 ### e. [User Interface](#menus)  
 ### f. [What is a drag profile?](#whatdragprofile)  
 ### g. [How to use a drag profile?](#useprofile)   
-## 2. [Section 2](#Section2)  
+## 2. [Section 2 - KSP Aerodynamics](#Section2)  
 ### 1. [KSP Drag](#kspdrag)  
 #### a. [Drag Overview](#dragoverview)  
 #### b. [Drag Cubes](#dragcubes)  
@@ -46,7 +46,7 @@ The 3rd section goes into the different scripts and files used.
 ### 4. [Airbrakes](#airbrakes)  
 ### 5. [Heatshields](#capsule)   
 ### 6. [Special Parts](#specialparts)   
-## 3. [Section 3](#Section3)  
+## 3. [Section 3 - Script Structure](#Section3)  
 ### 1. [Cubic Hermite Splines](#hermite)  
 
 # Section 1 <a name="Section1"></a>
