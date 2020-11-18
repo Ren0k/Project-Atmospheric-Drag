@@ -280,8 +280,6 @@ A drag cube is a 3 Dimensional Cube that sits on top of every of those surfaces,
 - Drag Coefficient
 - Depth  
 
-![dragcube2](https://lh5.googleusercontent.com/34BGFljugBKWJ-VcrudyUeJUeBQ_cdi0RWtk7Yd5q-TYgRm3AnKQTI7quNJkDwlBbIRN9b-KTwJipRLJ6spyDYJUEW6XxaXWa7XG5AWy0zntaEun3sneuPJGtkNZKt2mbq8IDXRQ)  
-
 Depth is not used for our purposes.  
 This leaves 12 values for every part that is involved in drag.  
 
