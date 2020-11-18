@@ -8,8 +8,10 @@
 ### a. [Limitations](#limitations)  
 ### b. [Quick Start Guide](#quickstart)  
 ### c. [How to install?](#install)  
-### d. [How to Use?](#usage)  
+### d. [How to start?](#usage)  
 ### e. [User Interface](#menus)  
+### f. [What is a drag profile?](#whatdragprofile)  
+### g. [How to use a drag profile??](#useprofile)   
 
 # Introduction <a name="introduction1"></a>
 
@@ -159,19 +161,19 @@ This will end the createProfile script.
 ![Demo Image 2](https://github.com/Ren0k/Project-Atmospheric-Drag/blob/main/Images/Demo%20Image%202.jpg)    
 **Image of the drag profile results**  
 
-## useProfile
+## useProfile  
 
 At this stage you have created a 'Drag Profile' for your selected vessel and configuration.  
 You might wonder what this actually is, and how to use it.  
 
-### What is a drag profile?  
+### What is a drag profile?  <a name="whatdragprofile"></a>
 It turns out that the most important property that determines Drag Coefficients (CD) and Lift Coefficients (CL) is mach number.  
 If you know what Cd/Cl value corresponds to what mach number, only a few additional steps are required for you to acquire the drag force on your vessel.  
 A drag profile is a collection of calculated Cd values for different mach numbers, with a specified interval.  
 In kOS language, it is a lexicon of lists.  Every list, contains 2 lists: One for dragcube Cd values, one for 'other' Cd values.  
 The 2 seperate lists are required as the calculation applied to them is different. Drag cube drag calculation requires a reynolds number modifier, while 'other' cd values skip this modifier.  
 
-### What do I need to use a drag profile?  
+### What do I need to use a drag profile?  <a name="useprofile"></a>
 An example function is provided that you can use, and modify, to your liking.  
 Run it with runpath("dragProfile/useProfile.ks").  
 As mentioned earlier, the main limitation to using this is the accuracy of the mach number you provide. In addition, the accuracy of the provided SAT and Density used in Dynamic Pressure calculation is also a big factor.  
