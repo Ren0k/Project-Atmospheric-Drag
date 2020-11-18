@@ -2,18 +2,7 @@
 
 # A model to determine atmospheric drag with kOS, for stock KSP
 
-# Table of Contents  
-## 0. [Introduction](#introduction1)  
-## 1. [Section 1](#Section1)  
-### a. [Limitations](#limitations)  
-### b. [Quick Start Guide](#quickstart)  
-### c. [How to install?](#install)  
-### d. [How to start?](#usage)  
-### e. [User Interface](#menus)  
-### f. [What is a drag profile?](#whatdragprofile)  
-### g. [How to use a drag profile??](#useprofile)   
-
-# Introduction <a name="introduction1"></a>
+# Introduction 
 
 This tool allows you to determine accurate atmospheric drag for stock KSP vessels, for a configurable fixed configuration.  
 It encompasses a complete re-creation of the actual KSP drag and lift calculations, and takes into account different configurations of your vessel.  
@@ -32,6 +21,16 @@ This manual is split up in 3 sections.
 The purpose of the 1st section is to quickly get you started, without providing in depth details of the underlying mechanics.  
 The 2nd section will dive deeply into the mechanics of KSP, how drag is determined from start to finish.  
 The 3rd section goes into the different scripts and files used.  
+
+# Table of Contents  
+## 1. [Section 1](#Section1)  
+### a. [Limitations](#limitations)  
+### b. [Quick Start Guide](#quickstart)  
+### c. [How to install?](#install)  
+### d. [How to start?](#usage)  
+### e. [User Interface](#menus)  
+### f. [What is a drag profile?](#whatdragprofile)  
+### g. [How to use a drag profile??](#useprofile)   
 
 # Section 1 <a name="Section1"></a>
 
