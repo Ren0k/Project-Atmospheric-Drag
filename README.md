@@ -275,7 +275,7 @@ Lets go down the rabbit hole.
 
 ### What are drag cubes?  
 Every part in KSP has 6 surfaces: A front surface (YP), a back surface (YN), and 4 side surfaces (XP/XN/ZP/ZN).  
-The side surfaces can be further divided into right (XN), left (XP), top (ZP), bottom (ZN).  
+The side surfaces can be further divided into right (XP), left (XN), top (ZN), bottom (ZP).  
 A drag cube is a 3 Dimensional Cube that sits on top of every of those surfaces, with 3 values:  
 - Area
 - Drag Coefficient
@@ -291,10 +291,12 @@ You might find that some parts have multiple cubes. This is due different part v
 **IMPORTANT NOTE**  
 You might think, looking at the image, that the X+ (XP) and X- (XN) sides are reversed. This is not the case.  
 KSP uses a [left-handed](https://ksp-kos.github.io/KOS/math/ref_frame.html#left-handed) coordinate system.  
-When you spawn a part in the SPH, it actually spawns with the ZP side on the bottom, the ZN side on the top, the XP side on the right and the XN side on the left.  
+However when you spawn a part in the SPH, it actually spawns with the ZP side on the bottom, the ZN side on the top, the XP side on the right and the XN side on the left.  
+That is why I chose a different method to deal with this system.  
 My way of correcting for this left-handed system is to 'reverse' the top and bottom sides, so the top side is called ZN and the bottom side is called ZP.  
 This was the best way to get the actual calculations to line up with in game drag vectors.  
-If you see me mix up these sides, this is the reason.  
+To make sense of this is to see this image as it is upside down. 
+This might be confusing, and I might mix these values up, but the calculated drag vectors in the script line up with the actual game drag vectors.  
 
 ![dragcube1](https://lh6.googleusercontent.com/wYG-GLOLnBKE3vilulRY9uhMRN3eosBdO8aCY_KvxkmdhSnmbStaiOgJgaH2ebMiC3rM6ilk4g_BSDtyn7AYACO3jeAqu5zEDtfx8NBJ4luhXiZ9X7QpiC79aaveVJ_oHFtFaQsY)  
 
