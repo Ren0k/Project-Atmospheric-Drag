@@ -32,11 +32,13 @@ The 3rd section goes into the different scripts and files used.
 ### f. [What is a drag profile?](#whatdragprofile)  
 ### g. [How to use a drag profile?](#useprofile)   
 ## 2. [Section 2](#Section2)  
-### a. [KSP Drag](#kspdrag)  
-### b. [Drag Overview](#dragoverview)  
-### c. [Drag Cubes](#dragcubes)  
-### d. [Example 1](#dcexample1)  
-### e. [Example 2](#dcexample1)  
+### 1. [KSP Drag](#kspdrag)  
+### a. [Drag Overview](#dragoverview)  
+### b. [Drag Cubes](#dragcubes)  
+### c. [Example 1](#dcexample1)  
+### d. [Example 2](#dcexample1)  
+### 2. [Lifting Surfaces](#liftdrag)  
+### a. [Wings](#wings)  
 
 # Section 1 <a name="Section1"></a>
 
@@ -684,7 +686,7 @@ It is not quite clear to me where the errors come from, but with an average erro
 My guess is that KSP rounds up or down some values, perhaps the 'Drag Vector' as displayed in the part GUI. We used the exact values, perhaps we should have use the displayed values (0.0, 0.9, 0.3).  
 This concludes drag cubes, next we will be looking at other 'types' of drag.  
 
-# Lifting Surface Drag  
+# Lifting Surface Drag  <a name="liftdrag"></a>  
 
 ![Lift Drag](https://github.com/Ren0k/Project-Atmospheric-Drag/blob/main/Images/Demo%20Image%203.jpg)  
 
@@ -702,7 +704,7 @@ Real world induced drag is the result of a different mechanic, but the main idea
 
 The **yellow arrows** are lift vectors from control surfaces. They work mostly the same as the dark blue lift vectors, but can have more tilt since control surfaces rotate.  
 
-## Wings  
+## Wings  <a name="wings"></a>  
 
 **What makes a part a wing?**  
 If you explore the GameData parts folders, you find that every part has a CFG file defining its properties.  
@@ -715,7 +717,7 @@ We are actually only interested in a single property, called 'deflectionLiftCoef
 As it stands there is no way to calculate or acquire this value from kOS. For simple wings it turns out that it is simply its mass multiplied by 10, but this is not the case for all wings.  
 To solve this problem I have included an extra database containing all stock and dlc lifting surface parts with its values.  
 
-### Wing Lift  
+### Wing Lift  <a name="winglift"></a>  
 
 Lets start with lift.  
 Why is this important if we are intersted in drag? Well, because induced drag as previously mentioned is a direct result of lift generated.  
@@ -747,7 +749,7 @@ This will return a value of Lift in Kilonewton, but the rest of the equations us
 
 > L (N) = ((Rho * V^2) / 2) * **deflectionLiftCoeff** * (CL_aoa * CL_mach) * 36  
 
-### Wing Profile Drag  
+### Wing Profile Drag  <a name="wingprofiledrag"></a>  
 
 From the same section in the physics file we find 2 sets of key value pairs. They are responsible for 'wing profile drag'.  
 Perhaps not the official name, but a name that stuck with me.  
@@ -768,14 +770,14 @@ Adding the specific **liftDragMultiplier** of 0.015, or 15 for a result in Newto
 
 >Wingdrag (N) = ((Rho * V^2) / 2) * **deflectionLiftCoeff** * (CD_aoa * CD_mach) * 15  
 
-### Lift Induced Drag  
+### Lift Induced Drag  <a name="winginduceddrag"></a>  
 
 When a lifting surface produces lift, its lift vector tilts in the opposite direction of motion.  
 The relationship is very simple.  
 
 >Induced Drag (N) = Sin (AoA) * ((Rho * V^2) / 2) * **deflectionLiftCoeff** * (CL_aoa * CL_mach) * 36
 
-## Body Lift  
+## Body Lift   <a name="bodylift"></a>  
 
 You will also find parts that both use drag cubes and have a 'ModuleLiftingSurface'.  
 For example, Mk2 Spaceplane parts fall in this category, just like the vessel used in the image above.  
@@ -787,7 +789,7 @@ Body lift is however important, the 'deflectionLiftCoeff' is usually quite a hig
 Body lift also uses the **liftMultiplier**, and body lift has its own spline curves in the physics file.  
 You now understand why in the image above, the fuselage parts do not have light blue arrows attached.  
 
-## Airbrakes  
+## Airbrakes  <a name="airbrakes"></a>  
 
 Airbrakes do not use dragcubes. They have a module called **ModuleAeroSurface** that also has a **deflectionLiftCoeff** value.  
 They do not produce lift, only drag following 2 transformations in the specific airbrake section in the physics file.  
@@ -796,7 +798,7 @@ They do not produce lift, only drag following 2 transformations in the specific 
 
 >dragMach // Converts mach number into a multiplier to Cd  
 
-## Capsules and Heat Shields  
+## Capsules and Heat Shields   <a name="capsule"></a>  
 
 Another special case. They use drag cubes and they have the same module as wings (ModuleLiftingSurface), but without profile drag.  
 They have 2 specific sets of curves in the physics file:  
@@ -808,7 +810,7 @@ They have 2 specific sets of curves in the physics file:
 The mach multiplier is a constant of 0.0625.  
 If you remove drag cube drag by occupying nodes, no drag but induced drag remains. Definitely not an exploitable wing.  
 
-# Special Parts  
+# Special Parts  <a name="specialparts"></a>  
 
 Lets go over a few types of parts that need further explaining.  
 
