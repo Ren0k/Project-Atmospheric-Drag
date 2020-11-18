@@ -36,7 +36,7 @@ The 3rd section goes into the different scripts and files used.
 #### a. [Drag Overview](#dragoverview)  
 #### b. [Drag Cubes](#dragcubes)  
 #### c. [Example 1](#dcexample1)  
-#### d. [Example 2](#dcexample1)  
+#### d. [Example 2](#dcexample2)  
 ### 2. [Lifting Surfaces](#liftdrag)  
 #### a. [Wings](#wings)  
 #### b. [Wing Lift](#winglift)  
