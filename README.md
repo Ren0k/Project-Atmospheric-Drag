@@ -30,7 +30,9 @@ The 3rd section goes into the different scripts and files used.
 ### d. [How to start?](#usage)  
 ### e. [User Interface](#menus)  
 ### f. [What is a drag profile?](#whatdragprofile)  
-### g. [How to use a drag profile??](#useprofile)   
+### g. [How to use a drag profile?](#useprofile)   
+## 1. [Section 2](#Section2)  
+### a. [Limitations](#limitations)  
 
 # Section 1 <a name="Section1"></a>
 
@@ -183,9 +185,9 @@ For other planets kOS will provide an estimated value, and will reduce the accur
 I recommend exploring the useProfile.ks script and investigate what data is used.  
 This concludes a high-level overview, the next section will go in depth into how it all works.  
 
-# Section 2
+# Section 2 <a name="Section2"></a>
 
-# KSP Drag
+# KSP Drag <a name="kspdrag"></a>
 
 ## Introduction
 Welcome to the fascinating world of KSP aerodynamics.  
@@ -201,7 +203,7 @@ To calculate dynamic pressure, you need an accurate value of density, which is n
 
 The main 'gotcha' is the value of (Cd x A) or CdA, which is very dynamic.  
 
-Before we dive in, here a full overview of the 'types' of drag, modifiers and influencing factors:  
+Before we dive in, here a full overview of the 'types' of drag, modifiers and influencing factors:  <a name="dragoverview"></a>
 
 #### **Drag Cubes**  
 - 6 Dragcube Surfaces per Body Part  
@@ -244,7 +246,7 @@ Before we dive in, here a full overview of the 'types' of drag, modifiers and in
 With this out of the way, you might realize that a little bit more is involved than filling in the drag equation.  
 We will break it down section by section, calculation by calculation, starting with Drag Cubes.
 
-# Drag Cubes
+# Drag Cubes <a name="dragcubes"></a>
 
 ### What are drag cubes?  
 Every part in KSP has 6 surfaces: A front surface (YP), a back surface (YN), and 4 side surfaces (XP/XN/ZP/ZN).
@@ -272,7 +274,7 @@ Every surface can have either 1 or 2 different types of drag applied to it, eith
 In my opinion, the best way to further explain the concept is by using actual situations while in KSP.  
 Lets consider the following situation.  
 
-## Drag Cube Example 1
+## Drag Cube Example 1 <a name="dcexample1"></a>
 
 ![Example 1](https://github.com/Ren0k/Project-Atmospheric-Drag/blob/main/Images/Example%201.jpg)  
 
@@ -436,7 +438,7 @@ This is the method that KSP uses to calculate drag cube drag.
 You might have realized that since only the 2nd (Mach) transformation is done to The Power Of, that all transformations after that are commutative, as long as you keep a constant orientation. So instead of calculating values for every drag cube, we can already apply and add drag cubes together after the surface modifiers are applied.  
 This significantly speeds up the process, and is used in this script.  
 
-## Drag Cube Example 2
+## Drag Cube Example 2 <a name="dcexample2"></a>
 
 ![Example 2](https://github.com/Ren0k/Project-Atmospheric-Drag/blob/main/Images/Example%202.jpg)  
 
