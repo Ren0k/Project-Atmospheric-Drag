@@ -115,13 +115,18 @@ Continues to the next menu where you can create a drag profile
 If you select 'Create Profile' you will continue to the next menu where you can create a 'Drag Profile'.  
 
 ### Menu 3
+**IMPORTANT**  
+Depending on the values you select, a profile might become an excessively large file with file sizes up to 20-30 Mb.  
+If you create a profile for a very wide range of mach numbers, be gentle on the dT value you select.  
+
 - Mach Start  
 At what mach number should the profile start. This indicates the lowest mach number at which you can use this profile.  
 - Mach End  
 At what mach number should the profile end. It indicates the highest mach number at which you can use this profile.  
 Note that the highest value you will find in KSP is mach 25; higher mach numbers will have constant Cd/Cl values.  
 - Delta-T  
-The intervals for which you calculate the Cd value. The default selected value of 0.01 works well. Lowering this value will increase accuracy but also increase calculation time.  
+The intervals for which you calculate the Cd value. The default selected value of 0.01 works well. Lowering this value will increase accuracy but also increase calculation time. 
+
 I recommend using either 0.0001 / 0.001 / 0.01 / 0.1.  
 - Review Part List  
 Same as in Menu 2
