@@ -290,13 +290,13 @@ You might find that some parts have multiple cubes. This is due different part v
 
 **IMPORTANT NOTE**  
 You might think, looking at the image, that the X+ (XP) and X- (XN) sides are reversed. This is not the case.  
-In fact, ZP (Z+) and ZN (Z-) are reversed, to make the Z+ (ZP) node on the bottom, and the Z- (ZN) node on the top.   
+In fact, ZP (Z+) and ZN (Z-) are reversed, to make the Z+ (ZP) side on the bottom, and the Z- (ZN) side on the top.   
 That is why the ZN side is called the top side, and the ZP node is called the bottom side.  
 The image you look at is actually upside down.  
 You might say that right and left are reversed, but that does not seem to be true.  
 The only solution to line up the partGUI 'drag vectors' with the calculated drag vectors was to reverse up and down.  
-When you spawn a part in the VAB/SPH, it actually spawns upside down with the ZP node on the bottom and the right XP node on the right.  
-Another way of looking at it is to remember that the Top node corresponds to ZN (Z-) and the bottom node corresponds to ZP (Z+).  
+When you spawn a part in the SPH, it actually spawns in this specific configuration with ZN on the top, ZP on the bottom, XP on the right, XN on the left.   
+Another way of looking at it is to remember that the top side corresponds to ZN (Z-) and the bottom side corresponds to ZP (Z+).  
 
 ![dragcube1](https://lh6.googleusercontent.com/wYG-GLOLnBKE3vilulRY9uhMRN3eosBdO8aCY_KvxkmdhSnmbStaiOgJgaH2ebMiC3rM6ilk4g_BSDtyn7AYACO3jeAqu5zEDtfx8NBJ4luhXiZ9X7QpiC79aaveVJ_oHFtFaQsY)  
 
