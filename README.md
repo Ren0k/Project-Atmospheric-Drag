@@ -147,6 +147,9 @@ It will be saved in the dragProfile\DATA\Profiles folder.
 - Finish  
 This will end the createProfile script.  
 
+![Demo Image 2](https://github.com/Ren0k/Project-Atmospheric-Drag/blob/main/Images/Demo%20Image%202.jpg)    
+**Image of the drag profile results**  
+
 ## useProfile
 
 At this stage you have created a 'Drag Profile' for your selected vessel and configuration.  
