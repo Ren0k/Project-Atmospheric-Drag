@@ -52,7 +52,7 @@ The 3rd section goes into the different scripts and files used.
 ### 3. [Bypass the GUI](#nogui)  
 ### 4. [How to read a drag profile?](#readprofile)  
 ### 5. [Useful Functions and Equations](#equations)  
-### 5. [Useful Links](#links)  
+### 6. [Useful Links](#links)  
 
 # Section 1 <a name="Section1"></a>
 
