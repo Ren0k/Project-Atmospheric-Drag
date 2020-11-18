@@ -486,7 +486,7 @@ The same fuel tank as in example 1 is falling down towards Kerbin. In addition, 
 There are some internal gyros that produce drag, we ignore them for now, and only look at drag values of the 2 fuel tanks.  
 So how do we get the drag on the 2 fuel tanks?  
 
-We follow the exact same steps as in example 1, but a few addition before starting with transformations.  
+We follow the exact same steps as in example 1, but with a few additions before starting with transformations.  
 
 #### 1) Getting Drag Cube Values
 Same as in example 1:
