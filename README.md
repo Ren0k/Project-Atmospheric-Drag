@@ -990,6 +990,17 @@ Of course you can use a linear method (example provided), or simply round your m
 
 The function 'useProfile' demonstrates a few of these concepts and it will make more sense looking through this file.  
 
+## Useful Functions and Equations  
+
+### Atmospheric Values  
+**Density:**  
+> ρ = P / ((R/M) * T)   
+ρ = Density (kg/m^3)  
+P = Pressure (pa)  
+R = Ideal Gas Constant (j/m/k)  
+M = Atmospheric Molar Mass (kg/mol)  
+T = Temperature (kelvin)  
+
 ## Useful Links   <a name="links"></a>  
 
 - [Dev Post](https://forum.kerbalspaceprogram.com/index.php?/topic/195178-modders-notes-1100/) from the KSP team about the update that introduced drag cubes  
