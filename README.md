@@ -3,8 +3,8 @@
 # A model to determine atmospheric drag with kOS, for stock KSP
 
 # Table of Contents  
-## 1. [Introduction](#introduction1)  
-## 2. [Section 1](#Section1)  
+## 0. [Introduction](#introduction1)  
+## 1. [Section 1](#Section1)  
 ### a. [Limitations](#limitations)  
 ### b. [Quick Start Guide](#quickstart)  
 ### c. [How to install?](#install)  
