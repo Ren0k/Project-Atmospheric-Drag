@@ -936,3 +936,18 @@ This allows you to use the same hermite interpolator to get the most exact value
 Of course you can use a linear method (example provided), or simply round your mach number to the nearest key.  
 
 The function 'useProfile' demonstrates a few of these concepts and it will make more sense looking through this file.  
+
+## Useful Links  
+
+- [Dev Post](https://forum.kerbalspaceprogram.com/index.php?/topic/195178-modders-notes-1100/) from the KSP team about the update that introduced drag cubes  
+
+- [Dev Post](https://forum.kerbalspaceprogram.com/index.php?/developerarticles.html/on-cargo-bays-and-part-occlusion-r156/) about cargo bay exclusion  
+
+- [Forum Post](https://forum.kerbalspaceprogram.com/index.php?/topic/182616-the-drag-of-parts/) and an insightful discussion about KSP drag  
+
+- [Forum Post](https://forum.kerbalspaceprogram.com/index.php?/topic/107254-overhauls-for-10/page/4/#comment-2165453) about Lift and Drag  
+
+- [Guide](https://github.com/Ren0k/Kerbin-Temperature-Model) for the tool provided here with which you calculate kerbin air temperatures  
+
+
+
