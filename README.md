@@ -888,7 +888,7 @@ Some parts like engines have different variants that correspond to different dra
 ## Bypassing the User Interface  
 
 Look at the file called createProfile.ks.  
-The function called 'example_CreateProfile' is an example of how to skip the user interface, just input values and create a drag profile.  
+The function called 'example_CreateProfile' is an example of how to skip the user interface, just input the parameters as demonstrated, and the function will create and return the dragProfile.    
 The input to the 'executeAnalysis' function has to be a lexicon of defined parameters.  
 
 ## How to read a drag profile?  
