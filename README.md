@@ -811,6 +811,12 @@ The system used to generate drag cubes is based on a camera tool in unity and ca
 As such, if fairings are used the user will have to manually specify drag cube values with the tool provided by the user interface.  
 If not, a function will try to guess the value based on its properties.  
 
+## Shrouds  
+
+Some parts like engines, once combined with decouplers, can have a shroud attached.  
+The script will automatically identify which parts have shrouds attached, but only from the craft file.  
+Be aware that once you modify your craft in game and remove a shroud, the model will no longer be accurate.  
+
 ## ModuleDragModifier  
 
 Certain parts like landing gears and parachute have a module called **ModuleDragModifier**.  
