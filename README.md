@@ -285,8 +285,12 @@ Depth is not used for our purposes.
 This leaves 12 values for every part that is involved in drag.  
 
 **IMPORTANT NOTE**  
-The right and left nodes are actually reversed, to make them XN and XP. Now the issue I had with this, is when you spawn a part it spawns upside down.  
-Note how the image is 'upside down' and that in KSP top and bottom are not as you expect, with the Z-Minus or ZN node being on the top.  
+You might think, looking at the image, that the right (XP) and left (XN) sides are reversed. This is not the case.  
+In fact, top and bottom are reversed, and the image you look at is upside down.  
+This was the only solution to line up the partGUI 'drag vectors' with the calculated drag vectors.  
+When you spawn a part in the VAB/SPH, it actually spawns upside down with the top (ZN) node on the bottom.  
+If this is still confusing, just remember that ZN corresponds with the top section.  
+
 
 Drag Cubes for parts are saved in the PartDatabase.cfg file in the root KSP folder.  
 If you look through this file, you can find all drag cubes for all parts.  
