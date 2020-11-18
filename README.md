@@ -3,12 +3,15 @@
 # A model to determine atmospheric drag with kOS, for stock KSP
 
 # Table of Contents  
-## 1. [Introduction](#introduction)  
+## 1. [Introduction](#introduction1)  
 ## 2. [Section 1](#Section1)  
-### a. [Limitations](#limitations)
-### b. [Quick Start Guide](#quickstart)
+### a. [Limitations](#limitations)  
+### b. [Quick Start Guide](#quickstart)  
+### c. [How to install?](#install)  
+### d. [How to Use?](#usage)  
+### e. [User Interface](#menus)  
 
-# Introduction <a name="introduction"></a>
+# Introduction <a name="introduction1"></a>
 
 This tool allows you to determine accurate atmospheric drag for stock KSP vessels, for a configurable fixed configuration.  
 It encompasses a complete re-creation of the actual KSP drag and lift calculations, and takes into account different configurations of your vessel.  
@@ -65,14 +68,14 @@ A quick overview of things you need to know:
 - Multiple drag profiles can be created that can be used later, also for different vessels
 - Be aware that complex modded parts might not work correctly
 
-## Install
+## Install  <a name="install"></a>
 
 - Put the dragProfile folder in your KSP\Ships\Script folder
 - Create a copy of your partdatabase.cfg file found in the KSP root folder, and place it in KSP\Ships\Script\dragProfile\DATA\PartDatabase
 - Create a copy of your ship's .craft file (found in KSP\saves\savename\ships) in KSP\Ships\Script\dragProfile\DATA\Vessels.  
 Note: do this at the last possible moment, as any time you save your vessel in the VAB, new part ID's are created and a new copy has to be put in the \Vessels folder.
 
-## Usage
+## Usage <a name="usage"></a>
 
 There are 2 main scripts to use, found in the dragProfile root folder.  
 'createProfile.ks' and 'useProfile.ks'.  
