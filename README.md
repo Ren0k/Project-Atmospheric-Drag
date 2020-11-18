@@ -100,6 +100,10 @@ A quick overview of things you need to know:
 
 ## Usage <a name="usage"></a>
 
+Before running the script, 2 notes:    
+- 1) Try to refrain from using complex parts like rotors or robotic arms. They might not be picked up correctly by the script.  
+- 2) Try to spawn the vessel from the VAB/SPH in a state as ready as possible for the profile creation. Some information is gathered from the craft file, and changing your vessel later might result in deviations  
+
 There are 2 main scripts to use, found in the dragProfile root folder.  
 'createProfile.ks' and 'useProfile.ks'.  
 You start by running the 'createProfile.ks' script.  
