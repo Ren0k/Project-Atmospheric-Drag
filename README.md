@@ -281,7 +281,7 @@ A drag cube is a 3 Dimensional Cube that sits on top of every of those surfaces,
 - Drag Coefficient
 - Depth  
 
-Depth is not used for our purposes.  
+Depth is not used in these scripts.  
 This leaves 12 values for every part that is involved in drag.  
 
 Drag Cubes for parts are saved in the PartDatabase.cfg file in the root KSP folder.  
