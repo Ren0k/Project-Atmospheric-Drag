@@ -66,7 +66,7 @@ The 3rd section goes into the different scripts and files used.
 There are of course limitations to what this tool can do.  
 Drag will be determined for a fixed vessel orientation and configuration, so changing any of these in flight will result in inaccurate readings.    
 While in theory it is possible to allow for changing orientations and configurations, the amount of calculations required to do this is too great for kOS.  
-Hence I have chosen to restrict the tool to this setup.  
+Hence I have chosen to restrict the tool to this setup. For multiple configurations and states multiple profiles have to be created.    
 
 Other limitations and bugs:  
 - The information required to do these calculations can not be obtained with kOS alone. A copy of your 'partdatabase.cfg' and your vessel's .craft file have to be put in the correct folder for use by the tool
