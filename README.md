@@ -227,7 +227,7 @@ To calculate dynamic pressure, you need an accurate value of density, which is n
 
 The main 'gotcha' is the value of (Cd x A) or CdA, which is very dynamic.  
 
-Before we dive in, here a full overview of the 'types' of drag, modifiers and influencing factors:  <a name="dragoverview"></a>
+This is a full overview of the 'types' of drag, modifiers and influencing factors:  <a name="dragoverview"></a>
 
 #### **Drag Cubes**  
 - 6 Dragcube Surfaces per Body Part  
@@ -268,7 +268,8 @@ Before we dive in, here a full overview of the 'types' of drag, modifiers and in
 - Global Lift Drag Multiplier
 
 With this out of the way, you might realize that a little bit more is involved than filling in the drag equation.  
-We will break it down section by section, calculation by calculation, starting with Drag Cubes.
+We will break it down section by section, calculation by calculation, starting with Drag Cubes.  
+Lets go down the rabbit hole.  
 
 # Drag Cubes <a name="dragcubes"></a>
 
