@@ -993,9 +993,9 @@ The function 'useProfile' demonstrates a few of these concepts and it will make 
 
 - [Dev Post](https://forum.kerbalspaceprogram.com/index.php?/developerarticles.html/on-cargo-bays-and-part-occlusion-r156/) about cargo bay exclusion  
 
-- [Forum Post](https://forum.kerbalspaceprogram.com/index.php?/topic/182616-the-drag-of-parts/) and an insightful discussion about KSP drag  
+- [Forum Post](https://forum.kerbalspaceprogram.com/index.php?/topic/182616-the-drag-of-parts/) about KSP drag  
 
-- [Forum Post](https://forum.kerbalspaceprogram.com/index.php?/topic/107254-overhauls-for-10/page/4/#comment-2165453) about Lift and Drag  
+- [Forum Post](https://forum.kerbalspaceprogram.com/index.php?/topic/107254-overhauls-for-10/page/4/#comment-2165453) and an insightful discussion about Lift and Drag  
 
 - [Guide](https://github.com/Ren0k/Kerbin-Temperature-Model) for the tool provided here with which you calculate kerbin air temperatures  
 
