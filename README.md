@@ -71,8 +71,8 @@ Hence I have chosen to restrict the tool to this setup. For multiple configurati
 
 Other limitations and bugs:  
 - The information required to do these calculations can not be obtained with kOS alone. A copy of your 'partdatabase.cfg' and your vessel's .craft file have to be put in the correct folder for use by the tool
-- **Airbrake** Deployment angle is bugged in KSP; a bug report is filed. The bug is actually coded in this script, and if it is fixed in KSP this will have to be adjusted here. You should not have to worry about this, just be aware it exists.  
-- **Engine Plates** are currently bugged in KSP; a bug report for this is filed. This is NOT coded into the script, engine plates do not apply their drag cubes. You will have to manually enter drag cube values.  
+- **Airbrake** Deployment angle is bugged in KSP; a [bug report](https://bugs.kerbalspaceprogram.com/issues/26565) is filed. The bug is actually coded in this script, and if it is fixed in KSP this will have to be adjusted here. You should not have to worry about this, just be aware it exists.  
+- **Engine Plates** are currently bugged in KSP; a [bug report](https://bugs.kerbalspaceprogram.com/issues/25712) for this is filed. This is NOT coded into the script, engine plates do not apply their drag cubes. You will have to manually enter drag cube values.  
 - **Fairings** work by procedural drag cube generation. The process KSP uses to do this can not be re-created, and if you use fairings manual values have to be entered.  
 A tool is used to guesstimate the values, but it is not too accurate.  
 - **Cargobay** part exclusion can not be determined, you will have to specify which parts are excluded if you have a cargobay fitted.  
