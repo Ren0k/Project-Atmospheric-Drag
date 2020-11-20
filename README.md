@@ -903,7 +903,7 @@ The splines used for the Cd/Cl transformations are of of the [cubic hermite type
 Since the splines already exist in the physics file, we need a cubic hermite interpolator to 'read' them.  
 A cubic hermite interpolator is created with the function:  
 
-![Hermite Interpolator](https://github.com/Ren0k/Kerbin-Temperature-Model/blob/master/Images/Hermite.jpg)   
+![Hermite Interpolator](https://github.com/Ren0k/Project-Atmospheric-Drag/blob/main/Images/Hermite.jpg)   
 
 Or as used in kOS:  
 
