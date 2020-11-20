@@ -2,12 +2,14 @@
 
 # A model to calculate atmospheric drag with kOS, for stock KSP
 
-# UPDATE 20-11-20
-
-Please use the new method to obtain SAT, for best results.  
-Get [here!](https://github.com/Ren0k/Atmospheric-Data)  
-
 # Introduction 
+
+
+### UPDATE 20-11-20
+
+Added a new method to obtain SAT, and updated the scripts to use this new method.  
+See [here!](https://github.com/Ren0k/Atmospheric-Data)  
+
 
 This tool allows you to determine accurate atmospheric drag for stock KSP vessels, for a configurable fixed configuration.  
 It encompasses a complete re-creation of the actual KSP drag and lift calculations, and takes into account different configurations of your vessel.  
