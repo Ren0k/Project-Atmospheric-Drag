@@ -82,7 +82,7 @@ Other limitations and bugs:
 A tool is used to guesstimate the values, but it is not too accurate.  
 - **Cargobay** part exclusion can not be determined, you will have to specify which parts are excluded if you have a cargobay fitted.  
 - Simple non-stock/modded parts will work; more complex non-stock parts that have different variants and modules might not work  
-- You need accurate mach number values; this is determined by the accuracy of the static ambient temperature (SAT) and density, which is not provided by kOS. I have added a tool that allows you to obtain accurate SAT's for kerbin, but for other planets you will have to use an estimated value.
+- You need accurate mach number values; this is determined by the accuracy of the static ambient temperature (SAT) and density, which is not provided by kOS. I have added a tool that allows you to obtain these for all atmospheric planets.
 
 ![Demo Image](https://github.com/Ren0k/Project-Atmospheric-Drag/blob/main/Images/Demo%20Image.jpg)    
 **Image of the dragGUI interface**  
@@ -98,7 +98,7 @@ A quick overview of things you need to know:
 
 ## Install  <a name="install"></a>
 
-- Put the dragProfile folder in your KSP\Ships\Script folder
+- Put the dragProfile folder, and the atmoData folder, in your KSP\Ships\Script folder
 - Create a copy of your partdatabase.cfg file found in the KSP root folder, and place it in KSP\Ships\Script\dragProfile\DATA\PartDatabase
 - Create a copy of your ship's .craft file (found in KSP\saves\savename\ships) in KSP\Ships\Script\dragProfile\DATA\Vessels.  
 **Note:** do this at the last possible moment, as any time you save your vessel in the VAB, new part ID's are created and a new copy has to be put in the \Vessels folder.
@@ -211,8 +211,8 @@ The 2 seperate lists are required as the calculation applied to them is differen
 An example function is provided that you can use, and modify, to your liking.  
 Run it with runpath("dragProfile/useProfile.ks").  
 As mentioned earlier, the main limitation to using this is the accuracy of the mach number you provide. In addition, the accuracy of the provided SAT and Density used in Dynamic Pressure calculation is also a big factor.  
-I have provided tools that allow you to quite accurately determine these values for Kerbin.  
-Further information on this topic can be found [here](https://github.com/Ren0k/Kerbin-Temperature-Model).  
+I have provided tools that allow you to get this information. 
+Further information on this topic can be found [here](https://github.com/Ren0k/Atmospheric-Data).  
 For other planets kOS will provide an estimated value, and will reduce the accuracy of the calculation.  
 
 I recommend exploring the useProfile.ks script and investigate what data is used.  
@@ -233,7 +233,7 @@ This is on a basic level how it works in KSP.
 You take dynamic pressure ((Rho x V^2)/2) and multiply it with a (Cd x A) value.  
 
 Getting dynamic pressure is possible with the method provided by kOS (ship:q), or can be calculated independently.  
-To calculate dynamic pressure, you need an accurate value of density, which is not provided by kOS but can be determined. I have provided a tool that allows you to get accurate density values for Kerbin's atmosphere, for other atmospheres you can get an estimated value.  
+To calculate dynamic pressure, you need an accurate value of density, which is not provided by kOS but can be determined. I have provided a tool that allows you to get accurate density values. 
 
 The main 'gotcha' is the value of (Cd x A) or CdA, which is very dynamic.  
 
@@ -1054,7 +1054,7 @@ tas = True Airspeed (m/s)
 
 - [Forum Post](https://forum.kerbalspaceprogram.com/index.php?/topic/107254-overhauls-for-10/page/4/#comment-2165453) and an insightful discussion about Lift and Drag  
 
-- [Guide](https://github.com/Ren0k/Kerbin-Temperature-Model) for the tool provided here with which you calculate kerbin air temperatures  
+- [Guide](https://github.com/Ren0k/Atmospheric-Data) for the tool provided here with which you calculate air temperatures  
 
 # Afterword  
 
