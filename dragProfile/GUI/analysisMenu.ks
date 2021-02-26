@@ -40,8 +40,8 @@ function analysisMenu {
     local stringCollection is lexicon(
         "label1", "<color=#1e3fa4>Vessel Analysis Menu</color>",
         "label2", "Before analyzing your vessel, please do the following:",
-        "label3", "<b>1) Create a copy of your PartDatabase.cfg file in the Ships/Script/dragProfile/DATA/PartDatabase folder and select 'Scan Database', if not already done so.</b>",
-        "label4", "<b>2) Create a copy of your current ship .Craft file in the Ships/Script/dragProfile/DATA/Vessels folder.</b>",
+        "label3", "<b>1) Create a copy of your PartDatabase.cfg file in the Ships/Script/CCAT/dragProfile/DATA/PartDatabase folder and select 'Scan Database', if not already done so.</b>",
+        "label4", "<b>2) Create a copy of your current ship .Craft file in the Ships/Script/CCAT/dragProfile/DATA/Vessels folder.</b>",
         "label5", "<b>3) Make sure that your ship is in the correct configuration that you want to create the profile for, or manually configure your ships configuration.</b>",
         "label6", "<color=#1e3fa4>Part Configuration Menu</color>",
         "label7", "<b>Select what specific configuration you want to use. Additionally you can decide to scan the vessel in its current actual configuration.</b>",
@@ -64,13 +64,13 @@ function analysisMenu {
     function checkForFiles {
         // PRIVATE checkForFiles :: nothing -> nothing
         local craftName is (ship:name+".craft").
-        if (exists("dragProfile/DATA/PartDatabase/PartDatabase.cfg")) and (exists("dragProfile/DATA/Vessels/"+craftName)) return True.
+        if (exists("CCAT/dragProfile/DATA/PartDatabase/PartDatabase.cfg")) and (exists("CCAT/dragProfile/DATA/Vessels/"+craftName)) return True.
         else set warningLabel:text to "<color=red><b>ONE OF THE FILES WAS NOT FOUND, PLEASE FOLLOW THE INSTRUCTIONS!</b></color>".
     }
 
     function buttonRescan {
         // PRIVATE buttonRescan :: nothing -> nothing
-        if (exists("dragProfile/DATA/PartDatabase/PartDatabase.cfg")) {
+        if (exists("CCAT/dragProfile/DATA/PartDatabase/PartDatabase.cfg")) {
             set warningLabel:text to "<color=red><b>SCANNING PARTDATABASE</b></color>".
             lib_getVesselAnalysis["rescanPartDatabase"]().
             set warningLabel:text to "Partdatabase scanned!".
@@ -317,8 +317,8 @@ function analysisMenu {
         // PRIVATE button_loadPartlist :: nothing -> nothing
         set loadPartlistTextfield:confirmed to true.
         local selectedPartlist is loadPartlistTextfield:text.
-        if exists("dragProfile/DATA/Partlists/"+selectedPartlist) {
-            local newPartList is readjson("dragProfile/DATA/Partlists/"+selectedPartlist).
+        if exists("CCAT/dragProfile/DATA/Partlists/"+selectedPartlist) {
+            local newPartList is readjson("CCAT/dragProfile/DATA/Partlists/"+selectedPartlist).
             set vesselPartList to newPartList.
             set parametersCollection to vesselPartList["parametersCollection"].
             vesselPartList:remove("parametersCollection").
@@ -613,7 +613,7 @@ function analysisMenu {
     //////////////////////////////////////////
 
     ///// PartDatabase Scan /////
-    if (not exists("dragProfile/DATA/PartDatabase/PartDatabase.json")) and (exists("dragProfile/DATA/PartDatabase/PartDatabase.cfg")) {
+    if (not exists("CCAT/dragProfile/DATA/PartDatabase/PartDatabase.json")) and (exists("CCAT/dragProfile/DATA/PartDatabase/PartDatabase.cfg")) {
         showGUI(13).
         buttonRescan().
         hideGUI(13).

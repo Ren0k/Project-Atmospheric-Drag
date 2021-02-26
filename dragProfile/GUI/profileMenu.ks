@@ -88,7 +88,7 @@ function profileMenu {
     function saveToFile {
         // PRIVATE saveToFile :: nothing -> nothing
         set filenameTextfield:confirmed to True. 
-        writejson(dragProfile, "dragProfile/DATA/Profiles/"+fileName).
+        writejson(dragProfile, "CCAT/dragProfile/DATA/Profiles/"+fileName).
         set getGui("5-label-3"):text to "<color=red><b>Saved as </b></color>"+fileName.
     }
 
