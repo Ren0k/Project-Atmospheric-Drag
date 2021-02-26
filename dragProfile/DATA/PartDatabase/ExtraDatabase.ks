@@ -129,7 +129,80 @@ function getPartVariantList {
         "EnginePlate1p5", lexicon("Short", 0, "Medium-Short", 1, "Medium", 2, "Medium-Long", 3, "Long", 4),
         "EnginePlate2", lexicon("Short", 0, "Medium-Short", 1, "Medium", 2, "Medium-Long", 3, "Long", 4),
         "EnginePlate3", lexicon("Short", 0, "Medium-Short", 1, "Medium", 2, "Medium-Long", 3, "Long", 4),
-        "EnginePlate4", lexicon("Short", 0, "Medium-Short", 1, "Medium", 2, "Medium-Long", 3, "Long", 4)
+        "EnginePlate4", lexicon("Short", 0, "Medium-Short", 1, "Medium", 2, "Medium-Long", 3, "Long", 4),
+        "RCSBlock.v2", lexicon("5Horn", 1, "4Horn", 2, "3Horn", 3, "2Horn", 4),
+        "RCSblock.01.small", lexicon("5Horn", 1, "4Horn", 2, "3Horn", 3, "2Horn", 4)
     ).
     return partVariantList.
+}
+
+function getPartProceduralCubes {
+    // PUBLIC getPartProceduralCubes :: Nothing -> 2D Associative Array
+    local proceduralCubeList is lexicon(
+        "EnginePlate1p5", lexicon(
+            "XP", "A: 0.30 Cd: 0.78", 
+            "XN", "A: 0.30 Cd: 0.78",
+            "YP", "A: 2.73 Cd: 1.0",
+            "YN", "A: 2.73 Cd: 1.0",
+            "ZP", "A: 0.30 Cd: 0.78", 
+            "ZN", "A: 0.30 Cd: 0.78"
+            ),
+        "EnginePlate2", lexicon(
+            "XP", "A: 0.53 Cd: 0.78", 
+            "XN", "A: 0.53 Cd: 0.78",
+            "YP", "A: 4.58 Cd: 1.00",
+            "YN", "A: 4.58 Cd: 1.00",
+            "ZP", "A: 0.53 Cd: 0.78", 
+            "ZN", "A: 0.53 Cd: 0.78"
+        ),
+        "EnginePlate3", lexicon(
+            "XP", "A: 1.18 Cd: 0.78", 
+            "XN", "A: 1.18 Cd: 0.78",
+            "YP", "A: 10.92 Cd: 1.00",
+            "YN", "A: 10.92 Cd: 1.00",
+            "ZP", "A: 1.18 Cd: 0.78", 
+            "ZN", "A: 1.18 Cd: 0.78"
+        ),
+        "EnginePlate4", lexicon(
+            "XP", "A: 2.10 Cd: 0.78", 
+            "XN", "A: 2.10 Cd: 0.78",
+            "YP", "A: 19.41 Cd: 1.00",
+            "YN", "A: 19.41 Cd: 1.00",
+            "ZP", "A: 2.10 Cd: 0.78", 
+            "ZN", "A: 2.10 Cd: 0.78"
+        ),
+        "Size1to0ServiceModule", lexicon(
+            "XP", "A: 0.62 Cd: 0.69", 
+            "XN", "A: 0.62 Cd: 0.69",
+            "YP", "A: 1.21 Cd: 0.58",
+            "YN", "A: 1.21 Cd: 0.98",
+            "ZP", "A: 0.62 Cd: 0.69", 
+            "ZN", "A: 0.62 Cd: 0.69"
+        ),
+        "ServiceModule18", lexicon(
+            "XP", "A: 2.80 Cd: 0.78", 
+            "XN", "A: 2.80 Cd: 0.78",
+            "YP", "A: 2.85 Cd: 0.95",
+            "YN", "A: 2.85 Cd: 0.91",
+            "ZP", "A: 2.80 Cd: 0.78", 
+            "ZN", "A: 2.80 Cd: 0.78"
+        ),
+        "ServiceModule25", lexicon(
+            "XP", "A: 7.85 Cd: 0.78", 
+            "XN", "A: 7.85 Cd: 0.78",
+            "YP", "A: 4.87 Cd: 0.95",
+            "YN", "A: 4.87 Cd: 0.95",
+            "ZP", "A: 7.85 Cd: 0.77", 
+            "ZN", "A: 7.85 Cd: 0.77"
+        ),
+        "nuclearEngine", lexicon(
+            "XP", "A: 2.66 Cd: 0.73", 
+            "XN", "A: 2.66 Cd: 0.73",
+            "YP", "A: 1.22 Cd: 0.97",
+            "YN", "A: 1.22 Cd: 0.62",
+            "ZP", "A: 2.66 Cd: 0.73", 
+            "ZN", "A: 2.66 Cd: 0.73"
+        )
+    ).
+    return proceduralCubeList.
 }
