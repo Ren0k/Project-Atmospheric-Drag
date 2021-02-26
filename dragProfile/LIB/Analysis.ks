@@ -10,8 +10,8 @@ function getVesselAnalysis {
 	function analyzePartDatabase {
 		// PUBLIC analyzePartDatabase :: nothing -> json
 		// Gets the partdatabase.cfg file and creates a json with the drag cube information per part
-		if (not exists("dragProfile/DATA/PartDatabase/PartDatabase.json")) and (exists("dragProfile/DATA/PartDatabase/PartDatabase.cfg")) {
-			local partDatabaseRaw is open("dragProfile/DATA/PartDatabase/PartDatabase.cfg"):readall.
+		if (not exists("CCAT/DragProfile/DATA/PartDatabase/PartDatabase.json")) and (exists("CCAT/DragProfile/DATA/PartDatabase/PartDatabase.cfg")) {
+			local partDatabaseRaw is open("CCAT/DragProfile/DATA/PartDatabase/PartDatabase.cfg"):readall.
 			local partDatabaseLexicon is lexicon().
 			local partname is "".
 			local index is 0.
@@ -34,15 +34,15 @@ function getVesselAnalysis {
 					set index to index + 1.
 				}
 			}
-			writejson(partDatabaseLexicon, "dragProfile/DATA/PartDatabase/PartDatabase.json"). } 
+			writejson(partDatabaseLexicon, "CCAT/DragProfile/DATA/PartDatabase/PartDatabase.json"). } 
 	}
 
 	function rescanPartDatabase {
 		// PUBLIC rescanPartDatabase :: nothing -> json
 		// Skips checking for an existing JSON
 		// Gets the partdatabase.cfg file and creates a json with the drag cube information per part
-		if (exists("dragProfile/DATA/PartDatabase/PartDatabase.cfg")) {
-			local partDatabaseRaw is open("dragProfile/DATA/PartDatabase/PartDatabase.cfg"):readall.
+		if (exists("CCAT/DragProfile/DATA/PartDatabase/PartDatabase.cfg")) {
+			local partDatabaseRaw is open("CCAT/DragProfile/DATA/PartDatabase/PartDatabase.cfg"):readall.
 			local partDatabaseLexicon is lexicon().
 			local partname is "".
 			local index is 0.
@@ -66,7 +66,7 @@ function getVesselAnalysis {
 					set index to index + 1.
 				}
 			}
-			writejson(partDatabaseLexicon, "dragProfile/DATA/PartDatabase/PartDatabase.json"). } 
+			writejson(partDatabaseLexicon, "CCAT/DragProfile/DATA/PartDatabase/PartDatabase.json"). } 
 	}
 
 	function analyzeCraftFile {
@@ -114,8 +114,8 @@ function getVesselAnalysis {
 
 		///// MAIN EXECUTION /////
 		// Now we are going to scan through the .Craft file and get the information we want
-		if exists("dragProfile/DATA/Vessels/"+craftName) {
-			local craftFileRaw is open("dragProfile/DATA/Vessels/"+craftName):readall.
+		if exists("CCAT/DragProfile/DATA/Vessels/"+craftName) {
+			local craftFileRaw is open("CCAT/DragProfile/DATA/Vessels/"+craftName):readall.
 			local index is 0.
 			local partSelected is "".
 			local specialCheck is False.
@@ -359,8 +359,9 @@ function getVesselAnalysis {
 		parameter		partlist.
 
 		// Returns the same lexicon as in 'getVesselPartList' but with uncorrected drag cube information added from 'analyzeCraftFile'
-		local partDatabaseJson is readjson("dragProfile/DATA/PartDatabase/PartDatabase.json").
+		local partDatabaseJson is readjson("CCAT/DragProfile/DATA/PartDatabase/PartDatabase.json").
 		local partVariantList is getPartVariantList().
+		local proceduralCubeList is getPartProceduralCubes().
 		///// Helper Functions /////
 		// With this function we are going to decide what dragcube we are going to include
 		function checkExtensionState {
@@ -451,14 +452,35 @@ function getVesselAnalysis {
 		///// Dragcube Selection /////
 		for part in partlist:keys {
 			local partInfo is partlist[part].
-			set partInfo["NrCubes"] to partDatabaseJson[part:split(" ")[0]+" NrCubes"].
-			local extensionState is checkExtensionState(partInfo).
-			set partlist[part]["XP Default"] to partDatabaseJson[part:split(" ")[0]+extensionState+" xp"].
-			set partlist[part]["XN Default"] to partDatabaseJson[part:split(" ")[0]+extensionState+" xn"].
-			set partlist[part]["YP Default"] to partDatabaseJson[part:split(" ")[0]+extensionState+" yp"].
-			set partlist[part]["YN Default"] to partDatabaseJson[part:split(" ")[0]+extensionState+" yn"].
-			set partlist[part]["ZP Default"] to partDatabaseJson[part:split(" ")[0]+extensionState+" zp"].
-			set partlist[part]["ZN Default"] to partDatabaseJson[part:split(" ")[0]+extensionState+" zn"].
+			local partGlobalName is part:split(" ")[0].
+			if partDatabaseJson:haskey(partGlobalName+" NrCubes") {
+				set partInfo["NrCubes"] to partDatabaseJson[partGlobalName+" NrCubes"].
+				local extensionState is checkExtensionState(partInfo).
+				set partlist[part]["XP Default"] to partDatabaseJson[partGlobalName+extensionState+" xp"].
+				set partlist[part]["XN Default"] to partDatabaseJson[partGlobalName+extensionState+" xn"].
+				set partlist[part]["YP Default"] to partDatabaseJson[partGlobalName+extensionState+" yp"].
+				set partlist[part]["YN Default"] to partDatabaseJson[partGlobalName+extensionState+" yn"].
+				set partlist[part]["ZP Default"] to partDatabaseJson[partGlobalName+extensionState+" zp"].
+				set partlist[part]["ZN Default"] to partDatabaseJson[partGlobalName+extensionState+" zn"].
+			} else if proceduralCubeList:haskey(partGlobalName) {
+				set partInfo["NrCubes"] to "Procedural - Recorded".
+				set partlist[part]["XP Default"] to proceduralCubeList[partGlobalName]["XP"].
+				set partlist[part]["XN Default"] to proceduralCubeList[partGlobalName]["XN"].
+				set partlist[part]["YP Default"] to proceduralCubeList[partGlobalName]["YP"].
+				set partlist[part]["YN Default"] to proceduralCubeList[partGlobalName]["YN"].
+				set partlist[part]["ZP Default"] to proceduralCubeList[partGlobalName]["ZP"].
+				set partlist[part]["ZN Default"] to proceduralCubeList[partGlobalName]["ZN"].
+			} else {
+				set partInfo["NrCubes"] to "Procedural".
+				set partlist[part]["XP Default"] to "A: 0 Cd: 0".
+				set partlist[part]["XN Default"] to "A: 0 Cd: 0".
+				set partlist[part]["YP Default"] to "A: 0 Cd: 0".
+				set partlist[part]["YN Default"] to "A: 0 Cd: 0".
+				set partlist[part]["ZP Default"] to "A: 0 Cd: 0".
+				set partlist[part]["ZN Default"] to "A: 0 Cd: 0".
+			}
+			
+
 			// Guesstimating Procedural Fairing Dragcubes
 			if partlist[part]:haskey("ModuleProceduralFairing") {
 				for entry in partlist[part]:keys {
@@ -469,10 +491,10 @@ function getVesselAnalysis {
 						local totalAValue is partlist[part]["fairingHeight"].
 						local totalCdValue is partlist[part]["fairingCd"].
 						if entry:contains("YP Default") {
-							set cdValue to (totalCdValue/totalAValue)*0.7.
+							set cdValue to (totalCdValue/totalAValue)*0.8.
 						}
 						else if entry:contains("YN Default") donothing.
-						else set aValue to aValue+totalAValue.
+						else set aValue to (aValue+totalAValue).
 						local newEntry is "A: "+aValue+" Cd: "+cdValue.	
 						set partlist[part][entry] to newEntry.		
 					}

@@ -896,3 +896,33 @@ function dragProfileMain {
 }
 
 global lib_DragProfile is dragProfileMain().
+
+function loadProfile {
+    // PUBLIC loadProfile :: string -> 2D Array
+    parameter       profileName is ship:name.
+    
+    function defaultProfile {
+        return readjson("CCAT/dragProfile/DATA/Profiles/defaultProfile").
+    }
+
+    function returnProfile {
+        // PRIVATE loadProfile :: string -> 2D Array
+        // Loads profile if found; returns nothing if not found
+        return readjson("CCAT/dragProfile/DATA/Profiles/"+profileName).
+    }
+
+    function profileExists {
+        // PRIVATE profileExists :: string -> bool
+        // Returns True if profile found; else returns false
+        if (exists("CCAT/dragProfile/DATA/Profiles/"+profileName)) return True. 
+        else return False.
+    }
+
+    if profileExists() {
+        print("Drag profile found called " + profileName).
+        return returnProfile().
+    }
+    else return defaultProfile().
+}
+
+global lib_loadProfile is loadProfile@.
