@@ -1,8 +1,23 @@
 ![Title Image](https://github.com/Ren0k/Project-Atmospheric-Drag/blob/main/Images/Header.jpg)    
 
-# A model to calculate atmospheric drag with kOS, for stock KSP
+# Atmospheric drag calculations with kOS, for stock KSP
 
-### UPDATE 20-11-20
+### UPDATE 26-02-21 - Full Overhaul  
+
+#### 1)  
+The old drag profile script is now part of a bigger script; that is experimental for the time being.
+This new script (Constantly Computed Atmospheric Trajectory -  CCAT) predicts future positions of the vessel using a created drag profile and differential equation solvers.  
+No documentation is provided for CCAT for now.  
+#### 2)  
+The new KSP patch changed some fundamental properties of KSP parts and added some new parts.
+Some parts switched from fixed static drag cubes to procedural drag cubes; those parts are added manually to the ExtraDatabase file.
+Additionally the new RCS parts and variants were added.  
+#### 3)   
+For complex parts with multiple nodes, the script would occasionally misidentify nodes.  
+This should be fixed now and additionally if it does occur an internal method prevents the script from crashing.  
+
+
+### UPDATE 20-11-20 - Temperature Calculation  
 
 Added a new method to obtain SAT, and updated the scripts to use this new method.  
 See [here!](https://github.com/Ren0k/Atmospheric-Data)  
