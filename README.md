@@ -2,7 +2,7 @@
 
 # Atmospheric drag calculations with kOS, for stock KSP
 
-### UPDATE 26-02-21 - Full Overhaul  
+### UPDATE 26-02-21 - CCAT Pre-Release  
 
 #### 1)  
 The old drag profile script is now part of a bigger script; that is experimental for the time being.
